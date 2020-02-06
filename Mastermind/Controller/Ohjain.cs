@@ -30,6 +30,12 @@ namespace Mastermind.Controller
             return havio;
         }
 
+        public bool Voitot(Kayttajat kayttaja)
+        {
+            bool voitto = dbController.Voitto(kayttaja);
+            return voitto;
+        }
+
         public DataTable Tilastot()
         {
             return dbController.TilastotTietokannasta();

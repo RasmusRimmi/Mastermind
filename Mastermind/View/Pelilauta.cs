@@ -40,7 +40,6 @@ namespace Mastermind
             varit[5] = pbTurkoosi;
             varit[6] = pbVihrea;
             varit[7] = pbVioletti;
-
         }
 
         private void Pelilauta_Load(object sender, EventArgs e)
@@ -86,42 +85,42 @@ namespace Mastermind
 
                 if (vari == 1)
                 {
-                    pictureBoxs[i].Image = Mastermind.Properties.Resources.keltainenpampula;
+                    pictureBoxs[i].Image = pbKeltainen.Image;
                 }
 
                 else if (vari == 2)
                 {
-                    pictureBoxs[i].Image = Mastermind.Properties.Resources.oranssipampula;
+                    pictureBoxs[i].Image = pbOranssi.Image;
                 }
 
                 else if (vari == 3)
                 {
-                    pictureBoxs[i].Image = Mastermind.Properties.Resources.pinkkipampula;
+                    pictureBoxs[i].Image = pbPinkki.Image;
                 }
 
                 else if (vari == 4)
                 {
-                    pictureBoxs[i].Image = Mastermind.Properties.Resources.punainenpampula;
+                    pictureBoxs[i].Image = pbPunainen.Image;
                 }
 
                 else if (vari == 5)
                 {
-                    pictureBoxs[i].Image = Mastermind.Properties.Resources.sininenpampula;
+                    pictureBoxs[i].Image = pbSininen.Image;
                 }
 
                 else if (vari == 6)
                 {
-                    pictureBoxs[i].Image = Mastermind.Properties.Resources.turkoosipampula;
+                    pictureBoxs[i].Image = pbTurkoosi.Image;
                 }
 
                 else if (vari == 7)
                 {
-                    pictureBoxs[i].Image = Mastermind.Properties.Resources.vihreapampula;
+                    pictureBoxs[i].Image = pbVihrea.Image;
                 }
 
                 else if (vari == 8)
                 {
-                    pictureBoxs[i].Image = Mastermind.Properties.Resources.violettipampula;
+                    pictureBoxs[i].Image = pbVioletti.Image;
                 }
             }
 
@@ -196,10 +195,17 @@ namespace Mastermind
 
         private void btTarkista_Click(object sender, EventArgs e)
         {
-            if (pb1R1.Image == pictureBoxs[0].Image)
+            if (pbOikea1.Image == pb1R1.Image && pbOikea2.Image == pb2R1.Image && pbOikea3.Image == pb3R1.Image && pbOikea4.Image == pb4R1.Image)
             {
                 MessageBox.Show("terve");
+
+                Kayttajat user = new Kayttajat();
+                user.Haviot = y;
+
+                registerHandler.Voitot(user);
+                Close();
             }
+
         }
     }
 }

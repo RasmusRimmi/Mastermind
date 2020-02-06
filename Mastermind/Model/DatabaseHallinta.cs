@@ -63,14 +63,27 @@ namespace Mastermind.Model
             return true;
         }
 
-        public DataTable TilastotTietokannasta()
+        public bool Voitto(Kayttajat kayttaja)
         {
             dbYhteys.Open();
-            SqlCommand query4 = new SqlCommand("SELECT Kayttaja, Voitot, Haviot FROM Kayttajat", dbYhteys);
+            SqlCommand query4 = new SqlCommand("UPDATE Kayttajat SET Voitot = Voitot + 1 WHERE KayttajaId = @KayttajaId", dbYhteys);
+            SqlParameter Kayttaja = new SqlParameter("@KayttajaId", kayttaja.Haviot);
+            query4.Parameters.Add(Kayttaja);
 
             query4.ExecuteNonQuery();
 
-            SqlDataAdapter sda = new SqlDataAdapter(query4);
+            dbYhteys.Close();
+            return true;
+        }
+
+        public DataTable TilastotTietokannasta()
+        {
+            dbYhteys.Open();
+            SqlCommand query5 = new SqlCommand("SELECT Kayttaja, Voitot, Haviot FROM Kayttajat", dbYhteys);
+
+            query5.ExecuteNonQuery();
+
+            SqlDataAdapter sda = new SqlDataAdapter(query5);
             DataTable dt = new DataTable();
             sda.Fill(dt);
             dbYhteys.Close();
