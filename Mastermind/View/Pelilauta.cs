@@ -510,7 +510,7 @@ namespace Mastermind
                     else if (Rivit[0, j].Image == pbOikea1.Image || Rivit[0, j].Image == pbOikea2.Image || Rivit[0, j].Image == pbOikea3.Image || Rivit[0, j].Image == pbOikea4.Image)
                     {
 
-                        Tarkistus[0, j].Image = Properties.Resources.valkoinenpampula; 
+                        Tarkistus[0, j].Image = Properties.Resources.valkoinenpampula;
 
                     }
 
