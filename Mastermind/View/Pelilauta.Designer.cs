@@ -49,6 +49,42 @@
             this.pbOikea2 = new System.Windows.Forms.PictureBox();
             this.pbOikea1 = new System.Windows.Forms.PictureBox();
             this.btTarkista = new System.Windows.Forms.Button();
+            this.pb4R2 = new System.Windows.Forms.PictureBox();
+            this.pb3R2 = new System.Windows.Forms.PictureBox();
+            this.pb2R2 = new System.Windows.Forms.PictureBox();
+            this.pb1R2 = new System.Windows.Forms.PictureBox();
+            this.pb4R3 = new System.Windows.Forms.PictureBox();
+            this.pb3R3 = new System.Windows.Forms.PictureBox();
+            this.pb2R3 = new System.Windows.Forms.PictureBox();
+            this.pb1R3 = new System.Windows.Forms.PictureBox();
+            this.pb4R4 = new System.Windows.Forms.PictureBox();
+            this.pb3R4 = new System.Windows.Forms.PictureBox();
+            this.pb2R4 = new System.Windows.Forms.PictureBox();
+            this.pb1R4 = new System.Windows.Forms.PictureBox();
+            this.pb4R5 = new System.Windows.Forms.PictureBox();
+            this.pb3R5 = new System.Windows.Forms.PictureBox();
+            this.pb2R5 = new System.Windows.Forms.PictureBox();
+            this.pb1R5 = new System.Windows.Forms.PictureBox();
+            this.pb4R6 = new System.Windows.Forms.PictureBox();
+            this.pb3R6 = new System.Windows.Forms.PictureBox();
+            this.pb2R6 = new System.Windows.Forms.PictureBox();
+            this.pb1R6 = new System.Windows.Forms.PictureBox();
+            this.pb4R7 = new System.Windows.Forms.PictureBox();
+            this.pb3R7 = new System.Windows.Forms.PictureBox();
+            this.pb2R7 = new System.Windows.Forms.PictureBox();
+            this.pb1R7 = new System.Windows.Forms.PictureBox();
+            this.pb4R8 = new System.Windows.Forms.PictureBox();
+            this.pb3R8 = new System.Windows.Forms.PictureBox();
+            this.pb2R8 = new System.Windows.Forms.PictureBox();
+            this.pb1R8 = new System.Windows.Forms.PictureBox();
+            this.pb4R9 = new System.Windows.Forms.PictureBox();
+            this.pb3R9 = new System.Windows.Forms.PictureBox();
+            this.pb2R9 = new System.Windows.Forms.PictureBox();
+            this.pb1R9 = new System.Windows.Forms.PictureBox();
+            this.pb4R10 = new System.Windows.Forms.PictureBox();
+            this.pb3R10 = new System.Windows.Forms.PictureBox();
+            this.pb2R10 = new System.Windows.Forms.PictureBox();
+            this.pb1R10 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -85,6 +121,10 @@
             this.pictureBox35 = new System.Windows.Forms.PictureBox();
             this.pictureBox36 = new System.Windows.Forms.PictureBox();
             this.pictureBox37 = new System.Windows.Forms.PictureBox();
+            this.pictureBox38 = new System.Windows.Forms.PictureBox();
+            this.pictureBox39 = new System.Windows.Forms.PictureBox();
+            this.pictureBox40 = new System.Windows.Forms.PictureBox();
+            this.pictureBox41 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pb4R1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb3R1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb2R1)).BeginInit();
@@ -102,6 +142,42 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbOikea3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbOikea2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbOikea1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb4R2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb3R2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb2R2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb1R2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb4R3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb3R3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb2R3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb1R3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb4R4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb3R4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb2R4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb1R4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb4R5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb3R5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb2R5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb1R5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb4R6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb3R6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb2R6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb1R6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb4R7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb3R7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb2R7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb1R7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb4R8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb3R8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb2R8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb1R8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb4R9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb3R9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb2R9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb1R9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb4R10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb3R10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb2R10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb1R10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -138,6 +214,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox35)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox36)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox37)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox38)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox39)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox40)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox41)).BeginInit();
             this.SuspendLayout();
             // 
             // btLuovuta
@@ -391,401 +471,841 @@
             this.btTarkista.UseVisualStyleBackColor = false;
             this.btTarkista.Click += new System.EventHandler(this.btTarkista_Click);
             // 
+            // pb4R2
+            // 
+            this.pb4R2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(85)))), ((int)(((byte)(165)))));
+            this.pb4R2.Image = global::Mastermind.Properties.Resources.harmaapampula;
+            this.pb4R2.Location = new System.Drawing.Point(310, 172);
+            this.pb4R2.Name = "pb4R2";
+            this.pb4R2.Size = new System.Drawing.Size(36, 33);
+            this.pb4R2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb4R2.TabIndex = 32;
+            this.pb4R2.TabStop = false;
+            // 
+            // pb3R2
+            // 
+            this.pb3R2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(85)))), ((int)(((byte)(165)))));
+            this.pb3R2.Image = global::Mastermind.Properties.Resources.harmaapampula;
+            this.pb3R2.Location = new System.Drawing.Point(254, 172);
+            this.pb3R2.Name = "pb3R2";
+            this.pb3R2.Size = new System.Drawing.Size(36, 33);
+            this.pb3R2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb3R2.TabIndex = 31;
+            this.pb3R2.TabStop = false;
+            // 
+            // pb2R2
+            // 
+            this.pb2R2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(85)))), ((int)(((byte)(165)))));
+            this.pb2R2.Image = global::Mastermind.Properties.Resources.harmaapampula;
+            this.pb2R2.Location = new System.Drawing.Point(196, 172);
+            this.pb2R2.Name = "pb2R2";
+            this.pb2R2.Size = new System.Drawing.Size(36, 33);
+            this.pb2R2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb2R2.TabIndex = 30;
+            this.pb2R2.TabStop = false;
+            // 
+            // pb1R2
+            // 
+            this.pb1R2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(85)))), ((int)(((byte)(165)))));
+            this.pb1R2.Image = global::Mastermind.Properties.Resources.harmaapampula;
+            this.pb1R2.Location = new System.Drawing.Point(139, 172);
+            this.pb1R2.Name = "pb1R2";
+            this.pb1R2.Size = new System.Drawing.Size(36, 33);
+            this.pb1R2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb1R2.TabIndex = 29;
+            this.pb1R2.TabStop = false;
+            // 
+            // pb4R3
+            // 
+            this.pb4R3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(85)))), ((int)(((byte)(165)))));
+            this.pb4R3.Image = global::Mastermind.Properties.Resources.harmaapampula;
+            this.pb4R3.Location = new System.Drawing.Point(310, 214);
+            this.pb4R3.Name = "pb4R3";
+            this.pb4R3.Size = new System.Drawing.Size(36, 33);
+            this.pb4R3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb4R3.TabIndex = 36;
+            this.pb4R3.TabStop = false;
+            // 
+            // pb3R3
+            // 
+            this.pb3R3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(85)))), ((int)(((byte)(165)))));
+            this.pb3R3.Image = global::Mastermind.Properties.Resources.harmaapampula;
+            this.pb3R3.Location = new System.Drawing.Point(254, 214);
+            this.pb3R3.Name = "pb3R3";
+            this.pb3R3.Size = new System.Drawing.Size(36, 33);
+            this.pb3R3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb3R3.TabIndex = 35;
+            this.pb3R3.TabStop = false;
+            // 
+            // pb2R3
+            // 
+            this.pb2R3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(85)))), ((int)(((byte)(165)))));
+            this.pb2R3.Image = global::Mastermind.Properties.Resources.harmaapampula;
+            this.pb2R3.Location = new System.Drawing.Point(196, 214);
+            this.pb2R3.Name = "pb2R3";
+            this.pb2R3.Size = new System.Drawing.Size(36, 33);
+            this.pb2R3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb2R3.TabIndex = 34;
+            this.pb2R3.TabStop = false;
+            // 
+            // pb1R3
+            // 
+            this.pb1R3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(85)))), ((int)(((byte)(165)))));
+            this.pb1R3.Image = global::Mastermind.Properties.Resources.harmaapampula;
+            this.pb1R3.Location = new System.Drawing.Point(139, 214);
+            this.pb1R3.Name = "pb1R3";
+            this.pb1R3.Size = new System.Drawing.Size(36, 33);
+            this.pb1R3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb1R3.TabIndex = 33;
+            this.pb1R3.TabStop = false;
+            // 
+            // pb4R4
+            // 
+            this.pb4R4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(85)))), ((int)(((byte)(165)))));
+            this.pb4R4.Image = global::Mastermind.Properties.Resources.harmaapampula;
+            this.pb4R4.Location = new System.Drawing.Point(310, 257);
+            this.pb4R4.Name = "pb4R4";
+            this.pb4R4.Size = new System.Drawing.Size(36, 33);
+            this.pb4R4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb4R4.TabIndex = 40;
+            this.pb4R4.TabStop = false;
+            // 
+            // pb3R4
+            // 
+            this.pb3R4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(85)))), ((int)(((byte)(165)))));
+            this.pb3R4.Image = global::Mastermind.Properties.Resources.harmaapampula;
+            this.pb3R4.Location = new System.Drawing.Point(254, 257);
+            this.pb3R4.Name = "pb3R4";
+            this.pb3R4.Size = new System.Drawing.Size(36, 33);
+            this.pb3R4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb3R4.TabIndex = 39;
+            this.pb3R4.TabStop = false;
+            // 
+            // pb2R4
+            // 
+            this.pb2R4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(85)))), ((int)(((byte)(165)))));
+            this.pb2R4.Image = global::Mastermind.Properties.Resources.harmaapampula;
+            this.pb2R4.Location = new System.Drawing.Point(196, 257);
+            this.pb2R4.Name = "pb2R4";
+            this.pb2R4.Size = new System.Drawing.Size(36, 33);
+            this.pb2R4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb2R4.TabIndex = 38;
+            this.pb2R4.TabStop = false;
+            // 
+            // pb1R4
+            // 
+            this.pb1R4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(85)))), ((int)(((byte)(165)))));
+            this.pb1R4.Image = global::Mastermind.Properties.Resources.harmaapampula;
+            this.pb1R4.Location = new System.Drawing.Point(139, 257);
+            this.pb1R4.Name = "pb1R4";
+            this.pb1R4.Size = new System.Drawing.Size(36, 33);
+            this.pb1R4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb1R4.TabIndex = 37;
+            this.pb1R4.TabStop = false;
+            // 
+            // pb4R5
+            // 
+            this.pb4R5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(85)))), ((int)(((byte)(165)))));
+            this.pb4R5.Image = global::Mastermind.Properties.Resources.harmaapampula;
+            this.pb4R5.Location = new System.Drawing.Point(310, 302);
+            this.pb4R5.Name = "pb4R5";
+            this.pb4R5.Size = new System.Drawing.Size(36, 33);
+            this.pb4R5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb4R5.TabIndex = 44;
+            this.pb4R5.TabStop = false;
+            // 
+            // pb3R5
+            // 
+            this.pb3R5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(85)))), ((int)(((byte)(165)))));
+            this.pb3R5.Image = global::Mastermind.Properties.Resources.harmaapampula;
+            this.pb3R5.Location = new System.Drawing.Point(254, 302);
+            this.pb3R5.Name = "pb3R5";
+            this.pb3R5.Size = new System.Drawing.Size(36, 33);
+            this.pb3R5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb3R5.TabIndex = 43;
+            this.pb3R5.TabStop = false;
+            // 
+            // pb2R5
+            // 
+            this.pb2R5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(85)))), ((int)(((byte)(165)))));
+            this.pb2R5.Image = global::Mastermind.Properties.Resources.harmaapampula;
+            this.pb2R5.Location = new System.Drawing.Point(196, 302);
+            this.pb2R5.Name = "pb2R5";
+            this.pb2R5.Size = new System.Drawing.Size(36, 33);
+            this.pb2R5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb2R5.TabIndex = 42;
+            this.pb2R5.TabStop = false;
+            // 
+            // pb1R5
+            // 
+            this.pb1R5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(85)))), ((int)(((byte)(165)))));
+            this.pb1R5.Image = global::Mastermind.Properties.Resources.harmaapampula;
+            this.pb1R5.Location = new System.Drawing.Point(139, 302);
+            this.pb1R5.Name = "pb1R5";
+            this.pb1R5.Size = new System.Drawing.Size(36, 33);
+            this.pb1R5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb1R5.TabIndex = 41;
+            this.pb1R5.TabStop = false;
+            // 
+            // pb4R6
+            // 
+            this.pb4R6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(85)))), ((int)(((byte)(165)))));
+            this.pb4R6.Image = global::Mastermind.Properties.Resources.harmaapampula;
+            this.pb4R6.Location = new System.Drawing.Point(310, 344);
+            this.pb4R6.Name = "pb4R6";
+            this.pb4R6.Size = new System.Drawing.Size(36, 33);
+            this.pb4R6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb4R6.TabIndex = 48;
+            this.pb4R6.TabStop = false;
+            // 
+            // pb3R6
+            // 
+            this.pb3R6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(85)))), ((int)(((byte)(165)))));
+            this.pb3R6.Image = global::Mastermind.Properties.Resources.harmaapampula;
+            this.pb3R6.Location = new System.Drawing.Point(254, 344);
+            this.pb3R6.Name = "pb3R6";
+            this.pb3R6.Size = new System.Drawing.Size(36, 33);
+            this.pb3R6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb3R6.TabIndex = 47;
+            this.pb3R6.TabStop = false;
+            // 
+            // pb2R6
+            // 
+            this.pb2R6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(85)))), ((int)(((byte)(165)))));
+            this.pb2R6.Image = global::Mastermind.Properties.Resources.harmaapampula;
+            this.pb2R6.Location = new System.Drawing.Point(196, 344);
+            this.pb2R6.Name = "pb2R6";
+            this.pb2R6.Size = new System.Drawing.Size(36, 33);
+            this.pb2R6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb2R6.TabIndex = 46;
+            this.pb2R6.TabStop = false;
+            // 
+            // pb1R6
+            // 
+            this.pb1R6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(85)))), ((int)(((byte)(165)))));
+            this.pb1R6.Image = global::Mastermind.Properties.Resources.harmaapampula;
+            this.pb1R6.Location = new System.Drawing.Point(139, 344);
+            this.pb1R6.Name = "pb1R6";
+            this.pb1R6.Size = new System.Drawing.Size(36, 33);
+            this.pb1R6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb1R6.TabIndex = 45;
+            this.pb1R6.TabStop = false;
+            // 
+            // pb4R7
+            // 
+            this.pb4R7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(85)))), ((int)(((byte)(165)))));
+            this.pb4R7.Image = global::Mastermind.Properties.Resources.harmaapampula;
+            this.pb4R7.Location = new System.Drawing.Point(310, 388);
+            this.pb4R7.Name = "pb4R7";
+            this.pb4R7.Size = new System.Drawing.Size(36, 33);
+            this.pb4R7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb4R7.TabIndex = 52;
+            this.pb4R7.TabStop = false;
+            // 
+            // pb3R7
+            // 
+            this.pb3R7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(85)))), ((int)(((byte)(165)))));
+            this.pb3R7.Image = global::Mastermind.Properties.Resources.harmaapampula;
+            this.pb3R7.Location = new System.Drawing.Point(254, 388);
+            this.pb3R7.Name = "pb3R7";
+            this.pb3R7.Size = new System.Drawing.Size(36, 33);
+            this.pb3R7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb3R7.TabIndex = 51;
+            this.pb3R7.TabStop = false;
+            // 
+            // pb2R7
+            // 
+            this.pb2R7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(85)))), ((int)(((byte)(165)))));
+            this.pb2R7.Image = global::Mastermind.Properties.Resources.harmaapampula;
+            this.pb2R7.Location = new System.Drawing.Point(196, 388);
+            this.pb2R7.Name = "pb2R7";
+            this.pb2R7.Size = new System.Drawing.Size(36, 33);
+            this.pb2R7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb2R7.TabIndex = 50;
+            this.pb2R7.TabStop = false;
+            // 
+            // pb1R7
+            // 
+            this.pb1R7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(85)))), ((int)(((byte)(165)))));
+            this.pb1R7.Image = global::Mastermind.Properties.Resources.harmaapampula;
+            this.pb1R7.Location = new System.Drawing.Point(139, 388);
+            this.pb1R7.Name = "pb1R7";
+            this.pb1R7.Size = new System.Drawing.Size(36, 33);
+            this.pb1R7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb1R7.TabIndex = 49;
+            this.pb1R7.TabStop = false;
+            // 
+            // pb4R8
+            // 
+            this.pb4R8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(85)))), ((int)(((byte)(165)))));
+            this.pb4R8.Image = global::Mastermind.Properties.Resources.harmaapampula;
+            this.pb4R8.Location = new System.Drawing.Point(310, 433);
+            this.pb4R8.Name = "pb4R8";
+            this.pb4R8.Size = new System.Drawing.Size(36, 33);
+            this.pb4R8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb4R8.TabIndex = 56;
+            this.pb4R8.TabStop = false;
+            // 
+            // pb3R8
+            // 
+            this.pb3R8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(85)))), ((int)(((byte)(165)))));
+            this.pb3R8.Image = global::Mastermind.Properties.Resources.harmaapampula;
+            this.pb3R8.Location = new System.Drawing.Point(254, 433);
+            this.pb3R8.Name = "pb3R8";
+            this.pb3R8.Size = new System.Drawing.Size(36, 33);
+            this.pb3R8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb3R8.TabIndex = 55;
+            this.pb3R8.TabStop = false;
+            // 
+            // pb2R8
+            // 
+            this.pb2R8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(85)))), ((int)(((byte)(165)))));
+            this.pb2R8.Image = global::Mastermind.Properties.Resources.harmaapampula;
+            this.pb2R8.Location = new System.Drawing.Point(196, 433);
+            this.pb2R8.Name = "pb2R8";
+            this.pb2R8.Size = new System.Drawing.Size(36, 33);
+            this.pb2R8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb2R8.TabIndex = 54;
+            this.pb2R8.TabStop = false;
+            // 
+            // pb1R8
+            // 
+            this.pb1R8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(85)))), ((int)(((byte)(165)))));
+            this.pb1R8.Image = global::Mastermind.Properties.Resources.harmaapampula;
+            this.pb1R8.Location = new System.Drawing.Point(139, 433);
+            this.pb1R8.Name = "pb1R8";
+            this.pb1R8.Size = new System.Drawing.Size(36, 33);
+            this.pb1R8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb1R8.TabIndex = 53;
+            this.pb1R8.TabStop = false;
+            // 
+            // pb4R9
+            // 
+            this.pb4R9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(85)))), ((int)(((byte)(165)))));
+            this.pb4R9.Image = global::Mastermind.Properties.Resources.harmaapampula;
+            this.pb4R9.Location = new System.Drawing.Point(310, 478);
+            this.pb4R9.Name = "pb4R9";
+            this.pb4R9.Size = new System.Drawing.Size(36, 33);
+            this.pb4R9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb4R9.TabIndex = 60;
+            this.pb4R9.TabStop = false;
+            // 
+            // pb3R9
+            // 
+            this.pb3R9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(85)))), ((int)(((byte)(165)))));
+            this.pb3R9.Image = global::Mastermind.Properties.Resources.harmaapampula;
+            this.pb3R9.Location = new System.Drawing.Point(254, 478);
+            this.pb3R9.Name = "pb3R9";
+            this.pb3R9.Size = new System.Drawing.Size(36, 33);
+            this.pb3R9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb3R9.TabIndex = 59;
+            this.pb3R9.TabStop = false;
+            // 
+            // pb2R9
+            // 
+            this.pb2R9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(85)))), ((int)(((byte)(165)))));
+            this.pb2R9.Image = global::Mastermind.Properties.Resources.harmaapampula;
+            this.pb2R9.Location = new System.Drawing.Point(196, 478);
+            this.pb2R9.Name = "pb2R9";
+            this.pb2R9.Size = new System.Drawing.Size(36, 33);
+            this.pb2R9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb2R9.TabIndex = 58;
+            this.pb2R9.TabStop = false;
+            // 
+            // pb1R9
+            // 
+            this.pb1R9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(85)))), ((int)(((byte)(165)))));
+            this.pb1R9.Image = global::Mastermind.Properties.Resources.harmaapampula;
+            this.pb1R9.Location = new System.Drawing.Point(139, 478);
+            this.pb1R9.Name = "pb1R9";
+            this.pb1R9.Size = new System.Drawing.Size(36, 33);
+            this.pb1R9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb1R9.TabIndex = 57;
+            this.pb1R9.TabStop = false;
+            // 
+            // pb4R10
+            // 
+            this.pb4R10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(85)))), ((int)(((byte)(165)))));
+            this.pb4R10.Image = global::Mastermind.Properties.Resources.harmaapampula;
+            this.pb4R10.Location = new System.Drawing.Point(310, 523);
+            this.pb4R10.Name = "pb4R10";
+            this.pb4R10.Size = new System.Drawing.Size(36, 33);
+            this.pb4R10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb4R10.TabIndex = 64;
+            this.pb4R10.TabStop = false;
+            // 
+            // pb3R10
+            // 
+            this.pb3R10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(85)))), ((int)(((byte)(165)))));
+            this.pb3R10.Image = global::Mastermind.Properties.Resources.harmaapampula;
+            this.pb3R10.Location = new System.Drawing.Point(254, 523);
+            this.pb3R10.Name = "pb3R10";
+            this.pb3R10.Size = new System.Drawing.Size(36, 33);
+            this.pb3R10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb3R10.TabIndex = 63;
+            this.pb3R10.TabStop = false;
+            // 
+            // pb2R10
+            // 
+            this.pb2R10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(85)))), ((int)(((byte)(165)))));
+            this.pb2R10.Image = global::Mastermind.Properties.Resources.harmaapampula;
+            this.pb2R10.Location = new System.Drawing.Point(196, 523);
+            this.pb2R10.Name = "pb2R10";
+            this.pb2R10.Size = new System.Drawing.Size(36, 33);
+            this.pb2R10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb2R10.TabIndex = 62;
+            this.pb2R10.TabStop = false;
+            // 
+            // pb1R10
+            // 
+            this.pb1R10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(85)))), ((int)(((byte)(165)))));
+            this.pb1R10.Image = global::Mastermind.Properties.Resources.harmaapampula;
+            this.pb1R10.Location = new System.Drawing.Point(139, 523);
+            this.pb1R10.Name = "pb1R10";
+            this.pb1R10.Size = new System.Drawing.Size(36, 33);
+            this.pb1R10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb1R10.TabIndex = 61;
+            this.pb1R10.TabStop = false;
+            // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(85)))), ((int)(((byte)(165)))));
             this.pictureBox1.Image = global::Mastermind.Properties.Resources.harmaapampula;
-            this.pictureBox1.Location = new System.Drawing.Point(310, 172);
+            this.pictureBox1.Location = new System.Drawing.Point(414, 544);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(36, 33);
+            this.pictureBox1.Size = new System.Drawing.Size(10, 10);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 32;
+            this.pictureBox1.TabIndex = 104;
             this.pictureBox1.TabStop = false;
             // 
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(85)))), ((int)(((byte)(165)))));
             this.pictureBox2.Image = global::Mastermind.Properties.Resources.harmaapampula;
-            this.pictureBox2.Location = new System.Drawing.Point(254, 172);
+            this.pictureBox2.Location = new System.Drawing.Point(373, 544);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(36, 33);
+            this.pictureBox2.Size = new System.Drawing.Size(10, 10);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 31;
+            this.pictureBox2.TabIndex = 103;
             this.pictureBox2.TabStop = false;
             // 
             // pictureBox3
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(85)))), ((int)(((byte)(165)))));
             this.pictureBox3.Image = global::Mastermind.Properties.Resources.harmaapampula;
-            this.pictureBox3.Location = new System.Drawing.Point(196, 172);
+            this.pictureBox3.Location = new System.Drawing.Point(414, 525);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(36, 33);
+            this.pictureBox3.Size = new System.Drawing.Size(10, 10);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 30;
+            this.pictureBox3.TabIndex = 102;
             this.pictureBox3.TabStop = false;
             // 
             // pictureBox4
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(85)))), ((int)(((byte)(165)))));
             this.pictureBox4.Image = global::Mastermind.Properties.Resources.harmaapampula;
-            this.pictureBox4.Location = new System.Drawing.Point(139, 172);
+            this.pictureBox4.Location = new System.Drawing.Point(373, 525);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(36, 33);
+            this.pictureBox4.Size = new System.Drawing.Size(10, 10);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 29;
+            this.pictureBox4.TabIndex = 101;
             this.pictureBox4.TabStop = false;
             // 
             // pictureBox5
             // 
             this.pictureBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(85)))), ((int)(((byte)(165)))));
             this.pictureBox5.Image = global::Mastermind.Properties.Resources.harmaapampula;
-            this.pictureBox5.Location = new System.Drawing.Point(310, 214);
+            this.pictureBox5.Location = new System.Drawing.Point(414, 500);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(36, 33);
+            this.pictureBox5.Size = new System.Drawing.Size(10, 10);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 36;
+            this.pictureBox5.TabIndex = 100;
             this.pictureBox5.TabStop = false;
             // 
             // pictureBox6
             // 
             this.pictureBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(85)))), ((int)(((byte)(165)))));
             this.pictureBox6.Image = global::Mastermind.Properties.Resources.harmaapampula;
-            this.pictureBox6.Location = new System.Drawing.Point(254, 214);
+            this.pictureBox6.Location = new System.Drawing.Point(373, 497);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(36, 33);
+            this.pictureBox6.Size = new System.Drawing.Size(10, 10);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox6.TabIndex = 35;
+            this.pictureBox6.TabIndex = 99;
             this.pictureBox6.TabStop = false;
             // 
             // pictureBox7
             // 
             this.pictureBox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(85)))), ((int)(((byte)(165)))));
             this.pictureBox7.Image = global::Mastermind.Properties.Resources.harmaapampula;
-            this.pictureBox7.Location = new System.Drawing.Point(196, 214);
+            this.pictureBox7.Location = new System.Drawing.Point(414, 479);
             this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(36, 33);
+            this.pictureBox7.Size = new System.Drawing.Size(10, 10);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox7.TabIndex = 34;
+            this.pictureBox7.TabIndex = 98;
             this.pictureBox7.TabStop = false;
             // 
             // pictureBox8
             // 
             this.pictureBox8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(85)))), ((int)(((byte)(165)))));
             this.pictureBox8.Image = global::Mastermind.Properties.Resources.harmaapampula;
-            this.pictureBox8.Location = new System.Drawing.Point(139, 214);
+            this.pictureBox8.Location = new System.Drawing.Point(373, 479);
             this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(36, 33);
+            this.pictureBox8.Size = new System.Drawing.Size(10, 10);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox8.TabIndex = 33;
+            this.pictureBox8.TabIndex = 97;
             this.pictureBox8.TabStop = false;
             // 
             // pictureBox10
             // 
             this.pictureBox10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(85)))), ((int)(((byte)(165)))));
             this.pictureBox10.Image = global::Mastermind.Properties.Resources.harmaapampula;
-            this.pictureBox10.Location = new System.Drawing.Point(310, 257);
+            this.pictureBox10.Location = new System.Drawing.Point(414, 451);
             this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(36, 33);
+            this.pictureBox10.Size = new System.Drawing.Size(10, 10);
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox10.TabIndex = 40;
+            this.pictureBox10.TabIndex = 96;
             this.pictureBox10.TabStop = false;
             // 
             // pictureBox11
             // 
             this.pictureBox11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(85)))), ((int)(((byte)(165)))));
             this.pictureBox11.Image = global::Mastermind.Properties.Resources.harmaapampula;
-            this.pictureBox11.Location = new System.Drawing.Point(254, 257);
+            this.pictureBox11.Location = new System.Drawing.Point(373, 451);
             this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(36, 33);
+            this.pictureBox11.Size = new System.Drawing.Size(10, 10);
             this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox11.TabIndex = 39;
+            this.pictureBox11.TabIndex = 95;
             this.pictureBox11.TabStop = false;
             // 
             // pictureBox12
             // 
             this.pictureBox12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(85)))), ((int)(((byte)(165)))));
             this.pictureBox12.Image = global::Mastermind.Properties.Resources.harmaapampula;
-            this.pictureBox12.Location = new System.Drawing.Point(196, 257);
+            this.pictureBox12.Location = new System.Drawing.Point(414, 433);
             this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.Size = new System.Drawing.Size(36, 33);
+            this.pictureBox12.Size = new System.Drawing.Size(10, 10);
             this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox12.TabIndex = 38;
+            this.pictureBox12.TabIndex = 94;
             this.pictureBox12.TabStop = false;
             // 
             // pictureBox13
             // 
             this.pictureBox13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(85)))), ((int)(((byte)(165)))));
             this.pictureBox13.Image = global::Mastermind.Properties.Resources.harmaapampula;
-            this.pictureBox13.Location = new System.Drawing.Point(139, 257);
+            this.pictureBox13.Location = new System.Drawing.Point(373, 434);
             this.pictureBox13.Name = "pictureBox13";
-            this.pictureBox13.Size = new System.Drawing.Size(36, 33);
+            this.pictureBox13.Size = new System.Drawing.Size(10, 10);
             this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox13.TabIndex = 37;
+            this.pictureBox13.TabIndex = 93;
             this.pictureBox13.TabStop = false;
             // 
             // pictureBox14
             // 
             this.pictureBox14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(85)))), ((int)(((byte)(165)))));
             this.pictureBox14.Image = global::Mastermind.Properties.Resources.harmaapampula;
-            this.pictureBox14.Location = new System.Drawing.Point(310, 302);
+            this.pictureBox14.Location = new System.Drawing.Point(414, 408);
             this.pictureBox14.Name = "pictureBox14";
-            this.pictureBox14.Size = new System.Drawing.Size(36, 33);
+            this.pictureBox14.Size = new System.Drawing.Size(10, 10);
             this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox14.TabIndex = 44;
+            this.pictureBox14.TabIndex = 92;
             this.pictureBox14.TabStop = false;
             // 
             // pictureBox15
             // 
             this.pictureBox15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(85)))), ((int)(((byte)(165)))));
             this.pictureBox15.Image = global::Mastermind.Properties.Resources.harmaapampula;
-            this.pictureBox15.Location = new System.Drawing.Point(254, 302);
+            this.pictureBox15.Location = new System.Drawing.Point(373, 408);
             this.pictureBox15.Name = "pictureBox15";
-            this.pictureBox15.Size = new System.Drawing.Size(36, 33);
+            this.pictureBox15.Size = new System.Drawing.Size(10, 10);
             this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox15.TabIndex = 43;
+            this.pictureBox15.TabIndex = 91;
             this.pictureBox15.TabStop = false;
             // 
             // pictureBox16
             // 
             this.pictureBox16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(85)))), ((int)(((byte)(165)))));
             this.pictureBox16.Image = global::Mastermind.Properties.Resources.harmaapampula;
-            this.pictureBox16.Location = new System.Drawing.Point(196, 302);
+            this.pictureBox16.Location = new System.Drawing.Point(414, 390);
             this.pictureBox16.Name = "pictureBox16";
-            this.pictureBox16.Size = new System.Drawing.Size(36, 33);
+            this.pictureBox16.Size = new System.Drawing.Size(10, 10);
             this.pictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox16.TabIndex = 42;
+            this.pictureBox16.TabIndex = 90;
             this.pictureBox16.TabStop = false;
             // 
             // pictureBox17
             // 
             this.pictureBox17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(85)))), ((int)(((byte)(165)))));
             this.pictureBox17.Image = global::Mastermind.Properties.Resources.harmaapampula;
-            this.pictureBox17.Location = new System.Drawing.Point(139, 302);
+            this.pictureBox17.Location = new System.Drawing.Point(373, 390);
             this.pictureBox17.Name = "pictureBox17";
-            this.pictureBox17.Size = new System.Drawing.Size(36, 33);
+            this.pictureBox17.Size = new System.Drawing.Size(10, 10);
             this.pictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox17.TabIndex = 41;
+            this.pictureBox17.TabIndex = 89;
             this.pictureBox17.TabStop = false;
             // 
             // pictureBox18
             // 
             this.pictureBox18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(85)))), ((int)(((byte)(165)))));
             this.pictureBox18.Image = global::Mastermind.Properties.Resources.harmaapampula;
-            this.pictureBox18.Location = new System.Drawing.Point(310, 344);
+            this.pictureBox18.Location = new System.Drawing.Point(414, 364);
             this.pictureBox18.Name = "pictureBox18";
-            this.pictureBox18.Size = new System.Drawing.Size(36, 33);
+            this.pictureBox18.Size = new System.Drawing.Size(10, 10);
             this.pictureBox18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox18.TabIndex = 48;
+            this.pictureBox18.TabIndex = 88;
             this.pictureBox18.TabStop = false;
             // 
             // pictureBox19
             // 
             this.pictureBox19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(85)))), ((int)(((byte)(165)))));
             this.pictureBox19.Image = global::Mastermind.Properties.Resources.harmaapampula;
-            this.pictureBox19.Location = new System.Drawing.Point(254, 344);
+            this.pictureBox19.Location = new System.Drawing.Point(373, 364);
             this.pictureBox19.Name = "pictureBox19";
-            this.pictureBox19.Size = new System.Drawing.Size(36, 33);
+            this.pictureBox19.Size = new System.Drawing.Size(10, 10);
             this.pictureBox19.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox19.TabIndex = 47;
+            this.pictureBox19.TabIndex = 87;
             this.pictureBox19.TabStop = false;
             // 
             // pictureBox20
             // 
             this.pictureBox20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(85)))), ((int)(((byte)(165)))));
             this.pictureBox20.Image = global::Mastermind.Properties.Resources.harmaapampula;
-            this.pictureBox20.Location = new System.Drawing.Point(196, 344);
+            this.pictureBox20.Location = new System.Drawing.Point(414, 347);
             this.pictureBox20.Name = "pictureBox20";
-            this.pictureBox20.Size = new System.Drawing.Size(36, 33);
+            this.pictureBox20.Size = new System.Drawing.Size(10, 10);
             this.pictureBox20.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox20.TabIndex = 46;
+            this.pictureBox20.TabIndex = 86;
             this.pictureBox20.TabStop = false;
             // 
             // pictureBox21
             // 
             this.pictureBox21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(85)))), ((int)(((byte)(165)))));
             this.pictureBox21.Image = global::Mastermind.Properties.Resources.harmaapampula;
-            this.pictureBox21.Location = new System.Drawing.Point(139, 344);
+            this.pictureBox21.Location = new System.Drawing.Point(373, 347);
             this.pictureBox21.Name = "pictureBox21";
-            this.pictureBox21.Size = new System.Drawing.Size(36, 33);
+            this.pictureBox21.Size = new System.Drawing.Size(10, 10);
             this.pictureBox21.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox21.TabIndex = 45;
+            this.pictureBox21.TabIndex = 85;
             this.pictureBox21.TabStop = false;
             // 
             // pictureBox22
             // 
             this.pictureBox22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(85)))), ((int)(((byte)(165)))));
             this.pictureBox22.Image = global::Mastermind.Properties.Resources.harmaapampula;
-            this.pictureBox22.Location = new System.Drawing.Point(310, 388);
+            this.pictureBox22.Location = new System.Drawing.Point(414, 322);
             this.pictureBox22.Name = "pictureBox22";
-            this.pictureBox22.Size = new System.Drawing.Size(36, 33);
+            this.pictureBox22.Size = new System.Drawing.Size(10, 10);
             this.pictureBox22.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox22.TabIndex = 52;
+            this.pictureBox22.TabIndex = 84;
             this.pictureBox22.TabStop = false;
             // 
             // pictureBox23
             // 
             this.pictureBox23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(85)))), ((int)(((byte)(165)))));
             this.pictureBox23.Image = global::Mastermind.Properties.Resources.harmaapampula;
-            this.pictureBox23.Location = new System.Drawing.Point(254, 388);
+            this.pictureBox23.Location = new System.Drawing.Point(373, 322);
             this.pictureBox23.Name = "pictureBox23";
-            this.pictureBox23.Size = new System.Drawing.Size(36, 33);
+            this.pictureBox23.Size = new System.Drawing.Size(10, 10);
             this.pictureBox23.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox23.TabIndex = 51;
+            this.pictureBox23.TabIndex = 83;
             this.pictureBox23.TabStop = false;
             // 
             // pictureBox24
             // 
             this.pictureBox24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(85)))), ((int)(((byte)(165)))));
             this.pictureBox24.Image = global::Mastermind.Properties.Resources.harmaapampula;
-            this.pictureBox24.Location = new System.Drawing.Point(196, 388);
+            this.pictureBox24.Location = new System.Drawing.Point(414, 303);
             this.pictureBox24.Name = "pictureBox24";
-            this.pictureBox24.Size = new System.Drawing.Size(36, 33);
+            this.pictureBox24.Size = new System.Drawing.Size(10, 10);
             this.pictureBox24.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox24.TabIndex = 50;
+            this.pictureBox24.TabIndex = 82;
             this.pictureBox24.TabStop = false;
             // 
             // pictureBox25
             // 
             this.pictureBox25.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(85)))), ((int)(((byte)(165)))));
             this.pictureBox25.Image = global::Mastermind.Properties.Resources.harmaapampula;
-            this.pictureBox25.Location = new System.Drawing.Point(139, 388);
+            this.pictureBox25.Location = new System.Drawing.Point(373, 304);
             this.pictureBox25.Name = "pictureBox25";
-            this.pictureBox25.Size = new System.Drawing.Size(36, 33);
+            this.pictureBox25.Size = new System.Drawing.Size(10, 10);
             this.pictureBox25.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox25.TabIndex = 49;
+            this.pictureBox25.TabIndex = 81;
             this.pictureBox25.TabStop = false;
             // 
             // pictureBox26
             // 
             this.pictureBox26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(85)))), ((int)(((byte)(165)))));
             this.pictureBox26.Image = global::Mastermind.Properties.Resources.harmaapampula;
-            this.pictureBox26.Location = new System.Drawing.Point(310, 433);
+            this.pictureBox26.Location = new System.Drawing.Point(414, 278);
             this.pictureBox26.Name = "pictureBox26";
-            this.pictureBox26.Size = new System.Drawing.Size(36, 33);
+            this.pictureBox26.Size = new System.Drawing.Size(10, 10);
             this.pictureBox26.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox26.TabIndex = 56;
+            this.pictureBox26.TabIndex = 80;
             this.pictureBox26.TabStop = false;
             // 
             // pictureBox27
             // 
             this.pictureBox27.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(85)))), ((int)(((byte)(165)))));
             this.pictureBox27.Image = global::Mastermind.Properties.Resources.harmaapampula;
-            this.pictureBox27.Location = new System.Drawing.Point(254, 433);
+            this.pictureBox27.Location = new System.Drawing.Point(373, 279);
             this.pictureBox27.Name = "pictureBox27";
-            this.pictureBox27.Size = new System.Drawing.Size(36, 33);
+            this.pictureBox27.Size = new System.Drawing.Size(10, 10);
             this.pictureBox27.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox27.TabIndex = 55;
+            this.pictureBox27.TabIndex = 79;
             this.pictureBox27.TabStop = false;
             // 
             // pictureBox28
             // 
             this.pictureBox28.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(85)))), ((int)(((byte)(165)))));
             this.pictureBox28.Image = global::Mastermind.Properties.Resources.harmaapampula;
-            this.pictureBox28.Location = new System.Drawing.Point(196, 433);
+            this.pictureBox28.Location = new System.Drawing.Point(414, 259);
             this.pictureBox28.Name = "pictureBox28";
-            this.pictureBox28.Size = new System.Drawing.Size(36, 33);
+            this.pictureBox28.Size = new System.Drawing.Size(10, 10);
             this.pictureBox28.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox28.TabIndex = 54;
+            this.pictureBox28.TabIndex = 78;
             this.pictureBox28.TabStop = false;
             // 
             // pictureBox29
             // 
             this.pictureBox29.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(85)))), ((int)(((byte)(165)))));
             this.pictureBox29.Image = global::Mastermind.Properties.Resources.harmaapampula;
-            this.pictureBox29.Location = new System.Drawing.Point(139, 433);
+            this.pictureBox29.Location = new System.Drawing.Point(373, 260);
             this.pictureBox29.Name = "pictureBox29";
-            this.pictureBox29.Size = new System.Drawing.Size(36, 33);
+            this.pictureBox29.Size = new System.Drawing.Size(10, 10);
             this.pictureBox29.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox29.TabIndex = 53;
+            this.pictureBox29.TabIndex = 77;
             this.pictureBox29.TabStop = false;
             // 
             // pictureBox30
             // 
             this.pictureBox30.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(85)))), ((int)(((byte)(165)))));
             this.pictureBox30.Image = global::Mastermind.Properties.Resources.harmaapampula;
-            this.pictureBox30.Location = new System.Drawing.Point(310, 478);
+            this.pictureBox30.Location = new System.Drawing.Point(414, 234);
             this.pictureBox30.Name = "pictureBox30";
-            this.pictureBox30.Size = new System.Drawing.Size(36, 33);
+            this.pictureBox30.Size = new System.Drawing.Size(10, 10);
             this.pictureBox30.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox30.TabIndex = 60;
+            this.pictureBox30.TabIndex = 76;
             this.pictureBox30.TabStop = false;
             // 
             // pictureBox31
             // 
             this.pictureBox31.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(85)))), ((int)(((byte)(165)))));
             this.pictureBox31.Image = global::Mastermind.Properties.Resources.harmaapampula;
-            this.pictureBox31.Location = new System.Drawing.Point(254, 478);
+            this.pictureBox31.Location = new System.Drawing.Point(373, 234);
             this.pictureBox31.Name = "pictureBox31";
-            this.pictureBox31.Size = new System.Drawing.Size(36, 33);
+            this.pictureBox31.Size = new System.Drawing.Size(10, 10);
             this.pictureBox31.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox31.TabIndex = 59;
+            this.pictureBox31.TabIndex = 75;
             this.pictureBox31.TabStop = false;
             // 
             // pictureBox32
             // 
             this.pictureBox32.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(85)))), ((int)(((byte)(165)))));
             this.pictureBox32.Image = global::Mastermind.Properties.Resources.harmaapampula;
-            this.pictureBox32.Location = new System.Drawing.Point(196, 478);
+            this.pictureBox32.Location = new System.Drawing.Point(414, 217);
             this.pictureBox32.Name = "pictureBox32";
-            this.pictureBox32.Size = new System.Drawing.Size(36, 33);
+            this.pictureBox32.Size = new System.Drawing.Size(10, 10);
             this.pictureBox32.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox32.TabIndex = 58;
+            this.pictureBox32.TabIndex = 74;
             this.pictureBox32.TabStop = false;
             // 
             // pictureBox33
             // 
             this.pictureBox33.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(85)))), ((int)(((byte)(165)))));
             this.pictureBox33.Image = global::Mastermind.Properties.Resources.harmaapampula;
-            this.pictureBox33.Location = new System.Drawing.Point(139, 478);
+            this.pictureBox33.Location = new System.Drawing.Point(373, 217);
             this.pictureBox33.Name = "pictureBox33";
-            this.pictureBox33.Size = new System.Drawing.Size(36, 33);
+            this.pictureBox33.Size = new System.Drawing.Size(10, 10);
             this.pictureBox33.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox33.TabIndex = 57;
+            this.pictureBox33.TabIndex = 73;
             this.pictureBox33.TabStop = false;
             // 
             // pictureBox34
             // 
             this.pictureBox34.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(85)))), ((int)(((byte)(165)))));
             this.pictureBox34.Image = global::Mastermind.Properties.Resources.harmaapampula;
-            this.pictureBox34.Location = new System.Drawing.Point(310, 523);
+            this.pictureBox34.Location = new System.Drawing.Point(414, 173);
             this.pictureBox34.Name = "pictureBox34";
-            this.pictureBox34.Size = new System.Drawing.Size(36, 33);
+            this.pictureBox34.Size = new System.Drawing.Size(10, 10);
             this.pictureBox34.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox34.TabIndex = 64;
+            this.pictureBox34.TabIndex = 72;
             this.pictureBox34.TabStop = false;
             // 
             // pictureBox35
             // 
             this.pictureBox35.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(85)))), ((int)(((byte)(165)))));
             this.pictureBox35.Image = global::Mastermind.Properties.Resources.harmaapampula;
-            this.pictureBox35.Location = new System.Drawing.Point(254, 523);
+            this.pictureBox35.Location = new System.Drawing.Point(373, 173);
             this.pictureBox35.Name = "pictureBox35";
-            this.pictureBox35.Size = new System.Drawing.Size(36, 33);
+            this.pictureBox35.Size = new System.Drawing.Size(10, 10);
             this.pictureBox35.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox35.TabIndex = 63;
+            this.pictureBox35.TabIndex = 71;
             this.pictureBox35.TabStop = false;
             // 
             // pictureBox36
             // 
             this.pictureBox36.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(85)))), ((int)(((byte)(165)))));
             this.pictureBox36.Image = global::Mastermind.Properties.Resources.harmaapampula;
-            this.pictureBox36.Location = new System.Drawing.Point(196, 523);
+            this.pictureBox36.Location = new System.Drawing.Point(414, 191);
             this.pictureBox36.Name = "pictureBox36";
-            this.pictureBox36.Size = new System.Drawing.Size(36, 33);
+            this.pictureBox36.Size = new System.Drawing.Size(10, 10);
             this.pictureBox36.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox36.TabIndex = 62;
+            this.pictureBox36.TabIndex = 70;
             this.pictureBox36.TabStop = false;
             // 
             // pictureBox37
             // 
             this.pictureBox37.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(85)))), ((int)(((byte)(165)))));
             this.pictureBox37.Image = global::Mastermind.Properties.Resources.harmaapampula;
-            this.pictureBox37.Location = new System.Drawing.Point(139, 523);
+            this.pictureBox37.Location = new System.Drawing.Point(373, 190);
             this.pictureBox37.Name = "pictureBox37";
-            this.pictureBox37.Size = new System.Drawing.Size(36, 33);
+            this.pictureBox37.Size = new System.Drawing.Size(10, 10);
             this.pictureBox37.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox37.TabIndex = 61;
+            this.pictureBox37.TabIndex = 69;
             this.pictureBox37.TabStop = false;
+            // 
+            // pictureBox38
+            // 
+            this.pictureBox38.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(85)))), ((int)(((byte)(165)))));
+            this.pictureBox38.Image = global::Mastermind.Properties.Resources.harmaapampula;
+            this.pictureBox38.Location = new System.Drawing.Point(414, 146);
+            this.pictureBox38.Name = "pictureBox38";
+            this.pictureBox38.Size = new System.Drawing.Size(10, 10);
+            this.pictureBox38.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox38.TabIndex = 68;
+            this.pictureBox38.TabStop = false;
+            // 
+            // pictureBox39
+            // 
+            this.pictureBox39.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(85)))), ((int)(((byte)(165)))));
+            this.pictureBox39.Image = global::Mastermind.Properties.Resources.harmaapampula;
+            this.pictureBox39.Location = new System.Drawing.Point(373, 146);
+            this.pictureBox39.Name = "pictureBox39";
+            this.pictureBox39.Size = new System.Drawing.Size(10, 10);
+            this.pictureBox39.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox39.TabIndex = 67;
+            this.pictureBox39.TabStop = false;
+            // 
+            // pictureBox40
+            // 
+            this.pictureBox40.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(85)))), ((int)(((byte)(165)))));
+            this.pictureBox40.Image = global::Mastermind.Properties.Resources.harmaapampula;
+            this.pictureBox40.Location = new System.Drawing.Point(414, 128);
+            this.pictureBox40.Name = "pictureBox40";
+            this.pictureBox40.Size = new System.Drawing.Size(10, 10);
+            this.pictureBox40.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox40.TabIndex = 66;
+            this.pictureBox40.TabStop = false;
+            // 
+            // pictureBox41
+            // 
+            this.pictureBox41.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(85)))), ((int)(((byte)(165)))));
+            this.pictureBox41.Image = global::Mastermind.Properties.Resources.harmaapampula;
+            this.pictureBox41.Location = new System.Drawing.Point(373, 128);
+            this.pictureBox41.Name = "pictureBox41";
+            this.pictureBox41.Size = new System.Drawing.Size(10, 10);
+            this.pictureBox41.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox41.TabIndex = 65;
+            this.pictureBox41.TabStop = false;
             // 
             // Pelilauta
             // 
@@ -794,42 +1314,82 @@
             this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(684, 665);
-            this.Controls.Add(this.pictureBox34);
-            this.Controls.Add(this.pictureBox35);
-            this.Controls.Add(this.pictureBox36);
-            this.Controls.Add(this.pictureBox37);
-            this.Controls.Add(this.pictureBox30);
-            this.Controls.Add(this.pictureBox31);
-            this.Controls.Add(this.pictureBox32);
-            this.Controls.Add(this.pictureBox33);
-            this.Controls.Add(this.pictureBox26);
-            this.Controls.Add(this.pictureBox27);
-            this.Controls.Add(this.pictureBox28);
-            this.Controls.Add(this.pictureBox29);
-            this.Controls.Add(this.pictureBox22);
-            this.Controls.Add(this.pictureBox23);
-            this.Controls.Add(this.pictureBox24);
-            this.Controls.Add(this.pictureBox25);
-            this.Controls.Add(this.pictureBox18);
-            this.Controls.Add(this.pictureBox19);
-            this.Controls.Add(this.pictureBox20);
-            this.Controls.Add(this.pictureBox21);
-            this.Controls.Add(this.pictureBox14);
-            this.Controls.Add(this.pictureBox15);
-            this.Controls.Add(this.pictureBox16);
-            this.Controls.Add(this.pictureBox17);
-            this.Controls.Add(this.pictureBox10);
-            this.Controls.Add(this.pictureBox11);
-            this.Controls.Add(this.pictureBox12);
-            this.Controls.Add(this.pictureBox13);
-            this.Controls.Add(this.pictureBox5);
-            this.Controls.Add(this.pictureBox6);
-            this.Controls.Add(this.pictureBox7);
-            this.Controls.Add(this.pictureBox8);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox4);
+            this.Controls.Add(this.pictureBox5);
+            this.Controls.Add(this.pictureBox6);
+            this.Controls.Add(this.pictureBox7);
+            this.Controls.Add(this.pictureBox8);
+            this.Controls.Add(this.pictureBox10);
+            this.Controls.Add(this.pictureBox11);
+            this.Controls.Add(this.pictureBox12);
+            this.Controls.Add(this.pictureBox13);
+            this.Controls.Add(this.pictureBox14);
+            this.Controls.Add(this.pictureBox15);
+            this.Controls.Add(this.pictureBox16);
+            this.Controls.Add(this.pictureBox17);
+            this.Controls.Add(this.pictureBox18);
+            this.Controls.Add(this.pictureBox19);
+            this.Controls.Add(this.pictureBox20);
+            this.Controls.Add(this.pictureBox21);
+            this.Controls.Add(this.pictureBox22);
+            this.Controls.Add(this.pictureBox23);
+            this.Controls.Add(this.pictureBox24);
+            this.Controls.Add(this.pictureBox25);
+            this.Controls.Add(this.pictureBox26);
+            this.Controls.Add(this.pictureBox27);
+            this.Controls.Add(this.pictureBox28);
+            this.Controls.Add(this.pictureBox29);
+            this.Controls.Add(this.pictureBox30);
+            this.Controls.Add(this.pictureBox31);
+            this.Controls.Add(this.pictureBox32);
+            this.Controls.Add(this.pictureBox33);
+            this.Controls.Add(this.pictureBox34);
+            this.Controls.Add(this.pictureBox35);
+            this.Controls.Add(this.pictureBox36);
+            this.Controls.Add(this.pictureBox37);
+            this.Controls.Add(this.pictureBox38);
+            this.Controls.Add(this.pictureBox39);
+            this.Controls.Add(this.pictureBox40);
+            this.Controls.Add(this.pictureBox41);
+            this.Controls.Add(this.pb4R10);
+            this.Controls.Add(this.pb3R10);
+            this.Controls.Add(this.pb2R10);
+            this.Controls.Add(this.pb1R10);
+            this.Controls.Add(this.pb4R9);
+            this.Controls.Add(this.pb3R9);
+            this.Controls.Add(this.pb2R9);
+            this.Controls.Add(this.pb1R9);
+            this.Controls.Add(this.pb4R8);
+            this.Controls.Add(this.pb3R8);
+            this.Controls.Add(this.pb2R8);
+            this.Controls.Add(this.pb1R8);
+            this.Controls.Add(this.pb4R7);
+            this.Controls.Add(this.pb3R7);
+            this.Controls.Add(this.pb2R7);
+            this.Controls.Add(this.pb1R7);
+            this.Controls.Add(this.pb4R6);
+            this.Controls.Add(this.pb3R6);
+            this.Controls.Add(this.pb2R6);
+            this.Controls.Add(this.pb1R6);
+            this.Controls.Add(this.pb4R5);
+            this.Controls.Add(this.pb3R5);
+            this.Controls.Add(this.pb2R5);
+            this.Controls.Add(this.pb1R5);
+            this.Controls.Add(this.pb4R4);
+            this.Controls.Add(this.pb3R4);
+            this.Controls.Add(this.pb2R4);
+            this.Controls.Add(this.pb1R4);
+            this.Controls.Add(this.pb4R3);
+            this.Controls.Add(this.pb3R3);
+            this.Controls.Add(this.pb2R3);
+            this.Controls.Add(this.pb1R3);
+            this.Controls.Add(this.pb4R2);
+            this.Controls.Add(this.pb3R2);
+            this.Controls.Add(this.pb2R2);
+            this.Controls.Add(this.pb1R2);
             this.Controls.Add(this.btTarkista);
             this.Controls.Add(this.pbOikea4);
             this.Controls.Add(this.pbOikea3);
@@ -872,6 +1432,42 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbOikea3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbOikea2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbOikea1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb4R2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb3R2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb2R2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb1R2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb4R3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb3R3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb2R3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb1R3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb4R4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb3R4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb2R4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb1R4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb4R5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb3R5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb2R5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb1R5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb4R6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb3R6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb2R6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb1R6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb4R7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb3R7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb2R7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb1R7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb4R8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb3R8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb2R8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb1R8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb4R9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb3R9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb2R9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb1R9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb4R10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb3R10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb2R10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb1R10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -908,6 +1504,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox35)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox36)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox37)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox38)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox39)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox40)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox41)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -936,6 +1536,42 @@
         private System.Windows.Forms.PictureBox pbOikea2;
         private System.Windows.Forms.PictureBox pbOikea1;
         private System.Windows.Forms.Button btTarkista;
+        private System.Windows.Forms.PictureBox pb4R2;
+        private System.Windows.Forms.PictureBox pb3R2;
+        private System.Windows.Forms.PictureBox pb2R2;
+        private System.Windows.Forms.PictureBox pb1R2;
+        private System.Windows.Forms.PictureBox pb4R3;
+        private System.Windows.Forms.PictureBox pb3R3;
+        private System.Windows.Forms.PictureBox pb2R3;
+        private System.Windows.Forms.PictureBox pb1R3;
+        private System.Windows.Forms.PictureBox pb4R4;
+        private System.Windows.Forms.PictureBox pb3R4;
+        private System.Windows.Forms.PictureBox pb2R4;
+        private System.Windows.Forms.PictureBox pb1R4;
+        private System.Windows.Forms.PictureBox pb4R5;
+        private System.Windows.Forms.PictureBox pb3R5;
+        private System.Windows.Forms.PictureBox pb2R5;
+        private System.Windows.Forms.PictureBox pb1R5;
+        private System.Windows.Forms.PictureBox pb4R6;
+        private System.Windows.Forms.PictureBox pb3R6;
+        private System.Windows.Forms.PictureBox pb2R6;
+        private System.Windows.Forms.PictureBox pb1R6;
+        private System.Windows.Forms.PictureBox pb4R7;
+        private System.Windows.Forms.PictureBox pb3R7;
+        private System.Windows.Forms.PictureBox pb2R7;
+        private System.Windows.Forms.PictureBox pb1R7;
+        private System.Windows.Forms.PictureBox pb4R8;
+        private System.Windows.Forms.PictureBox pb3R8;
+        private System.Windows.Forms.PictureBox pb2R8;
+        private System.Windows.Forms.PictureBox pb1R8;
+        private System.Windows.Forms.PictureBox pb4R9;
+        private System.Windows.Forms.PictureBox pb3R9;
+        private System.Windows.Forms.PictureBox pb2R9;
+        private System.Windows.Forms.PictureBox pb1R9;
+        private System.Windows.Forms.PictureBox pb4R10;
+        private System.Windows.Forms.PictureBox pb3R10;
+        private System.Windows.Forms.PictureBox pb2R10;
+        private System.Windows.Forms.PictureBox pb1R10;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
@@ -972,5 +1608,9 @@
         private System.Windows.Forms.PictureBox pictureBox35;
         private System.Windows.Forms.PictureBox pictureBox36;
         private System.Windows.Forms.PictureBox pictureBox37;
+        private System.Windows.Forms.PictureBox pictureBox38;
+        private System.Windows.Forms.PictureBox pictureBox39;
+        private System.Windows.Forms.PictureBox pictureBox40;
+        private System.Windows.Forms.PictureBox pictureBox41;
     }
 }
