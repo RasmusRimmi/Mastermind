@@ -148,6 +148,14 @@ namespace Mastermind
                 }
             }
 
+            for (int i = 1; i < 10; i++)
+            {
+                for (int j = 0; j < 4; j++)
+                {
+                    Rivit[i, j].Hide();
+                }
+            }
+
             OikeaRivi();
         }
 
@@ -505,6 +513,7 @@ namespace Mastermind
                     if (Rivit[0, j].Image == pictureBoxs[j].Image)
                     {
                         Tarkistus[0, j].Image = pbPunainen.Image;
+
                     }
 
                     else if (Rivit[0, j].Image == pbOikea1.Image || Rivit[0, j].Image == pbOikea2.Image || Rivit[0, j].Image == pbOikea3.Image || Rivit[0, j].Image == pbOikea4.Image)
@@ -513,8 +522,6 @@ namespace Mastermind
                         Tarkistus[0, j].Image = Properties.Resources.valkoinenpampula;
 
                     }
-
-
 
                 }
 
