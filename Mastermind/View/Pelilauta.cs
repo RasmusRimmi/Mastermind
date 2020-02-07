@@ -323,7 +323,7 @@ namespace Mastermind
         }
         private void DragDropR6P1(object sender, DragEventArgs e)
         {
-            pb1R6.Image = (Bitmap)e.Data.GetData(DataFormats.Bitmap);
+            pb1R6.Image = (Bitmap)e.Data.GetData(DataFormats.Bitmap); 
         }
 
         private void DragDropR6P2(object sender, DragEventArgs e)
