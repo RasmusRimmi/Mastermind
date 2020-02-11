@@ -18,11 +18,11 @@ namespace Mastermind
         private Kayttajavalikko kayttajavalikko;
         string b;
         int y;
-        PictureBox[] pictureBoxs = new PictureBox[4];
+        PictureBox[] oikeaRivi = new PictureBox[4];
         PictureBox[] varit = new PictureBox[8];
         PictureBox[] rivi = new PictureBox[40];
         PictureBox[,] Rivit = new PictureBox[10,4];
-        PictureBox[,] Tarkistus = new PictureBox[1, 4];
+        PictureBox[,] Tarkistus = new PictureBox[10, 4];
 
         public Pelilauta(Kayttajavalikko kayttajavalikko)
         { 
@@ -30,10 +30,10 @@ namespace Mastermind
 
             this.kayttajavalikko = kayttajavalikko;
 
-            pictureBoxs[0] = pbOikea1;
-            pictureBoxs[1] = pbOikea2;
-            pictureBoxs[2] = pbOikea3;
-            pictureBoxs[3] = pbOikea4;
+            oikeaRivi[0] = pbOikea1;
+            oikeaRivi[1] = pbOikea2;
+            oikeaRivi[2] = pbOikea3;
+            oikeaRivi[3] = pbOikea4;
 
             varit[0] = pbKeltainen;
             varit[1] = pbOranssi;
@@ -43,14 +43,6 @@ namespace Mastermind
             varit[5] = pbTurkoosi;
             varit[6] = pbVihrea;
             varit[7] = pbVioletti;
-
-            for (int i = 0; i < 10; i++)
-            {
-                for (int j = 0; j < 4; j++)
-                {
-                   
-                }
-            }
 
             Rivit[0, 0] = pb1R1;
             Rivit[0, 1] = pb2R1;
@@ -98,42 +90,42 @@ namespace Mastermind
             Tarkistus[0, 1] = pbTark2R1;
             Tarkistus[0, 2] = pbTark3R1;
             Tarkistus[0, 3] = pbTark4R1;
-            //Tarkistus[1, 0] = pbTark1R2;
-            //Tarkistus[1, 1] = pbTark2R2;
-            //Tarkistus[1, 2] = pbTark3R2;
-            //Tarkistus[1, 3] = pbTark4R2;
-            //Tarkistus[2, 0] = pbTark1R3;
-            //Tarkistus[2, 1] = pbTark2R3;
-            //Tarkistus[2, 2] = pbTark3R3;
-            //Tarkistus[2, 3] = pbTark4R3;
-            //Tarkistus[3, 0] = pbTark1R4;
-            //Tarkistus[3, 1] = pbTark2R4;
-            //Tarkistus[3, 2] = pbTark3R4;
-            //Tarkistus[3, 3] = pbTark4R4;
-            //Tarkistus[4, 0] = pbTark1R5;
-            //Tarkistus[4, 1] = pbTark2R5;
-            //Tarkistus[4, 2] = pbTark3R5;
-            //Tarkistus[4, 3] = pbTark4R5;
-            //Tarkistus[5, 0] = pbTark1R6;
-            //Tarkistus[5, 1] = pbTark2R6;
-            //Tarkistus[5, 2] = pbTark3R6;
-            //Tarkistus[5, 3] = pbTark4R6;
-            //Tarkistus[6, 0] = pbTark1R7;
-            //Tarkistus[6, 1] = pbTark2R7;
-            //Tarkistus[6, 2] = pbTark3R7;
-            //Tarkistus[6, 3] = pbTark4R7;
-            //Tarkistus[7, 0] = pbTark1R8;
-            //Tarkistus[7, 1] = pbTark2R8;
-            //Tarkistus[7, 2] = pbTark3R8;
-            //Tarkistus[7, 3] = pbTark4R8;
-            //Tarkistus[8, 0] = pbTark1R9;
-            //Tarkistus[8, 1] = pbTark2R9;
-            //Tarkistus[8, 2] = pbTark3R9;
-            //Tarkistus[8, 3] = pbTark4R9;
-            //Tarkistus[9, 0] = pbTark1R10;
-            //Tarkistus[9, 1] = pbTark2R10;
-            //Tarkistus[9, 2] = pbTark3R10;
-            //Tarkistus[9, 3] = pbTark4R10;
+            Tarkistus[1, 0] = pbTark1R2;
+            Tarkistus[1, 1] = pbTark2R2;
+            Tarkistus[1, 2] = pbTark3R2;
+            Tarkistus[1, 3] = pbTark4R2;
+            Tarkistus[2, 0] = pbTark1R3;
+            Tarkistus[2, 1] = pbTark2R3;
+            Tarkistus[2, 2] = pbTark3R3;
+            Tarkistus[2, 3] = pbTark4R3;
+            Tarkistus[3, 0] = pbTark1R4;
+            Tarkistus[3, 1] = pbTark2R4;
+            Tarkistus[3, 2] = pbTark3R4;
+            Tarkistus[3, 3] = pbTark4R4;
+            Tarkistus[4, 0] = pbTark1R5;
+            Tarkistus[4, 1] = pbTark2R5;
+            Tarkistus[4, 2] = pbTark3R5;
+            Tarkistus[4, 3] = pbTark4R5;
+            Tarkistus[5, 0] = pbTark1R6;
+            Tarkistus[5, 1] = pbTark2R6;
+            Tarkistus[5, 2] = pbTark3R6;
+            Tarkistus[5, 3] = pbTark4R6;
+            Tarkistus[6, 0] = pbTark1R7;
+            Tarkistus[6, 1] = pbTark2R7;
+            Tarkistus[6, 2] = pbTark3R7;
+            Tarkistus[6, 3] = pbTark4R7;
+            Tarkistus[7, 0] = pbTark1R8;
+            Tarkistus[7, 1] = pbTark2R8;
+            Tarkistus[7, 2] = pbTark3R8;
+            Tarkistus[7, 3] = pbTark4R8;
+            Tarkistus[8, 0] = pbTark1R9;
+            Tarkistus[8, 1] = pbTark2R9;
+            Tarkistus[8, 2] = pbTark3R9;
+            Tarkistus[8, 3] = pbTark4R9;
+            Tarkistus[9, 0] = pbTark1R10;
+            Tarkistus[9, 1] = pbTark2R10;
+            Tarkistus[9, 2] = pbTark3R10;
+            Tarkistus[9, 3] = pbTark4R10;
         }
 
         private void Pelilauta_Load(object sender, EventArgs e)
@@ -192,42 +184,42 @@ namespace Mastermind
 
                 if (vari == 1)
                 {
-                    pictureBoxs[i].Image = pbKeltainen.Image;
+                    oikeaRivi[i].Image = pbKeltainen.Image;
                 }
 
                 else if (vari == 2)
                 {
-                    pictureBoxs[i].Image = pbOranssi.Image;
+                    oikeaRivi[i].Image = pbOranssi.Image;
                 }
 
                 else if (vari == 3)
                 {
-                    pictureBoxs[i].Image = pbPinkki.Image;
+                    oikeaRivi[i].Image = pbPinkki.Image;
                 }
 
                 else if (vari == 4)
                 {
-                    pictureBoxs[i].Image = pbPunainen.Image;
+                    oikeaRivi[i].Image = pbPunainen.Image;
                 }
 
                 else if (vari == 5)
                 {
-                    pictureBoxs[i].Image = pbSininen.Image;
+                    oikeaRivi[i].Image = pbSininen.Image;
                 }
 
                 else if (vari == 6)
                 {
-                    pictureBoxs[i].Image = pbTurkoosi.Image;
+                    oikeaRivi[i].Image = pbTurkoosi.Image;
                 }
 
                 else if (vari == 7)
                 {
-                    pictureBoxs[i].Image = pbVihrea.Image;
+                    oikeaRivi[i].Image = pbVihrea.Image;
                 }
 
                 else if (vari == 8)
                 {
-                    pictureBoxs[i].Image = pbVioletti.Image;
+                    oikeaRivi[i].Image = pbVioletti.Image;
                 }
             }
 
@@ -235,22 +227,22 @@ namespace Mastermind
 
         private void DragDropR1P1(object sender, DragEventArgs e)
         {
-            pb1R1.Image = (Bitmap)e.Data.GetData(DataFormats.Bitmap);
+            Rivit[0, 0].Image = (Bitmap)e.Data.GetData(DataFormats.Bitmap);
         }
 
         private void DragDropR1P2(object sender, DragEventArgs e)
         {
-            pb2R1.Image = (Bitmap)e.Data.GetData(DataFormats.Bitmap);
+            Rivit[0, 1].Image = (Bitmap)e.Data.GetData(DataFormats.Bitmap);
         }
 
         private void DragDropR1P3(object sender, DragEventArgs e)
         {
-            pb3R1.Image = (Bitmap)e.Data.GetData(DataFormats.Bitmap);
+            Rivit[0, 2].Image = (Bitmap)e.Data.GetData(DataFormats.Bitmap);
         }
 
         private void DragDropR1P4(object sender, DragEventArgs e)
         {
-            pb4R1.Image = (Bitmap)e.Data.GetData(DataFormats.Bitmap);
+            Rivit[0, 3].Image = (Bitmap)e.Data.GetData(DataFormats.Bitmap);
         }
 
         private void DragDropR2P1(object sender, DragEventArgs e)
@@ -474,58 +466,102 @@ namespace Mastermind
 
         private void btTarkista_Click(object sender, EventArgs e)
         {
-            if (pbOikea1.Image == pb1R1.Image && pbOikea2.Image == pb2R1.Image && pbOikea3.Image == pb3R1.Image && pbOikea4.Image == pb4R1.Image)
-            {
-
-                Kayttajat user = new Kayttajat();
-                user.Haviot = y;
-
-                registerHandler.Voitot(user);
-                //Close();
-
-                lbLoppu.Text = "VOITIT";
-                lbLoppu.ForeColor = Color.Lime;
-
-                pbTark1R1.Image = pbPunainen.Image;
-                pbTark2R1.Image = pbPunainen.Image;
-                pbTark3R1.Image = pbPunainen.Image;
-                pbTark4R1.Image = pbPunainen.Image;
-            }
-
             
-            //else if (pb1R1.Image == pbOikea1.Image || pb1R1.Image == pbOikea2.Image || pb1R1.Image == pbOikea3.Image || pb1R1.Image == pbOikea4.Image)
-            //{
-            //    pbTark1R1.Image = Properties.Resources.valkoinenpampula;
-            //}
 
-            else
+            for (int i = 0; i < 2; i++)
             {
-                //lbLoppu.Text = "HÄVISIT";
-                //lbLoppu.ForeColor = Color.Red;
-
-                //Kayttajat user = new Kayttajat();
-                //user.Haviot = y;
-
-                //registerHandler.Haviot(user);
-
-                for (int j = 0; j < 4; j++)
+                if (oikeaRivi[0].Image == Rivit[i, 0].Image && oikeaRivi[1].Image == Rivit[i, 1].Image && oikeaRivi[2].Image == Rivit[i, 2].Image && oikeaRivi[3].Image == Rivit[i, 3].Image)
                 {
-                    if (Rivit[0, j].Image == pictureBoxs[j].Image)
+                    Kayttajat user = new Kayttajat();
+                    user.Haviot = y;
+
+                    registerHandler.Voitot(user);
+                    //Close();
+
+                    lbLoppu.Text = "VOITIT";
+                    lbLoppu.ForeColor = Color.Lime;
+
+                    Tarkistus[i,0].Image = pbPunainen.Image;
+                    Tarkistus[i,1].Image = pbPunainen.Image;
+                    Tarkistus[i,2].Image = pbPunainen.Image;
+                    Tarkistus[i,3].Image = pbPunainen.Image;
+                }
+
+                else
+                {
+                    for (int k = 0; k < 4; k++)
                     {
-                        Tarkistus[0, j].Image = pbPunainen.Image;
+                        if (Rivit[i, k].Image == oikeaRivi[0].Image || Rivit[i, k].Image == oikeaRivi[1].Image || Rivit[i, k].Image == oikeaRivi[2].Image || Rivit[i, k].Image == oikeaRivi[3].Image)
+                        {
+                            Tarkistus[0, k].Image = Properties.Resources.valkoinenpampula;
 
-                    }
+                            if (Rivit[i, 0].Image == oikeaRivi[0].Image)
+                            {
+                                Tarkistus[i, 0].Image = pbPunainen.Image;
+                            }
 
-                    else if (Rivit[0, j].Image == pbOikea1.Image || Rivit[0, j].Image == pbOikea2.Image || Rivit[0, j].Image == pbOikea3.Image || Rivit[0, j].Image == pbOikea4.Image)
-                    {
+                            if (Rivit[i, 1].Image == oikeaRivi[1].Image)
+                            {
+                                Tarkistus[i, 1].Image = pbPunainen.Image;
+                            }
 
-                        Tarkistus[0, j].Image = Properties.Resources.valkoinenpampula;
+                            if (Rivit[i, 2].Image == oikeaRivi[2].Image)
+                            {
+                                Tarkistus[i, 2].Image = pbPunainen.Image;
+                            }
 
+                            if (Rivit[i, 3].Image == oikeaRivi[3].Image)
+                            {
+                                Tarkistus[i, 3].Image = pbPunainen.Image;
+                            }
+                      
+                        }
+
+                        for (int l = 0; l < 4; l++)
+                        {
+                            Rivit[0, l].AllowDrop = false;
+                        }
+                        
+                        Rivit[i, k].Show();
                     }
 
                 }
 
+                //ekan rivin eka pallo
+               
+
             }
+            
+            
+
+            //else
+            //{
+            //    lbLoppu.Text = "HÄVISIT";
+            //    lbLoppu.ForeColor = Color.Red;
+
+            //    Kayttajat user = new Kayttajat();
+            //    user.Haviot = y;
+
+            //    registerHandler.Haviot(user);
+
+            //    for (int j = 0; j < 4; j++)
+            //    {
+            //        if (Rivit[0, j].Image == pictureBoxs[j].Image)
+            //        {
+            //            Tarkistus[0, j].Image = pbPunainen.Image;
+
+            //        }
+
+            //        else if (Rivit[0, j].Image == pbOikea1.Image || Rivit[0, j].Image == pbOikea2.Image || Rivit[0, j].Image == pbOikea3.Image || Rivit[0, j].Image == pbOikea4.Image)
+            //        {
+
+            //            Tarkistus[0, j].Image = Properties.Resources.valkoinenpampula;
+
+            //        }
+
+            //    }
+
+            //}
 
         }
 
