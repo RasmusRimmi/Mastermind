@@ -41,7 +41,7 @@
             this.pbTurkoosi = new System.Windows.Forms.PictureBox();
             this.pbSininen = new System.Windows.Forms.PictureBox();
             this.pbPunainen = new System.Windows.Forms.PictureBox();
-            this.pbPinkki = new System.Windows.Forms.PictureBox();
+            this.pbValkoinen = new System.Windows.Forms.PictureBox();
             this.pbOranssi = new System.Windows.Forms.PictureBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.pbOikea4 = new System.Windows.Forms.PictureBox();
@@ -136,7 +136,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbTurkoosi)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbSininen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbPunainen)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbPinkki)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbValkoinen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbOranssi)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbOikea4)).BeginInit();
@@ -380,16 +380,16 @@
             this.pbPunainen.TabStop = false;
             this.pbPunainen.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Siirra4);
             // 
-            // pbPinkki
+            // pbValkoinen
             // 
-            this.pbPinkki.Image = global::Mastermind.Properties.Resources.pinkkipampula;
-            this.pbPinkki.Location = new System.Drawing.Point(580, 222);
-            this.pbPinkki.Name = "pbPinkki";
-            this.pbPinkki.Size = new System.Drawing.Size(36, 33);
-            this.pbPinkki.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbPinkki.TabIndex = 21;
-            this.pbPinkki.TabStop = false;
-            this.pbPinkki.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Siirra3);
+            this.pbValkoinen.Image = global::Mastermind.Properties.Resources.valkoinenpampula;
+            this.pbValkoinen.Location = new System.Drawing.Point(580, 222);
+            this.pbValkoinen.Name = "pbValkoinen";
+            this.pbValkoinen.Size = new System.Drawing.Size(36, 33);
+            this.pbValkoinen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbValkoinen.TabIndex = 21;
+            this.pbValkoinen.TabStop = false;
+            this.pbValkoinen.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Siirra3);
             // 
             // pbOranssi
             // 
@@ -1484,7 +1484,7 @@
             this.Controls.Add(this.pbKeltainen);
             this.Controls.Add(this.pb4R1);
             this.Controls.Add(this.pbOranssi);
-            this.Controls.Add(this.pbPinkki);
+            this.Controls.Add(this.pbValkoinen);
             this.Controls.Add(this.pbPunainen);
             this.Controls.Add(this.pbSininen);
             this.Controls.Add(this.pbTurkoosi);
@@ -1511,7 +1511,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbTurkoosi)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbSininen)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbPunainen)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbPinkki)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbValkoinen)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbOranssi)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbOikea4)).EndInit();
@@ -1614,7 +1614,7 @@
         private System.Windows.Forms.PictureBox pbTurkoosi;
         private System.Windows.Forms.PictureBox pbSininen;
         private System.Windows.Forms.PictureBox pbPunainen;
-        private System.Windows.Forms.PictureBox pbPinkki;
+        private System.Windows.Forms.PictureBox pbValkoinen;
         private System.Windows.Forms.PictureBox pbOranssi;
         private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.PictureBox pbOikea4;

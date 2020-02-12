@@ -26,7 +26,6 @@ namespace Mastermind
         List<PictureBox> variLista = new List<PictureBox>();
 
         int i = 0;
-        int j = 0;
 
         public Pelilauta(Kayttajavalikko kayttajavalikko)
         { 
@@ -41,7 +40,7 @@ namespace Mastermind
 
             varit[0] = pbKeltainen;
             varit[1] = pbOranssi;
-            varit[2] = pbPinkki;
+            varit[2] = pbValkoinen;
             varit[3] = pbPunainen;
             varit[4] = pbSininen;
             varit[5] = pbTurkoosi;
@@ -459,8 +458,8 @@ namespace Mastermind
         }
         private void Siirra3(object sender, MouseEventArgs e)
         {
-            pbPinkki.DoDragDrop(pbPinkki.Image, DragDropEffects.Copy);
-            this.pbPinkki.Visible = true;
+            pbValkoinen.DoDragDrop(pbValkoinen.Image, DragDropEffects.Copy);
+            this.pbValkoinen.Visible = true;
         }
         private void Siirra4(object sender, MouseEventArgs e)
         {
@@ -512,33 +511,123 @@ namespace Mastermind
             {
                 for (int k = 0; k < 4; k++)
                 {
-                    if (Rivit[i, k].Image == oikeaRivi[0].Image || Rivit[i, k].Image == oikeaRivi[1].Image || Rivit[i, k].Image == oikeaRivi[2].Image || Rivit[i, k].Image == oikeaRivi[3].Image)
+                    if (Rivit[i, k].Image == oikeaRivi[k].Image)
                     {
-
-                        Tarkistus[i, k].Image = Properties.Resources.valkoinenpampula;
-
-                        if (Rivit[i, 0].Image == oikeaRivi[0].Image)
+                        if (Tarkistus[i, 0].Image != pbPunainen.Image)
                         {
                             Tarkistus[i, 0].Image = pbPunainen.Image;
                         }
 
-                        if (Rivit[i, 1].Image == oikeaRivi[1].Image)
+                        else if (Tarkistus[i, 1].Image != pbPunainen.Image)
                         {
                             Tarkistus[i, 1].Image = pbPunainen.Image;
                         }
 
-                        if (Rivit[i, 2].Image == oikeaRivi[2].Image)
+                        else if (Tarkistus[i, 2].Image != pbPunainen.Image)
                         {
                             Tarkistus[i, 2].Image = pbPunainen.Image;
                         }
 
-                        if (Rivit[i, 3].Image == oikeaRivi[3].Image)
+                        else
                         {
                             Tarkistus[i, 3].Image = pbPunainen.Image;
                         }
+                    }
 
+                    if (Rivit[i, k].Image != oikeaRivi[k].Image && (Rivit[i, k].Image == oikeaRivi[1].Image || Rivit[i, k].Image == oikeaRivi[2].Image || Rivit[i, k].Image == oikeaRivi[3].Image))
+                    {
+                        if (Tarkistus[i, 0].Image != pbValkoinen.Image && Tarkistus[i, 0].Image != pbPunainen.Image)
+                        {
+                            Tarkistus[i, 0].Image = pbValkoinen.Image;
+                        }
+
+                        else if (Tarkistus[i, 1].Image != pbValkoinen.Image && Tarkistus[i, 1].Image != pbPunainen.Image)
+                        {
+                            Tarkistus[i, 1].Image = pbValkoinen.Image;
+                        }
+
+                        else if (Tarkistus[i, 2].Image != pbValkoinen.Image && Tarkistus[i, 2].Image != pbPunainen.Image)
+                        {
+                            Tarkistus[i, 2].Image = pbValkoinen.Image;
+                        }
+
+                        else if (Tarkistus[i, 3].Image != pbValkoinen.Image && Tarkistus[i, 3].Image != pbPunainen.Image)
+                        {
+                            Tarkistus[i, 3].Image = pbValkoinen.Image;
+                        }
 
                     }
+
+                    //if (Rivit[i, 1].Image == oikeaRivi[0].Image || Rivit[i, 1].Image == oikeaRivi[2].Image || Rivit[i, 1].Image == oikeaRivi[3].Image)
+                    //{
+                    //    if (Tarkistus[i, 0].Image != pbValkoinen.Image && Tarkistus[i, 0].Image != pbPunainen.Image)
+                    //    {
+                    //        Tarkistus[i, 0].Image = pbValkoinen.Image;
+                    //    }
+
+                    //    else if (Tarkistus[i, 1].Image != pbValkoinen.Image && Tarkistus[i, 1].Image != pbPunainen.Image)
+                    //    {
+                    //        Tarkistus[i, 1].Image = pbValkoinen.Image;
+                    //    }
+
+                    //    else if (Tarkistus[i, 2].Image != pbValkoinen.Image && Tarkistus[i, 2].Image != pbPunainen.Image)
+                    //    {
+                    //        Tarkistus[i, 2].Image = pbValkoinen.Image;
+                    //    }
+
+                    //    else if (Tarkistus[i, 3].Image != pbValkoinen.Image && Tarkistus[i, 3].Image != pbPunainen.Image)
+                    //    {
+                    //        Tarkistus[i, 3].Image = pbValkoinen.Image;
+                    //    }
+
+                    //}
+
+                    //if (Rivit[i, 2].Image == oikeaRivi[0].Image || Rivit[i, 2].Image == oikeaRivi[1].Image || Rivit[i, 2].Image == oikeaRivi[3].Image)
+                    //{
+                    //    if (Tarkistus[i, 0].Image != pbValkoinen.Image && Tarkistus[i, 0].Image != pbPunainen.Image)
+                    //    {
+                    //        Tarkistus[i, 0].Image = pbValkoinen.Image;
+                    //    }
+
+                    //    else if (Tarkistus[i, 1].Image != pbValkoinen.Image && Tarkistus[i, 1].Image != pbPunainen.Image)
+                    //    {
+                    //        Tarkistus[i, 1].Image = pbValkoinen.Image;
+                    //    }
+
+                    //    else if (Tarkistus[i, 2].Image != pbValkoinen.Image && Tarkistus[i, 2].Image != pbPunainen.Image)
+                    //    {
+                    //        Tarkistus[i, 2].Image = pbValkoinen.Image;
+                    //    }
+
+                    //    else if (Tarkistus[i, 3].Image != pbValkoinen.Image && Tarkistus[i, 3].Image != pbPunainen.Image)
+                    //    {
+                    //        Tarkistus[i, 3].Image = pbValkoinen.Image;
+                    //    }
+                    //}
+
+                    //if (Rivit[i, 3].Image == oikeaRivi[0].Image || Rivit[i, 3].Image == oikeaRivi[1].Image || Rivit[i, 3].Image == oikeaRivi[2].Image)
+                    //{
+                    //    if (Tarkistus[i, 0].Image != pbValkoinen.Image && Tarkistus[i, 0].Image != pbPunainen.Image)
+                    //    {
+                    //        Tarkistus[i, 0].Image = pbValkoinen.Image;
+                    //    }
+
+                    //    else if (Tarkistus[i, 1].Image != pbValkoinen.Image && Tarkistus[i, 1].Image != pbPunainen.Image)
+                    //    {
+                    //        Tarkistus[i, 1].Image = pbValkoinen.Image;
+                    //    }
+
+                    //    else if (Tarkistus[i, 2].Image != pbValkoinen.Image && Tarkistus[i, 2].Image != pbPunainen.Image)
+                    //    {
+                    //        Tarkistus[i, 2].Image = pbValkoinen.Image;
+                    //    }
+
+                    //    else if (Tarkistus[i, 3].Image != pbValkoinen.Image && Tarkistus[i, 3].Image != pbPunainen.Image)
+                    //    {
+                    //        Tarkistus[i, 3].Image = pbValkoinen.Image;
+                    //    }
+                    //}
+
 
                     for (int l = 0; l < 4; l++)
                     {
@@ -554,7 +643,7 @@ namespace Mastermind
 
             }
 
-            if (i + 1 > 9)
+            if (i + 1 > 9 && (oikeaRivi[0].Image != Rivit[i, 0].Image || oikeaRivi[1].Image != Rivit[i, 1].Image || oikeaRivi[2].Image != Rivit[i, 2].Image || oikeaRivi[3].Image != Rivit[i, 3].Image))
             {
                 lbLoppu.Text = "HÄVISIT";
                 lbLoppu.ForeColor = Color.Red;
@@ -566,9 +655,11 @@ namespace Mastermind
             }
                
             i++;
-            j++;
         }
 
 
     }
+
+
+
 }
