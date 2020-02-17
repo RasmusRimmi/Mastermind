@@ -23,6 +23,10 @@ namespace Mastermind
         PictureBox[,] Rivit = new PictureBox[10,4];
         PictureBox[,] Tarkistus = new PictureBox[10, 4];
         List<PictureBox> variLista = new List<PictureBox>();
+        bool eka;
+        bool toka;
+        bool kolmas;
+        bool nelhas;
 
         int i = 0;
 
@@ -489,6 +493,11 @@ namespace Mastermind
         private void btTarkista_Click(object sender, EventArgs e)
         {
 
+            eka = false;
+            toka = false;
+            kolmas = false;
+            nelhas = false;
+
             if (oikeaRivi[0].Image == Rivit[i, 0].Image && oikeaRivi[1].Image == Rivit[i, 1].Image && oikeaRivi[2].Image == Rivit[i, 2].Image && oikeaRivi[3].Image == Rivit[i, 3].Image)
             {
                 Kayttajat user = new Kayttajat();
@@ -510,7 +519,7 @@ namespace Mastermind
             {
                 for (int k = 0; k < 4; k++)
                 {
-
+                    
                     if (Rivit[i, k].Image == oikeaRivi[k].Image)
                     {
                         if (Tarkistus[i, 0].Image != pbPunainen.Image)
@@ -529,157 +538,167 @@ namespace Mastermind
                         }
                     }
 
-                    if (Rivit[i, 0].Image == oikeaRivi[1].Image || Rivit[i, 0].Image == oikeaRivi[2].Image || Rivit[i, 0].Image == oikeaRivi[3].Image)
-                    {
-                        if ((Rivit[i, 0].Image == oikeaRivi[1].Image && Rivit[i, 1].Image == oikeaRivi[1].Image) || (Rivit[i, 0].Image == oikeaRivi[2].Image && Rivit[i, 2].Image == oikeaRivi[2].Image) || (Rivit[i, 0].Image == oikeaRivi[3].Image && Rivit[i, 3].Image == oikeaRivi[3].Image))
-                        {
-
-                        }
-
-                        else if ((Rivit[i, 0].Image == oikeaRivi[1].Image || Rivit[i, 0].Image == oikeaRivi[2].Image || Rivit[i, 0].Image == oikeaRivi[3].Image) && Tarkistus[i, 0].Image != pbValkoinen.Image && Tarkistus[i, 0].Image != pbPunainen.Image)
-                        {
-                            Tarkistus[i, 0].Image = pbValkoinen.Image;
-                        }
-
-                        else if ((Rivit[i, 0].Image == oikeaRivi[1].Image || Rivit[i, 0].Image == oikeaRivi[2].Image || Rivit[i, 0].Image == oikeaRivi[3].Image) && Tarkistus[i, 1].Image != pbValkoinen.Image && Tarkistus[i, 1].Image != pbPunainen.Image)
-                        {
-                            Tarkistus[i, 1].Image = pbValkoinen.Image;
-                        }
-
-                        else if ((Rivit[i, 0].Image == oikeaRivi[1].Image || Rivit[i, 0].Image == oikeaRivi[2].Image || Rivit[i, 0].Image == oikeaRivi[3].Image) && Tarkistus[i, 2].Image != pbValkoinen.Image && Tarkistus[i, 2].Image != pbPunainen.Image)
-                        {
-                            Tarkistus[i, 2].Image = pbValkoinen.Image;
-                        }
-
-                        else
-                        {
-                            Tarkistus[i, 3].Image = pbValkoinen.Image;
-                        }
-
-                    }
-
-                    else
-                    {
-
-                    }
-
-                    if (Rivit[i, 1].Image == oikeaRivi[0].Image || Rivit[i, 1].Image == oikeaRivi[2].Image || Rivit[i, 1].Image == oikeaRivi[3].Image)
-                    {
-                        if ((Rivit[i, 1].Image == oikeaRivi[0].Image && Rivit[i, 0].Image == oikeaRivi[0].Image) || (Rivit[i, 1].Image == oikeaRivi[2].Image && Rivit[i, 2].Image == oikeaRivi[2].Image) || (Rivit[i, 1].Image == oikeaRivi[3].Image && Rivit[i, 3].Image == oikeaRivi[3].Image))
-                        {
-
-                        }
-
-                        else if ((Rivit[i, 1].Image == oikeaRivi[0].Image || Rivit[i, 1].Image == oikeaRivi[2].Image || Rivit[i, 1].Image == oikeaRivi[3].Image) && Tarkistus[i, 0].Image != pbValkoinen.Image && Tarkistus[i, 0].Image != pbPunainen.Image)
-                        {
-                            Tarkistus[i, 0].Image = pbValkoinen.Image;
-                        }
-
-                        else if ((Rivit[i, 1].Image == oikeaRivi[0].Image || Rivit[i, 1].Image == oikeaRivi[2].Image || Rivit[i, 1].Image == oikeaRivi[3].Image) && Tarkistus[i, 0].Image == pbValkoinen.Image || Tarkistus[i, 0].Image == pbPunainen.Image)
-                        {
-                            Tarkistus[i, 1].Image = pbValkoinen.Image;
-                        }
-
-                        else if ((Rivit[i, 1].Image == oikeaRivi[0].Image || Rivit[i, 1].Image == oikeaRivi[2].Image || Rivit[i, 1].Image == oikeaRivi[3].Image) && Tarkistus[i, 1].Image == pbValkoinen.Image || Tarkistus[i, 1].Image == pbPunainen.Image)
-                        {
-                            Tarkistus[i, 2].Image = pbValkoinen.Image;
-                        }
-
-                        else
-                        {
-                            Tarkistus[i, 3].Image = pbValkoinen.Image;
-                        }
-                    }
-
-                    else
-                    {
-
-                    }
-
-                    if (Rivit[i, 2].Image == oikeaRivi[0].Image || Rivit[i, 2].Image == oikeaRivi[1].Image || Rivit[i, 2].Image == oikeaRivi[3].Image)
-                    {
-                        if ((Rivit[i, 2].Image == oikeaRivi[0].Image && Rivit[i, 0].Image == oikeaRivi[0].Image) || (Rivit[i, 2].Image == oikeaRivi[1].Image && Rivit[i, 1].Image == oikeaRivi[1].Image) || (Rivit[i, 2].Image == oikeaRivi[3].Image && Rivit[i, 3].Image == oikeaRivi[3].Image))
-                        {
-
-                        }
-
-                        else if ((Rivit[i, 2].Image == oikeaRivi[0].Image || Rivit[i, 2].Image == oikeaRivi[1].Image || Rivit[i, 2].Image == oikeaRivi[3].Image) && Tarkistus[i, 0].Image != pbValkoinen.Image && Tarkistus[i, 0].Image != pbPunainen.Image)
-                        {
-                            Tarkistus[i, 0].Image = pbValkoinen.Image;
-                        }
-
-                        else if ((Rivit[i, 2].Image == oikeaRivi[0].Image || Rivit[i, 2].Image == oikeaRivi[1].Image || Rivit[i, 2].Image == oikeaRivi[3].Image) && Tarkistus[i, 0].Image == pbValkoinen.Image || Tarkistus[i, 0].Image == pbPunainen.Image)
-                        {
-                            Tarkistus[i, 1].Image = pbValkoinen.Image;
-                        }
-
-                        else if ((Rivit[i, 2].Image == oikeaRivi[0].Image || Rivit[i, 2].Image == oikeaRivi[1].Image || Rivit[i, 2].Image == oikeaRivi[3].Image) && Tarkistus[i, 1].Image == pbValkoinen.Image || Tarkistus[i, 1].Image == pbPunainen.Image)
-                        {
-                            Tarkistus[i, 2].Image = pbValkoinen.Image;
-                        }
-
-                        else
-                        {
-                            Tarkistus[i, 3].Image = pbValkoinen.Image;
-                        }
-                    }
-
-                    else
-                    {
-
-                    }
-
-                    if (Rivit[i, 3].Image == oikeaRivi[0].Image || Rivit[i, 3].Image == oikeaRivi[1].Image || Rivit[i, 3].Image == oikeaRivi[2].Image)
-                    {
-                        if ((Rivit[i, 3].Image == oikeaRivi[0].Image && Rivit[i, 0].Image == oikeaRivi[0].Image) || (Rivit[i, 3].Image == oikeaRivi[1].Image && Rivit[i, 1].Image == oikeaRivi[1].Image) || (Rivit[i, 3].Image == oikeaRivi[2].Image && Rivit[i, 2].Image == oikeaRivi[2].Image))
-                        {
-
-                        }
-
-                        else if ((Rivit[i, 3].Image == oikeaRivi[0].Image || Rivit[i, 3].Image == oikeaRivi[1].Image || Rivit[i, 3].Image == oikeaRivi[2].Image) && Tarkistus[i, 0].Image != pbValkoinen.Image && Tarkistus[i, 0].Image != pbPunainen.Image)
-                        {
-                            Tarkistus[i, 0].Image = pbValkoinen.Image;
-                        }
-
-                        else if ((Rivit[i, 3].Image == oikeaRivi[0].Image || Rivit[i, 3].Image == oikeaRivi[1].Image || Rivit[i, 3].Image == oikeaRivi[2].Image) && Tarkistus[i, 1].Image != pbValkoinen.Image && Tarkistus[i, 1].Image != pbPunainen.Image)
-                        {
-                            Tarkistus[i, 1].Image = pbValkoinen.Image;
-                        }
-
-                        else if ((Rivit[i, 3].Image == oikeaRivi[0].Image || Rivit[i, 3].Image == oikeaRivi[1].Image || Rivit[i, 3].Image == oikeaRivi[2].Image) && Tarkistus[i, 2].Image != pbValkoinen.Image && Tarkistus[i, 2].Image != pbPunainen.Image)
-                        {
-                            Tarkistus[i, 2].Image = pbValkoinen.Image;
-                        }
-
-                        //else if ((Rivit[i, 3].Image == oikeaRivi[0].Image || Rivit[i, 3].Image == oikeaRivi[1].Image || Rivit[i, 3].Image == oikeaRivi[2].Image) && Tarkistus[i, 3].Image != pbValkoinen.Image && Tarkistus[i, 3].Image != pbPunainen.Image)
-                        //{
-                        //    Tarkistus[i, 3].Image = pbValkoinen.Image;
-                        //}
-
-                        else
-                        {
-                            Tarkistus[i, 3].Image = pbValkoinen.Image;
-                        }
-
-                    }
-
-                    else
-                    {
-
-                    }
-
-                    for (int l = 0; l < 4; l++)
-                    {
-                        Rivit[i, l].AllowDrop = false;
-                    }
-
                     if (i < 9)
                     {
-                        Rivit[i+1, k].Show();
+                        Rivit[i + 1, k].Show();
                     }
-                    
                 }
 
+                if (Rivit[i, 0].Image == oikeaRivi[1].Image || Rivit[i, 0].Image == oikeaRivi[2].Image || Rivit[i, 0].Image == oikeaRivi[3].Image)
+                {
+
+                    if ((Rivit[i, 0].Image == oikeaRivi[1].Image && Rivit[i, 1].Image == oikeaRivi[1].Image) || (Rivit[i, 0].Image == oikeaRivi[2].Image && Rivit[i, 2].Image == oikeaRivi[2].Image) || (Rivit[i, 0].Image == oikeaRivi[3].Image && Rivit[i, 3].Image == oikeaRivi[3].Image))
+                    {
+
+                    }
+
+                    if ((Tarkistus[i, 0].Image != pbValkoinen.Image && Tarkistus[i, 0].Image != pbPunainen.Image) && (eka == false))
+                    {
+                        Tarkistus[i, 0].Image = pbValkoinen.Image;
+                        eka = true;
+                    }
+
+                    if ((Tarkistus[i, 1].Image != pbValkoinen.Image && Tarkistus[i, 1].Image != pbPunainen.Image) && (eka == false))
+                    {
+                        Tarkistus[i, 1].Image = pbValkoinen.Image;
+                        eka = true;
+                    }
+
+                    if ((Tarkistus[i, 2].Image != pbValkoinen.Image && Tarkistus[i, 2].Image != pbPunainen.Image) && (eka == false))
+                    {
+                        Tarkistus[i, 2].Image = pbValkoinen.Image;
+                        eka = true;
+                    }
+
+                    if ((Tarkistus[i, 3].Image != pbValkoinen.Image && Tarkistus[i, 3].Image != pbPunainen.Image) && (eka == false))
+                    {
+                        Tarkistus[i, 3].Image = pbValkoinen.Image;
+                        eka = true;
+                    }
+
+                }
+
+                else
+                {
+
+                }
+
+                if (Rivit[i, 1].Image == oikeaRivi[0].Image || Rivit[i, 1].Image == oikeaRivi[2].Image || Rivit[i, 1].Image == oikeaRivi[3].Image)
+                {
+                    if ((Rivit[i, 1].Image == oikeaRivi[0].Image && Rivit[i, 0].Image == oikeaRivi[0].Image) || (Rivit[i, 1].Image == oikeaRivi[2].Image && Rivit[i, 2].Image == oikeaRivi[2].Image) || (Rivit[i, 1].Image == oikeaRivi[3].Image && Rivit[i, 3].Image == oikeaRivi[3].Image))
+                    {
+
+                    }
+
+                    if ((Tarkistus[i, 0].Image != pbValkoinen.Image && Tarkistus[i, 0].Image != pbPunainen.Image) && (toka == false))
+                    {
+                        Tarkistus[i, 0].Image = pbValkoinen.Image;
+                        toka = false;
+                    }
+
+                    if ((Tarkistus[i, 1].Image != pbValkoinen.Image && Tarkistus[i, 1].Image != pbPunainen.Image) && (toka == false))
+                    {
+                        Tarkistus[i, 1].Image = pbValkoinen.Image;
+                        toka = true;
+                    }
+
+                    if ((Tarkistus[i, 1].Image == pbValkoinen.Image || Tarkistus[i, 1].Image == pbPunainen.Image) && (toka == false))
+                    {
+                        Tarkistus[i, 2].Image = pbValkoinen.Image;
+                        toka = true;
+                    }
+
+                    if ((Tarkistus[i, 3].Image != pbValkoinen.Image && Tarkistus[i, 3].Image != pbPunainen.Image) && (toka == false))
+                    {
+                        Tarkistus[i, 3].Image = pbValkoinen.Image;
+                        toka = true;
+                    }
+                }
+
+                else
+                {
+
+                }
+
+                if (Rivit[i, 2].Image == oikeaRivi[0].Image || Rivit[i, 2].Image == oikeaRivi[1].Image || Rivit[i, 2].Image == oikeaRivi[3].Image)
+                {
+                    if ((Rivit[i, 2].Image == oikeaRivi[0].Image && Rivit[i, 0].Image == oikeaRivi[0].Image) || (Rivit[i, 2].Image == oikeaRivi[1].Image && Rivit[i, 1].Image == oikeaRivi[1].Image) || (Rivit[i, 2].Image == oikeaRivi[3].Image && Rivit[i, 3].Image == oikeaRivi[3].Image))
+                    {
+
+                    }
+
+                    if ((Tarkistus[i, 0].Image != pbValkoinen.Image && Tarkistus[i, 0].Image != pbPunainen.Image) && (kolmas == false))
+                    {
+                        Tarkistus[i, 0].Image = pbValkoinen.Image;
+                        kolmas = true;
+                    }
+
+                    if ((Tarkistus[i, 1].Image != pbValkoinen.Image && Tarkistus[i, 1].Image != pbPunainen.Image) && (kolmas == false))
+                    {
+                        Tarkistus[i, 1].Image = pbValkoinen.Image;
+                        kolmas = true;
+                    }
+
+                    if ((Tarkistus[i, 2].Image != pbValkoinen.Image && Tarkistus[i, 2].Image != pbPunainen.Image) && (kolmas == false))
+                    {
+                        Tarkistus[i, 2].Image = pbValkoinen.Image;
+                        kolmas = true;
+                    }
+
+                    if ((Tarkistus[i, 3].Image != pbValkoinen.Image && Tarkistus[i, 3].Image != pbPunainen.Image) && (kolmas == false))
+                    {
+                        Tarkistus[i, 3].Image = pbValkoinen.Image;
+                        kolmas = true;
+                    }
+                }
+
+                else
+                {
+
+                }
+
+                if (Rivit[i, 3].Image == oikeaRivi[0].Image || Rivit[i, 3].Image == oikeaRivi[1].Image || Rivit[i, 3].Image == oikeaRivi[2].Image)
+                {
+                    if ((Rivit[i, 3].Image == oikeaRivi[0].Image && Rivit[i, 0].Image == oikeaRivi[0].Image) || (Rivit[i, 3].Image == oikeaRivi[1].Image && Rivit[i, 1].Image == oikeaRivi[1].Image) || (Rivit[i, 3].Image == oikeaRivi[2].Image && Rivit[i, 2].Image == oikeaRivi[2].Image))
+                    {
+
+                    }
+
+                    if ((Tarkistus[i, 0].Image != pbValkoinen.Image && Tarkistus[i, 0].Image != pbPunainen.Image) && (nelhas == false))
+                    {
+                        Tarkistus[i, 0].Image = pbValkoinen.Image;
+                        nelhas = true;
+                    }
+
+                    if ((Tarkistus[i, 1].Image != pbValkoinen.Image && Tarkistus[i, 1].Image != pbPunainen.Image) && (nelhas == false))
+                    {
+                        Tarkistus[i, 1].Image = pbValkoinen.Image;
+                        nelhas = true;
+                    }
+
+                    if ((Tarkistus[i, 2].Image != pbValkoinen.Image && Tarkistus[i, 2].Image != pbPunainen.Image) && (nelhas == false))
+                    {
+                        Tarkistus[i, 2].Image = pbValkoinen.Image;
+                        nelhas = true;
+                    }
+
+                    if ((Tarkistus[i, 3].Image != pbValkoinen.Image && Tarkistus[i, 3].Image != pbPunainen.Image) && (nelhas == false))
+                    {
+                        Tarkistus[i, 3].Image = pbValkoinen.Image;
+                        nelhas = true;
+                    }
+
+                }
+
+                else
+                {
+
+                }
+
+                for (int l = 0; l < 4; l++)
+                {
+                    Rivit[i, l].AllowDrop = false;
+                }
             }
 
             if (i + 1 > 9 && (oikeaRivi[0].Image != Rivit[i, 0].Image || oikeaRivi[1].Image != Rivit[i, 1].Image || oikeaRivi[2].Image != Rivit[i, 2].Image || oikeaRivi[3].Image != Rivit[i, 3].Image))
