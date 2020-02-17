@@ -157,6 +157,11 @@ namespace Mastermind
             }
 
             OikeaRivi();
+
+            for (int i = 0; i < 4; i++)
+            {
+                oikeaRivi[i].Hide();
+            }
         }
 
         public void ab(string a)
@@ -513,6 +518,11 @@ namespace Mastermind
                 Tarkistus[i, 1].Image = pbPunainen.Image;
                 Tarkistus[i, 2].Image = pbPunainen.Image;
                 Tarkistus[i, 3].Image = pbPunainen.Image;
+
+                for (int i = 0; i < 4; i++)
+                {
+                    oikeaRivi[i].Show();
+                }
             }
 
             else
@@ -710,6 +720,11 @@ namespace Mastermind
                 user.Haviot = y;
 
                 registerHandler.Haviot(user);
+
+                for (int i = 0; i < 4; i++)
+                {
+                    oikeaRivi[i].Show();
+                }
             }
                
             i++;

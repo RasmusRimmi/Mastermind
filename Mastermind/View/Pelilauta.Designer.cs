@@ -126,6 +126,8 @@
             this.pbTark2R1 = new System.Windows.Forms.PictureBox();
             this.pbTark1R1 = new System.Windows.Forms.PictureBox();
             this.lbLoppu = new System.Windows.Forms.Label();
+            this.btUudestaan = new System.Windows.Forms.Button();
+            this.btPaavalikko = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pb4R1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb3R1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb2R1)).BeginInit();
@@ -1392,6 +1394,36 @@
             this.lbLoppu.TabIndex = 105;
             this.lbLoppu.UseMnemonic = false;
             // 
+            // btUudestaan
+            // 
+            this.btUudestaan.BackColor = System.Drawing.Color.LightCoral;
+            this.btUudestaan.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
+            this.btUudestaan.FlatAppearance.BorderSize = 3;
+            this.btUudestaan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btUudestaan.Font = new System.Drawing.Font("Mistral", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Strikeout))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btUudestaan.ForeColor = System.Drawing.Color.Black;
+            this.btUudestaan.Location = new System.Drawing.Point(492, 478);
+            this.btUudestaan.Name = "btUudestaan";
+            this.btUudestaan.Size = new System.Drawing.Size(159, 54);
+            this.btUudestaan.TabIndex = 106;
+            this.btUudestaan.Text = "UUDESTAAN";
+            this.btUudestaan.UseVisualStyleBackColor = false;
+            // 
+            // btPaavalikko
+            // 
+            this.btPaavalikko.BackColor = System.Drawing.Color.LightCoral;
+            this.btPaavalikko.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
+            this.btPaavalikko.FlatAppearance.BorderSize = 3;
+            this.btPaavalikko.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btPaavalikko.Font = new System.Drawing.Font("Mistral", 21F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Strikeout))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btPaavalikko.ForeColor = System.Drawing.Color.Black;
+            this.btPaavalikko.Location = new System.Drawing.Point(492, 539);
+            this.btPaavalikko.Name = "btPaavalikko";
+            this.btPaavalikko.Size = new System.Drawing.Size(159, 54);
+            this.btPaavalikko.TabIndex = 107;
+            this.btPaavalikko.Text = "PÄÄVALIKKO";
+            this.btPaavalikko.UseVisualStyleBackColor = false;
+            // 
             // Pelilauta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1399,6 +1431,8 @@
             this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(684, 665);
+            this.Controls.Add(this.btPaavalikko);
+            this.Controls.Add(this.btUudestaan);
             this.Controls.Add(this.lbLoppu);
             this.Controls.Add(this.pbTark4R10);
             this.Controls.Add(this.pbTark3R10);
@@ -1699,5 +1733,7 @@
         private System.Windows.Forms.PictureBox pbTark2R1;
         private System.Windows.Forms.PictureBox pbTark1R1;
         private System.Windows.Forms.Label lbLoppu;
+        private System.Windows.Forms.Button btUudestaan;
+        private System.Windows.Forms.Button btPaavalikko;
     }
 }
