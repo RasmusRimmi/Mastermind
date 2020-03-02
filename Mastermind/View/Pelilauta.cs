@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Mastermind.Controller;
 using Mastermind.Model;
+using System.Media;
 
 namespace Mastermind
 {
@@ -27,6 +28,9 @@ namespace Mastermind
         bool toka;
         bool kolmas;
         bool nelhas;
+        SoundPlayer peli = new SoundPlayer(Properties.Resources.Mastermind_game);
+        SoundPlayer menu = new SoundPlayer(Properties.Resources.MastermindMenu8bit);
+
 
         int i = 0;
 
@@ -138,6 +142,11 @@ namespace Mastermind
 
         private void Pelilauta_Load(object sender, EventArgs e)
         {
+
+            
+
+            peli.PlayLooping();
+
             lbKayttaja.Text = b;
 
             for (int i = 0; i < 10; i++)
@@ -162,6 +171,8 @@ namespace Mastermind
             {
                 oikeaRivi[i].Hide();
             }
+
+            btPaavalikko.Hide();
         }
 
         public void ab(string a)
@@ -182,6 +193,9 @@ namespace Mastermind
             user.Haviot = y;
 
             registerHandler.Haviot(user);
+
+            peli.Stop();
+            menu.PlayLooping();
         }
         /// <summary>
         /// 
@@ -523,6 +537,10 @@ namespace Mastermind
                 {
                     oikeaRivi[i].Show();
                 }
+
+                btPaavalikko.Show();
+                btLuovuta.Enabled = false;
+                btTarkista.Enabled = false;
             }
 
             else
@@ -725,9 +743,21 @@ namespace Mastermind
                 {
                     oikeaRivi[i].Show();
                 }
+
+                btPaavalikko.Show();
+                btLuovuta.Enabled = false;
+                btTarkista.Enabled = false;
             }
                
             i++;
         }
+
+        private void btPaavalikko_Click(object sender, EventArgs e)
+        {
+            peli.Stop();
+
+            Close();
+        }
+
     }
 }

@@ -121,6 +121,7 @@
             this.Controls.Add(this.btYksinpeli);
             this.Name = "Paavalikko";
             this.Text = "MASTERMIND";
+            this.Load += new System.EventHandler(this.Paavalikko_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

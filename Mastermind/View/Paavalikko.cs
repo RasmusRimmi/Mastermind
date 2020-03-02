@@ -7,14 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Media;
 
 namespace Mastermind
 {
     public partial class Paavalikko : Form
     {
+        SoundPlayer menu = new SoundPlayer(Properties.Resources.MastermindMenu8bit);
+
         public Paavalikko()
         {
             InitializeComponent();
+            menu.PlayLooping();
         }
 
         private void btYksinpeli_Click(object sender, EventArgs e)
@@ -49,6 +53,11 @@ namespace Mastermind
                 tulokset.ShowDialog();
                 this.Show();
             }
+        }
+
+        private void Paavalikko_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }

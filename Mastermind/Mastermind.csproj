@@ -154,5 +154,17 @@
   <ItemGroup>
     <None Include="Resources\valkoinenpampula.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mastermind game.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MainMenu.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MastermindMenu.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MastermindMenu8bit.wav" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
