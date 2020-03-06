@@ -39,8 +39,6 @@ namespace Mastermind
             {
                 _menu = value;
             }
-
-
         }
 
         public Paavalikko()

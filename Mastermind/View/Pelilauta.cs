@@ -31,7 +31,6 @@ namespace Mastermind
         SoundPlayer peli = new SoundPlayer(Properties.Resources.Mastermind_game);
         SoundPlayer menu = new SoundPlayer(Properties.Resources.MastermindMenu8bit);
 
-
         int i = 0;
 
         public Pelilauta(Kayttajavalikko kayttajavalikko)
@@ -154,7 +153,6 @@ namespace Mastermind
 
         private void Pelilauta_Load(object sender, EventArgs e)
         {
-
             lbKayttaja.Text = b;
 
             for (int i = 0; i < 10; i++)
