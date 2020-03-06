@@ -67,7 +67,7 @@ namespace Mastermind.Model
         {
             dbYhteys.Open();
             SqlCommand query4 = new SqlCommand("UPDATE Kayttajat SET Voitot = Voitot + 1 WHERE KayttajaId = @KayttajaId", dbYhteys);
-            SqlParameter Kayttaja = new SqlParameter("@KayttajaId", kayttaja.Haviot);
+            SqlParameter Kayttaja = new SqlParameter("@KayttajaId", kayttaja.Voitot);
             query4.Parameters.Add(Kayttaja);
 
             query4.ExecuteNonQuery();

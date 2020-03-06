@@ -13,12 +13,53 @@ namespace Mastermind
 {
     public partial class Paavalikko : Form
     {
-        SoundPlayer menu = new SoundPlayer(Properties.Resources.MastermindMenu8bit);
+        private static SoundPlayer _menu = new SoundPlayer(Properties.Resources.MastermindMenu8bit);
+        private static bool _mute = true;
+
+        public static bool mute
+        {
+            get
+            {
+                return _mute;
+            }
+
+            set{
+                _mute = value;
+            }
+        }
+
+        public static SoundPlayer menu
+        {
+            get
+            {
+                return _menu;
+            }
+
+            set
+            {
+                _menu = value;
+            }
+
+
+        }
 
         public Paavalikko()
         {
             InitializeComponent();
-            menu.PlayLooping();
+
+            if (mute == true)
+            {
+                btMute.BackgroundImage = Properties.Resources.on;
+                menu.PlayLooping();
+            }
+            
+
+            if (mute == false)
+            {
+                btMute.BackgroundImage = Properties.Resources.off;
+                menu.Stop();
+            }
+
         }
 
         private void btYksinpeli_Click(object sender, EventArgs e)
@@ -28,7 +69,17 @@ namespace Mastermind
             using (var kayttajavalikko = new Kayttajavalikko(this))
             {
                 kayttajavalikko.ShowDialog();
-                this.Show();   
+                this.Show();
+
+                if (mute == true)
+                {
+                    btMute.BackgroundImage = Properties.Resources.on;
+                }
+
+                else if(mute == false)
+                {
+                    btMute.BackgroundImage = Properties.Resources.off;
+                }
             }
         }
 
@@ -59,5 +110,23 @@ namespace Mastermind
         {
             
         }
+
+        private void btMute_Click(object sender, EventArgs e)
+        {
+            if (mute == true)
+            {
+                btMute.BackgroundImage = Properties.Resources.off;
+                menu.Stop();
+                mute = false;
+            }
+
+            else if (mute == false)
+            {
+                btMute.BackgroundImage = Properties.Resources.on;
+                menu.PlayLooping();
+                mute = true;
+            }                         
+        }
+
     }
 }

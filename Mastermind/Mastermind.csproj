@@ -166,5 +166,11 @@
   <ItemGroup>
     <None Include="Resources\MastermindMenu8bit.wav" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\off.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

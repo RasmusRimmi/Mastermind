@@ -127,6 +127,7 @@
             this.pbTark1R1 = new System.Windows.Forms.PictureBox();
             this.lbLoppu = new System.Windows.Forms.Label();
             this.btPaavalikko = new System.Windows.Forms.Button();
+            this.btMute = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pb4R1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb3R1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb2R1)).BeginInit();
@@ -1409,6 +1410,22 @@
             this.btPaavalikko.UseVisualStyleBackColor = false;
             this.btPaavalikko.Click += new System.EventHandler(this.btPaavalikko_Click);
             // 
+            // btMute
+            // 
+            this.btMute.BackColor = System.Drawing.Color.LightCoral;
+            this.btMute.BackgroundImage = global::Mastermind.Properties.Resources.on;
+            this.btMute.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btMute.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
+            this.btMute.FlatAppearance.BorderSize = 3;
+            this.btMute.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btMute.Font = new System.Drawing.Font("Mistral", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Strikeout))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btMute.Location = new System.Drawing.Point(12, 12);
+            this.btMute.Name = "btMute";
+            this.btMute.Size = new System.Drawing.Size(61, 44);
+            this.btMute.TabIndex = 108;
+            this.btMute.UseVisualStyleBackColor = false;
+            this.btMute.Click += new System.EventHandler(this.btMute_Click);
+            // 
             // Pelilauta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1416,6 +1433,7 @@
             this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(684, 665);
+            this.Controls.Add(this.btMute);
             this.Controls.Add(this.btPaavalikko);
             this.Controls.Add(this.lbLoppu);
             this.Controls.Add(this.pbTark4R10);
@@ -1718,5 +1736,6 @@
         private System.Windows.Forms.PictureBox pbTark1R1;
         private System.Windows.Forms.Label lbLoppu;
         private System.Windows.Forms.Button btPaavalikko;
+        private System.Windows.Forms.Button btMute;
     }
 }

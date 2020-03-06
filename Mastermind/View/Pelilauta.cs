@@ -40,6 +40,18 @@ namespace Mastermind
 
             this.kayttajavalikko = kayttajavalikko;
 
+            if (Paavalikko.mute == true)
+            {
+                btMute.BackgroundImage = Properties.Resources.on;
+                peli.PlayLooping();
+            }
+
+            else if (Paavalikko.mute == false)
+            {
+                btMute.BackgroundImage = Properties.Resources.off;
+                peli.Stop();
+            }
+
             oikeaRivi[0] = pbOikea1;
             oikeaRivi[1] = pbOikea2;
             oikeaRivi[2] = pbOikea3;
@@ -143,10 +155,6 @@ namespace Mastermind
         private void Pelilauta_Load(object sender, EventArgs e)
         {
 
-            
-
-            peli.PlayLooping();
-
             lbKayttaja.Text = b;
 
             for (int i = 0; i < 10; i++)
@@ -185,18 +193,6 @@ namespace Mastermind
             y = x;
         }
 
-        private void btLuovuta_Click(object sender, EventArgs e)
-        {
-            Close();
-
-            Kayttajat user = new Kayttajat();
-            user.Haviot = y;
-
-            registerHandler.Haviot(user);
-
-            peli.Stop();
-            menu.PlayLooping();
-        }
         /// <summary>
         /// 
         /// </summary>
@@ -520,10 +516,9 @@ namespace Mastermind
             if (oikeaRivi[0].Image == Rivit[i, 0].Image && oikeaRivi[1].Image == Rivit[i, 1].Image && oikeaRivi[2].Image == Rivit[i, 2].Image && oikeaRivi[3].Image == Rivit[i, 3].Image)
             {
                 Kayttajat user = new Kayttajat();
-                user.Haviot = y;
+                user.Voitot = y;
 
                 registerHandler.Voitot(user);
-                //Close();
 
                 lbLoppu.Text = "VOITIT";
                 lbLoppu.ForeColor = Color.Lime;
@@ -754,10 +749,62 @@ namespace Mastermind
 
         private void btPaavalikko_Click(object sender, EventArgs e)
         {
+            Paavalikko paavalikko = ((Paavalikko)Owner);
+
             peli.Stop();
 
-            Close();
+            if (Paavalikko.mute == true)
+            {
+                Paavalikko.menu.PlayLooping();
+            }
+
+            else if (Paavalikko.mute == false)
+            {
+                Paavalikko.menu.Stop();
+            }
+
+            this.Close();
         }
 
+        private void btLuovuta_Click(object sender, EventArgs e)
+        { 
+            Kayttajat user = new Kayttajat();
+            user.Haviot = y;
+
+            registerHandler.Haviot(user);
+
+            Paavalikko paavalikko = ((Paavalikko)Owner);
+
+            peli.Stop();
+
+            if (Paavalikko.mute == true)
+            {
+                Paavalikko.menu.PlayLooping();
+            }
+
+            else if (Paavalikko.mute == false)
+            {
+                Paavalikko.menu.Stop();
+            }
+
+            this.Close();
+        }
+
+        private void btMute_Click(object sender, EventArgs e)
+        {
+            if (Paavalikko.mute == true)
+            {
+                btMute.BackgroundImage = Properties.Resources.off;
+                peli.Stop();
+                Paavalikko.mute = false;
+            }
+
+            else if (Paavalikko.mute == false)
+            {
+                btMute.BackgroundImage = Properties.Resources.on;
+                peli.PlayLooping();
+                Paavalikko.mute = true;
+            }
+        }
     }
 }

@@ -9,12 +9,12 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Mastermind.Controller;
 using Mastermind.Model;
+using System.Media;
 
 namespace Mastermind
 {
     public partial class Kayttajavalikko : Form
     {
-        private Paavalikko paavalikko;
         Ohjain registerHandler =  new Ohjain();
         string a;
         int x;
@@ -22,8 +22,6 @@ namespace Mastermind
         public Kayttajavalikko(Paavalikko paavalikko)
         {
             InitializeComponent();
-
-            this.paavalikko = paavalikko;
 
             if (tbKayttaja.Text.ToString() == "")
             {
@@ -33,12 +31,24 @@ namespace Mastermind
             if (cbKayttaja.Text.ToString() == "")
             {
                 btValitse.Enabled = false;
-            }            
+            }      
+            
+            if (Paavalikko.mute == true)
+            {
+                btMute.BackgroundImage = Properties.Resources.on;
+            }
+
+            else if (Paavalikko.mute == false)
+            {
+                btMute.BackgroundImage = Properties.Resources.off;
+            }
+
         }
 
         private void btPaavalikko_Click(object sender, EventArgs e)
         {
-            Close();
+            Paavalikko paavalikko = ((Paavalikko)Owner);
+            this.Close();
         }
 
         private void btUusiKayttaja_Click(object sender, EventArgs e)
@@ -78,6 +88,7 @@ namespace Mastermind
             {
                 btUusiKayttaja.Enabled = true;
             }
+
         }
 
         private void btValitse_Click(object sender, EventArgs e)
@@ -94,6 +105,23 @@ namespace Mastermind
             }
 
             Close();
+        }
+
+        private void btMute_Click(object sender, EventArgs e)
+        {
+            if (Paavalikko.mute == true)
+            {
+                btMute.BackgroundImage = Properties.Resources.off;
+                Paavalikko.menu.Stop();
+                Paavalikko.mute = false;
+            }
+
+            else if (Paavalikko.mute == false)
+            {
+                btMute.BackgroundImage = Properties.Resources.on;
+                Paavalikko.menu.PlayLooping();
+                Paavalikko.mute = true;
+            }
         }
     }
 }

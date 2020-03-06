@@ -33,6 +33,7 @@
             this.btSaavutukset = new System.Windows.Forms.Button();
             this.btTulokset = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.btMute = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btYksinpeli
@@ -108,12 +109,29 @@
             this.label1.Text = "MASTERMIND";
             this.label1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
+            // btMute
+            // 
+            this.btMute.BackColor = System.Drawing.Color.LightCoral;
+            this.btMute.BackgroundImage = global::Mastermind.Properties.Resources.on;
+            this.btMute.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btMute.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
+            this.btMute.FlatAppearance.BorderSize = 3;
+            this.btMute.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btMute.Font = new System.Drawing.Font("Mistral", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Strikeout))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btMute.Location = new System.Drawing.Point(12, 12);
+            this.btMute.Name = "btMute";
+            this.btMute.Size = new System.Drawing.Size(61, 44);
+            this.btMute.TabIndex = 5;
+            this.btMute.UseVisualStyleBackColor = false;
+            this.btMute.Click += new System.EventHandler(this.btMute_Click);
+            // 
             // Paavalikko
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(557, 414);
+            this.Controls.Add(this.btMute);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btTulokset);
             this.Controls.Add(this.btSaavutukset);
@@ -134,6 +152,7 @@
         private System.Windows.Forms.Button btSaavutukset;
         private System.Windows.Forms.Button btTulokset;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btMute;
     }
 }
 
