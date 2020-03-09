@@ -76,19 +76,18 @@ namespace Mastermind.Model
             return true;
         }
 
-        public DataTable TilastotTietokannasta()
+        public DataSet TilastotTietokannasta()
         {
+            Kayttajat user = new Kayttajat();
             dbYhteys.Open();
-            SqlCommand query5 = new SqlCommand("SELECT Kayttaja, Voitot, Haviot FROM Kayttajat", dbYhteys);
-
-            query5.ExecuteNonQuery();
+            SqlCommand query5 = new SqlCommand("SELECT Kayttaja, Voitot FROM Kayttajat ORDER BY Voitot  DESC", dbYhteys);
 
             SqlDataAdapter sda = new SqlDataAdapter(query5);
-            DataTable dt = new DataTable();
-            sda.Fill(dt);
+            DataSet ds = new DataSet();
+            sda.Fill(ds);
             dbYhteys.Close();
 
-            return dt;
+            return ds;
         }
 
     }
