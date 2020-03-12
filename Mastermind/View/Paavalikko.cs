@@ -101,6 +101,16 @@ namespace Mastermind
             {
                 tulokset.ShowDialog();
                 this.Show();
+
+                if (mute == true)
+                {
+                    btMute.BackgroundImage = Properties.Resources.on;
+                }
+
+                else if (mute == false)
+                {
+                    btMute.BackgroundImage = Properties.Resources.off;
+                }
             }
         }
 

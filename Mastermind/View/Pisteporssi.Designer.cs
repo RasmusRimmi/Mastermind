@@ -31,16 +31,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btPaavalikko = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.btVoitotHaviot = new System.Windows.Forms.Button();
+            this.btMute = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label2
@@ -81,117 +75,60 @@
             this.btPaavalikko.UseVisualStyleBackColor = false;
             this.btPaavalikko.Click += new System.EventHandler(this.btPaavalikko_Click);
             // 
-            // label3
+            // label13
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Black;
-            this.label3.Font = new System.Drawing.Font("Mistral", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.LightCoral;
-            this.label3.Location = new System.Drawing.Point(12, 140);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(132, 39);
-            this.label3.TabIndex = 14;
-            this.label3.Text = "PELAAJA1";
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Mistral", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.CornflowerBlue;
+            this.label13.Location = new System.Drawing.Point(222, 121);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(81, 29);
+            this.label13.TabIndex = 25;
+            this.label13.Text = "VOITOT:";
             // 
-            // label4
+            // label14
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Mistral", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.LightCoral;
-            this.label4.Location = new System.Drawing.Point(221, 140);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(111, 39);
-            this.label4.TabIndex = 15;
-            this.label4.Text = "VOITOT1";
+            this.label14.AutoSize = true;
+            this.label14.BackColor = System.Drawing.Color.Black;
+            this.label14.Font = new System.Drawing.Font("Mistral", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.CornflowerBlue;
+            this.label14.Location = new System.Drawing.Point(14, 121);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(95, 29);
+            this.label14.TabIndex = 24;
+            this.label14.Text = "PELAAJA:";
             // 
-            // label5
+            // btVoitotHaviot
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Mistral", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.LightCoral;
-            this.label5.Location = new System.Drawing.Point(12, 181);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(132, 39);
-            this.label5.TabIndex = 16;
-            this.label5.Text = "PELAAJA2";
+            this.btVoitotHaviot.BackColor = System.Drawing.Color.LightCoral;
+            this.btVoitotHaviot.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
+            this.btVoitotHaviot.FlatAppearance.BorderSize = 3;
+            this.btVoitotHaviot.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btVoitotHaviot.Font = new System.Drawing.Font("Mistral", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Strikeout))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btVoitotHaviot.ForeColor = System.Drawing.Color.Black;
+            this.btVoitotHaviot.Location = new System.Drawing.Point(19, 396);
+            this.btVoitotHaviot.Name = "btVoitotHaviot";
+            this.btVoitotHaviot.Size = new System.Drawing.Size(84, 34);
+            this.btVoitotHaviot.TabIndex = 26;
+            this.btVoitotHaviot.Text = "HÄVIÖT";
+            this.btVoitotHaviot.UseVisualStyleBackColor = false;
+            this.btVoitotHaviot.Click += new System.EventHandler(this.btVoitotHaviot_Click);
             // 
-            // label6
+            // btMute
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Mistral", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.LightCoral;
-            this.label6.Location = new System.Drawing.Point(221, 181);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(111, 39);
-            this.label6.TabIndex = 17;
-            this.label6.Text = "VOITOT2";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Mistral", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.LightCoral;
-            this.label7.Location = new System.Drawing.Point(13, 220);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(132, 39);
-            this.label7.TabIndex = 21;
-            this.label7.Text = "PELAAJA3";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Mistral", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.LightCoral;
-            this.label8.Location = new System.Drawing.Point(222, 220);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(111, 39);
-            this.label8.TabIndex = 20;
-            this.label8.Text = "VOITOT3";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Mistral", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.LightCoral;
-            this.label9.Location = new System.Drawing.Point(13, 259);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(132, 39);
-            this.label9.TabIndex = 19;
-            this.label9.Text = "PELAAJA4";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.Black;
-            this.label10.Font = new System.Drawing.Font("Mistral", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.LightCoral;
-            this.label10.Location = new System.Drawing.Point(221, 259);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(111, 39);
-            this.label10.TabIndex = 18;
-            this.label10.Text = "VOITOT4";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Mistral", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.LightCoral;
-            this.label11.Location = new System.Drawing.Point(13, 298);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(132, 39);
-            this.label11.TabIndex = 23;
-            this.label11.Text = "PELAAJA5";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Mistral", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.LightCoral;
-            this.label12.Location = new System.Drawing.Point(221, 298);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(111, 39);
-            this.label12.TabIndex = 22;
-            this.label12.Text = "VOITOT5";
+            this.btMute.BackColor = System.Drawing.Color.LightCoral;
+            this.btMute.BackgroundImage = global::Mastermind.Properties.Resources.on;
+            this.btMute.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btMute.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
+            this.btMute.FlatAppearance.BorderSize = 3;
+            this.btMute.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btMute.Font = new System.Drawing.Font("Mistral", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Strikeout))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btMute.Location = new System.Drawing.Point(12, 12);
+            this.btMute.Name = "btMute";
+            this.btMute.Size = new System.Drawing.Size(61, 44);
+            this.btMute.TabIndex = 27;
+            this.btMute.UseVisualStyleBackColor = false;
+            this.btMute.Click += new System.EventHandler(this.btMute_Click);
             // 
             // Pisteporssi
             // 
@@ -199,16 +136,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(360, 443);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.label12);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.btMute);
+            this.Controls.Add(this.btVoitotHaviot);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.label14);
             this.Controls.Add(this.btPaavalikko);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -224,15 +155,9 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btPaavalikko;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Button btVoitotHaviot;
+        private System.Windows.Forms.Button btMute;
     }
 }

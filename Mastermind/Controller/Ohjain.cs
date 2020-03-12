@@ -36,9 +36,14 @@ namespace Mastermind.Controller
             return voitto;
         }
 
-        public DataSet Tilastot()
+        public DataSet VoittoTilastot()
         {
-            return dbController.TilastotTietokannasta();
+            return dbController.VoitotTietokannasta();
+        }
+
+        public DataSet HavioTilastot()
+        {
+            return dbController.HaviotTietokannasta();
         }
     }
 }

@@ -15,7 +15,7 @@ namespace Mastermind.Model
 
         public DatabaseHallinta()
         {
-
+        
         }
 
         public bool UusiKayttaja(Kayttajat kayttaja)
@@ -76,11 +76,25 @@ namespace Mastermind.Model
             return true;
         }
 
-        public DataSet TilastotTietokannasta()
+        public DataSet VoitotTietokannasta()
         {
             Kayttajat user = new Kayttajat();
             dbYhteys.Open();
             SqlCommand query5 = new SqlCommand("SELECT Kayttaja, Voitot FROM Kayttajat ORDER BY Voitot  DESC", dbYhteys);
+
+            SqlDataAdapter sda = new SqlDataAdapter(query5);
+            DataSet ds = new DataSet();
+            sda.Fill(ds);
+            dbYhteys.Close();
+
+            return ds;
+        }
+
+        public DataSet HaviotTietokannasta()
+        {
+            Kayttajat user = new Kayttajat();
+            dbYhteys.Open();
+            SqlCommand query5 = new SqlCommand("SELECT Kayttaja, Haviot FROM Kayttajat ORDER BY Haviot  DESC", dbYhteys);
 
             SqlDataAdapter sda = new SqlDataAdapter(query5);
             DataSet ds = new DataSet();
