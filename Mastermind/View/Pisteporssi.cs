@@ -605,6 +605,8 @@ namespace Mastermind
             else if (Paavalikko.mute == false)
             {
                 btMute.BackgroundImage = Properties.Resources.on;
+
+
                 musa.PlayLooping();
                 Paavalikko.mute = true;
             }
