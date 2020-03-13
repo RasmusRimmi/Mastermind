@@ -21,7 +21,7 @@ namespace Mastermind.Model
         public bool UusiKayttaja(Kayttajat kayttaja)
         {
             dbYhteys.Open();
-            SqlCommand query1 = new SqlCommand("INSERT INTO Kayttajat(Kayttaja, Voitot, Haviot) VALUES(@Kayttaja, 0, 0)", dbYhteys);
+            SqlCommand query1 = new SqlCommand("INSERT INTO Kayttajat(Kayttaja, Voitot, Haviot, Total) VALUES(@Kayttaja, 0, 0, 0)", dbYhteys);
             SqlParameter Kayttaja = new SqlParameter("@Kayttaja", kayttaja.Kayttaja);
             
             query1.Parameters.Add(Kayttaja);
@@ -284,11 +284,25 @@ namespace Mastermind.Model
             return true;
         }
 
-        public DataSet TilastotTietokannasta()
+        public DataSet VoitotTietokannasta()
         {
             Kayttajat user = new Kayttajat();
             dbYhteys.Open();
             SqlCommand query5 = new SqlCommand("SELECT Kayttaja, Voitot FROM Kayttajat ORDER BY Voitot  DESC", dbYhteys);
+
+            SqlDataAdapter sda = new SqlDataAdapter(query5);
+            DataSet ds = new DataSet();
+            sda.Fill(ds);
+            dbYhteys.Close();
+
+            return ds;
+        }
+
+        public DataSet HaviotTietokannasta()
+        {
+            Kayttajat user = new Kayttajat();
+            dbYhteys.Open();
+            SqlCommand query5 = new SqlCommand("SELECT Kayttaja, Haviot FROM Kayttajat ORDER BY Haviot  DESC", dbYhteys);
 
             SqlDataAdapter sda = new SqlDataAdapter(query5);
             DataSet ds = new DataSet();
