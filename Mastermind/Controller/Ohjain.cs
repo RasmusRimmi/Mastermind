@@ -48,6 +48,18 @@ namespace Mastermind.Controller
             return saavutus;
         }
 
+        public bool PelitSaavutus(Kayttajat kayttaja)
+        {
+            bool saavutus = dbController.PeliSaavutus(kayttaja);
+            return saavutus;
+        }
+
+        public bool PeliSaavutusLisays(Kayttajat kayttaja)
+        {
+            bool saavutus = dbController.PeliSaavutusLisays(kayttaja);
+            return saavutus;
+        }
+
         public DataSet Tilastot()
         {
             return dbController.TilastotTietokannasta();

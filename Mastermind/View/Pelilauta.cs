@@ -519,6 +519,10 @@ namespace Mastermind
                 registerHandler.Voitot(user);
                 registerHandler.VoittoSaavutus(user);
 
+                user.Total = y;
+                registerHandler.PelitSaavutus(user);
+                registerHandler.PeliSaavutusLisays(user);
+
                 lbLoppu.Text = "VOITIT";
                 lbLoppu.ForeColor = Color.Lime;
 
@@ -734,6 +738,10 @@ namespace Mastermind
                 registerHandler.Haviot(user);
                 registerHandler.HavioSaavutus(user);
 
+                user.Total = y;
+                registerHandler.PelitSaavutus(user);
+                registerHandler.PeliSaavutusLisays(user);
+
                 for (int i = 0; i < 4; i++)
                 {
                     oikeaRivi[i].Show();
@@ -773,6 +781,10 @@ namespace Mastermind
 
             registerHandler.Haviot(user);
             registerHandler.HavioSaavutus(user);
+
+            user.Total = y;
+            registerHandler.PelitSaavutus(user);
+            registerHandler.PeliSaavutusLisays(user);
 
             Paavalikko paavalikko = ((Paavalikko)Owner);
 

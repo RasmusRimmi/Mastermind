@@ -185,6 +185,79 @@ namespace Mastermind.Model
             return true;
         }
 
+        public bool PeliSaavutus(Kayttajat kayttaja)
+        {
+            dbYhteys.Open();
+            SqlCommand query = new SqlCommand("UPDATE Kayttajat SET Total = Voitot + Haviot WHERE KayttajaId = @KayttajaId", dbYhteys);
+            SqlParameter parametriVoitto = new SqlParameter("@KayttajaId", kayttaja.Total);
+            query.Parameters.Add(parametriVoitto);
+
+            query.ExecuteNonQuery();
+
+            dbYhteys.Close();
+            return true;
+        }
+
+        public bool PeliSaavutusLisays(Kayttajat kayttaja)
+        {
+            dbYhteys.Open();
+            SqlCommand query = new SqlCommand("SELECT Total FROM Kayttajat WHERE KayttajaId=@KayttajaId", dbYhteys);
+            SqlParameter Kayttaja1 = new SqlParameter("@KayttajaId", kayttaja.Total);
+            query.Parameters.Add(Kayttaja1);
+            SqlDataReader pelikerta = query.ExecuteReader();
+
+            if (pelikerta.Read())
+            {
+                Kayttajat kayttaja2 = new Kayttajat();
+                kayttaja2.Total = (int)pelikerta["Total"];
+
+                if (kayttaja2.Total == 1)
+                {
+                    dbYhteys.Close();
+                    dbYhteys.Open();
+                    KayttajienSaavutukset kaytsaav = new KayttajienSaavutukset();
+                    SqlCommand query2 = new SqlCommand("INSERT INTO Kayttajiensaavutukset(KayttajaId, SaavutusId) VALUES(@KayttajaId, 1)" +
+                        "SELECT Kayttajat.KayttajaId, Saavutukset.SaavutusId FROM ((Kayttajiensaavutukset " +
+                        "INNER JOIN Kayttajat ON Kayttajiensaavutukset.KayttajaId = Kayttajat.KayttajaId) " +
+                        "INNER JOIN Saavutukset ON KayttajienSaavutukset.SaavutusId = Saavutukset.SaavutusId)", dbYhteys);
+                    SqlParameter sqlParam = new SqlParameter("@KayttajaId", Kayttaja1.Value);
+                    query2.Parameters.Add(sqlParam);
+                    query2.ExecuteNonQuery();
+                }
+
+                else if (kayttaja2.Total == 5)
+                {
+                    dbYhteys.Close();
+                    dbYhteys.Open();
+                    KayttajienSaavutukset kaytsaav = new KayttajienSaavutukset();
+                    SqlCommand query2 = new SqlCommand("INSERT INTO Kayttajiensaavutukset(KayttajaId, SaavutusId) VALUES(@KayttajaId, 2)" +
+                        "SELECT Kayttajat.KayttajaId, Saavutukset.SaavutusId FROM ((Kayttajiensaavutukset " +
+                        "INNER JOIN Kayttajat ON Kayttajiensaavutukset.KayttajaId = Kayttajat.KayttajaId) " +
+                        "INNER JOIN Saavutukset ON KayttajienSaavutukset.SaavutusId = Saavutukset.SaavutusId)", dbYhteys);
+                    SqlParameter sqlParam = new SqlParameter("@KayttajaId", Kayttaja1.Value);
+                    query2.Parameters.Add(sqlParam);
+                    query2.ExecuteNonQuery();
+                }
+
+                else if (kayttaja2.Total == 10)
+                {
+                    dbYhteys.Close();
+                    dbYhteys.Open();
+                    KayttajienSaavutukset kaytsaav = new KayttajienSaavutukset();
+                    SqlCommand query2 = new SqlCommand("INSERT INTO Kayttajiensaavutukset(KayttajaId, SaavutusId) VALUES(@KayttajaId, 4)" +
+                        "SELECT Kayttajat.KayttajaId, Saavutukset.SaavutusId FROM ((Kayttajiensaavutukset " +
+                        "INNER JOIN Kayttajat ON Kayttajiensaavutukset.KayttajaId = Kayttajat.KayttajaId) " +
+                        "INNER JOIN Saavutukset ON KayttajienSaavutukset.SaavutusId = Saavutukset.SaavutusId)", dbYhteys);
+                    SqlParameter sqlParam = new SqlParameter("@KayttajaId", Kayttaja1.Value);
+                    query2.Parameters.Add(sqlParam);
+                    query2.ExecuteNonQuery();
+                }
+            }
+            dbYhteys.Close();
+
+            return true;
+        }
+
         public DataSet TilastotTietokannasta()
         {
             Kayttajat user = new Kayttajat();

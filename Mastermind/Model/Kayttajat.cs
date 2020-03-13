@@ -12,10 +12,12 @@ namespace Mastermind.Model
         string kayttaja;
         int voitot;
         int haviot;
+        int total;
 
         public int KayttajaId { get => kayttajaId; set => kayttajaId = value; }
         public string Kayttaja { get => kayttaja; set => kayttaja = value; }
         public int Voitot { get => voitot; set => voitot = value; }
         public int Haviot { get => haviot; set => haviot = value; }
+        public int Total { get => total; set => total = value; }
     }
 }
