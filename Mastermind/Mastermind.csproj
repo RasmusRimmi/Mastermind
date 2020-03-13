@@ -49,6 +49,7 @@
     <Compile Include="Controller\Ohjain.cs" />
     <Compile Include="Model\DatabaseHallinta.cs" />
     <Compile Include="Model\Kayttajat.cs" />
+    <Compile Include="Model\KayttajienSaavutukset.cs" />
     <Compile Include="Model\Pampulat.cs" />
     <Compile Include="Model\Saavutukset.cs" />
     <Compile Include="View\Kayttajavalikko.cs">
