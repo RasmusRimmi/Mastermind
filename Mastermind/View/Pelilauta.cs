@@ -517,6 +517,7 @@ namespace Mastermind
                 user.Voitot = y;
 
                 registerHandler.Voitot(user);
+                registerHandler.VoittoSaavutus(user);
 
                 lbLoppu.Text = "VOITIT";
                 lbLoppu.ForeColor = Color.Lime;
@@ -731,6 +732,7 @@ namespace Mastermind
                 user.Haviot = y;
 
                 registerHandler.Haviot(user);
+                registerHandler.HavioSaavutus(user);
 
                 for (int i = 0; i < 4; i++)
                 {
@@ -770,6 +772,7 @@ namespace Mastermind
             user.Haviot = y;
 
             registerHandler.Haviot(user);
+            registerHandler.HavioSaavutus(user);
 
             Paavalikko paavalikko = ((Paavalikko)Owner);
 

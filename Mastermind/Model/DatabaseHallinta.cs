@@ -15,7 +15,7 @@ namespace Mastermind.Model
 
         public DatabaseHallinta()
         {
-        
+
         }
 
         public bool UusiKayttaja(Kayttajat kayttaja)
@@ -29,6 +29,68 @@ namespace Mastermind.Model
             query1.ExecuteNonQuery();
 
             dbYhteys.Close();
+            return true;
+        }
+
+        public bool VoittoSaavutus(Kayttajat kayttaja)
+        {
+            dbYhteys.Open();
+            SqlCommand query = new SqlCommand("SELECT Voitot FROM Kayttajat WHERE KayttajaId=@KayttajaId", dbYhteys);
+            SqlParameter Kayttaja1 = new SqlParameter("@KayttajaId", kayttaja.Voitot);
+            query.Parameters.Add(Kayttaja1);
+            SqlDataReader voitto = query.ExecuteReader();
+
+            if (voitto.Read())
+            {
+                Kayttajat paska = new Kayttajat();
+                paska.Voitot = (int)voitto["Voitot"];
+
+                if (paska.Voitot == 1)
+                {
+                    dbYhteys.Close();
+                    dbYhteys.Open();
+                    KayttajienSaavutukset kaytsaav = new KayttajienSaavutukset();
+                    SqlCommand query2 = new SqlCommand("INSERT INTO Kayttajiensaavutukset(KayttajaId, SaavutusId) VALUES(@KayttajaId, 7)" +
+                        "SELECT Kayttajat.KayttajaId, Saavutukset.SaavutusId FROM ((Kayttajiensaavutukset " +
+                        "INNER JOIN Kayttajat ON Kayttajiensaavutukset.KayttajaId = Kayttajat.KayttajaId) " +
+                        "INNER JOIN Saavutukset ON KayttajienSaavutukset.SaavutusId = Saavutukset.SaavutusId)", dbYhteys);
+                    SqlParameter Paska2 = new SqlParameter("@KayttajaId", Kayttaja1.Value);
+                    query2.Parameters.Add(Paska2);
+                    query2.ExecuteNonQuery();
+                }
+
+                else if (paska.Voitot == 3)
+                {
+                    dbYhteys.Close();
+                    dbYhteys.Open();
+                    KayttajienSaavutukset kaytsaav = new KayttajienSaavutukset();
+                    SqlCommand query2 = new SqlCommand("INSERT INTO Kayttajiensaavutukset(KayttajaId, SaavutusId) VALUES(@KayttajaId, 3)" +
+                        "SELECT Kayttajat.KayttajaId, Saavutukset.SaavutusId FROM ((Kayttajiensaavutukset " +
+                        "INNER JOIN Kayttajat ON Kayttajiensaavutukset.KayttajaId = Kayttajat.KayttajaId) " +
+                        "INNER JOIN Saavutukset ON KayttajienSaavutukset.SaavutusId = Saavutukset.SaavutusId)", dbYhteys);
+                    SqlParameter Paska2 = new SqlParameter("@KayttajaId", Kayttaja1.Value);
+                    query2.Parameters.Add(Paska2);
+                    query2.ExecuteNonQuery();
+
+                }
+
+                else if (paska.Voitot == 10)
+                {
+                    dbYhteys.Close();
+                    dbYhteys.Open();
+                    KayttajienSaavutukset kaytsaav = new KayttajienSaavutukset();
+                    SqlCommand query2 = new SqlCommand("INSERT INTO Kayttajiensaavutukset(KayttajaId, SaavutusId) VALUES(@KayttajaId, 5)" +
+                        "SELECT Kayttajat.KayttajaId, Saavutukset.SaavutusId FROM ((Kayttajiensaavutukset " +
+                        "INNER JOIN Kayttajat ON Kayttajiensaavutukset.KayttajaId = Kayttajat.KayttajaId) " +
+                        "INNER JOIN Saavutukset ON KayttajienSaavutukset.SaavutusId = Saavutukset.SaavutusId)", dbYhteys);
+                    SqlParameter Paska2 = new SqlParameter("@KayttajaId", Kayttaja1.Value);
+                    query2.Parameters.Add(Paska2);
+                    query2.ExecuteNonQuery();
+
+                }
+            }
+            dbYhteys.Close();
+
             return true;
         }
 
@@ -63,6 +125,53 @@ namespace Mastermind.Model
             return true;
         }
 
+        public bool HavioSaavutus(Kayttajat kayttaja)
+        {
+            dbYhteys.Open();
+            SqlCommand query = new SqlCommand("SELECT Haviot FROM Kayttajat WHERE KayttajaId=@KayttajaId", dbYhteys);
+            SqlParameter Kayttaja1 = new SqlParameter("@KayttajaId", kayttaja.Haviot);
+            query.Parameters.Add(Kayttaja1);
+            SqlDataReader havio = query.ExecuteReader();
+
+            if (havio.Read())
+            {
+                Kayttajat paska = new Kayttajat();
+                paska.Haviot = (int)havio["Haviot"];
+
+                if (paska.Haviot == 10)
+                {
+                    dbYhteys.Close();
+                    dbYhteys.Open();
+                    KayttajienSaavutukset kaytsaav = new KayttajienSaavutukset();
+                    SqlCommand query2 = new SqlCommand("INSERT INTO Kayttajiensaavutukset(KayttajaId, SaavutusId) VALUES(@KayttajaId, 9)" +
+                        "SELECT Kayttajat.KayttajaId, Saavutukset.SaavutusId FROM ((Kayttajiensaavutukset " +
+                        "INNER JOIN Kayttajat ON Kayttajiensaavutukset.KayttajaId = Kayttajat.KayttajaId) " +
+                        "INNER JOIN Saavutukset ON KayttajienSaavutukset.SaavutusId = Saavutukset.SaavutusId)", dbYhteys);
+                    SqlParameter Paska2 = new SqlParameter("@KayttajaId", Kayttaja1.Value);
+                    query2.Parameters.Add(Paska2);
+                    query2.ExecuteNonQuery();
+                }
+
+                else if (paska.Haviot == 3)
+                {
+                    dbYhteys.Close();
+                    dbYhteys.Open();
+                    KayttajienSaavutukset kaytsaav = new KayttajienSaavutukset();
+                    SqlCommand query2 = new SqlCommand("INSERT INTO Kayttajiensaavutukset(KayttajaId, SaavutusId) VALUES(@KayttajaId, 8)" +
+                        "SELECT Kayttajat.KayttajaId, Saavutukset.SaavutusId FROM ((Kayttajiensaavutukset " +
+                        "INNER JOIN Kayttajat ON Kayttajiensaavutukset.KayttajaId = Kayttajat.KayttajaId) " +
+                        "INNER JOIN Saavutukset ON KayttajienSaavutukset.SaavutusId = Saavutukset.SaavutusId)", dbYhteys);
+                    SqlParameter Paska2 = new SqlParameter("@KayttajaId", Kayttaja1.Value);
+                    query2.Parameters.Add(Paska2);
+                    query2.ExecuteNonQuery();
+
+                }
+            }
+
+            dbYhteys.Close();
+            return true;
+        }
+
         public bool Voitto(Kayttajat kayttaja)
         {
             dbYhteys.Open();
@@ -76,25 +185,11 @@ namespace Mastermind.Model
             return true;
         }
 
-        public DataSet VoitotTietokannasta()
+        public DataSet TilastotTietokannasta()
         {
             Kayttajat user = new Kayttajat();
             dbYhteys.Open();
             SqlCommand query5 = new SqlCommand("SELECT Kayttaja, Voitot FROM Kayttajat ORDER BY Voitot  DESC", dbYhteys);
-
-            SqlDataAdapter sda = new SqlDataAdapter(query5);
-            DataSet ds = new DataSet();
-            sda.Fill(ds);
-            dbYhteys.Close();
-
-            return ds;
-        }
-
-        public DataSet HaviotTietokannasta()
-        {
-            Kayttajat user = new Kayttajat();
-            dbYhteys.Open();
-            SqlCommand query5 = new SqlCommand("SELECT Kayttaja, Haviot FROM Kayttajat ORDER BY Haviot  DESC", dbYhteys);
 
             SqlDataAdapter sda = new SqlDataAdapter(query5);
             DataSet ds = new DataSet();
