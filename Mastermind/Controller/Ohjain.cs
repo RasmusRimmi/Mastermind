@@ -60,6 +60,12 @@ namespace Mastermind.Controller
             return saavutus;
         }
 
+        public bool SuperVoitto(Kayttajat kayttaja)
+        {
+            bool saavutus = dbController.SuperVoitto(kayttaja);
+            return saavutus;
+        }
+
         public DataSet Tilastot()
         {
             return dbController.TilastotTietokannasta();

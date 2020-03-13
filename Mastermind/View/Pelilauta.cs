@@ -513,6 +513,13 @@ namespace Mastermind
 
             if (oikeaRivi[0].Image == Rivit[i, 0].Image && oikeaRivi[1].Image == Rivit[i, 1].Image && oikeaRivi[2].Image == Rivit[i, 2].Image && oikeaRivi[3].Image == Rivit[i, 3].Image)
             {
+                if (i == 0)
+                {
+                    Kayttajat user2 = new Kayttajat();
+                    user2.KayttajaId = y;
+                    registerHandler.SuperVoitto(user2);
+                }
+
                 Kayttajat user = new Kayttajat();
                 user.Voitot = y;
 
