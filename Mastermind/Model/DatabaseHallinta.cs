@@ -312,5 +312,25 @@ namespace Mastermind.Model
             return ds;
         }
 
+        public DataTable SaavutuksetTietokannasta(Kayttajat kayttaja)
+        {
+            dbYhteys.Open();
+            SqlCommand query4 = new SqlCommand("SELECT Saavutukset.Saavutus, Saavutukset.Kriteeri FROM((Kayttajiensaavutukset " +
+                                               "INNER JOIN Saavutukset ON Kayttajiensaavutukset.SaavutusId = Saavutukset.SaavutusId)" +
+                                               "INNER JOIN Kayttajat ON Kayttajiensaavutukset.KayttajaId = Kayttajat.KayttajaId)" +
+                                               "WHERE Kayttajat.Kayttaja = @Kayttaja", dbYhteys);
+            SqlParameter Kayttaja = new SqlParameter("@Kayttaja", kayttaja.Kayttaja);
+            query4.Parameters.Add(Kayttaja);
+
+            query4.ExecuteNonQuery();
+
+            SqlDataAdapter sda = new SqlDataAdapter(query4);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            dbYhteys.Close();
+
+            return dt;
+        }
+
     }
 }

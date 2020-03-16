@@ -75,5 +75,10 @@ namespace Mastermind.Controller
         {
             return dbController.HaviotTietokannasta();
         }
+
+        public DataTable Saavutukset(Kayttajat kayttaja)
+        {
+            return dbController.SaavutuksetTietokannasta(kayttaja);
+        }
     }
 }

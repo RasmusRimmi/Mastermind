@@ -22,6 +22,8 @@ namespace Mastermind
             InitializeComponent();
 
             this.paavalikko = paavalikko;
+
+            ShowData();
         }
 
         private void btPaavalikko_Click(object sender, EventArgs e)
@@ -34,6 +36,19 @@ namespace Mastermind
             cbKayttaja.DataSource = registerHandler.KaikkiKayttajat();
             cbKayttaja.DisplayMember = "kayttaja";
             cbKayttaja.ValueMember = "kayttajaId";
+        }
+
+        private void ShowData()
+        {
+            Kayttajat user = new Kayttajat();
+            user.Kayttaja = cbKayttaja.Text;
+
+            dgvSaavutukset.DataSource = registerHandler.Saavutukset(user);
+        }
+
+        private void cbKayttaja_SelectedValueChanged(object sender, EventArgs e)
+        {
+            ShowData();
         }
     }
 }

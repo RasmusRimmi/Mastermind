@@ -43,6 +43,7 @@
             this.cbKayttaja.Name = "cbKayttaja";
             this.cbKayttaja.Size = new System.Drawing.Size(146, 21);
             this.cbKayttaja.TabIndex = 6;
+            this.cbKayttaja.SelectedValueChanged += new System.EventHandler(this.cbKayttaja_SelectedValueChanged);
             // 
             // label1
             // 
