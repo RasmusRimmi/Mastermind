@@ -52,6 +52,12 @@
     <Compile Include="Model\KayttajienSaavutukset.cs" />
     <Compile Include="Model\Pampulat.cs" />
     <Compile Include="Model\Saavutukset.cs" />
+    <Compile Include="View\Credits.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Credits.Designer.cs">
+      <DependentUpon>Credits.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Kayttajavalikko.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,6 +100,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="View\Credits.resx">
+      <DependentUpon>Credits.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\Kayttajavalikko.resx">
       <DependentUpon>Kayttajavalikko.cs</DependentUpon>
     </EmbeddedResource>

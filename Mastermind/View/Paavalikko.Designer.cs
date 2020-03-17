@@ -44,9 +44,10 @@
             this.btYksinpeli.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btYksinpeli.Font = new System.Drawing.Font("Mistral", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Strikeout))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btYksinpeli.ForeColor = System.Drawing.Color.Black;
-            this.btYksinpeli.Location = new System.Drawing.Point(12, 139);
+            this.btYksinpeli.Location = new System.Drawing.Point(16, 171);
+            this.btYksinpeli.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btYksinpeli.Name = "btYksinpeli";
-            this.btYksinpeli.Size = new System.Drawing.Size(215, 115);
+            this.btYksinpeli.Size = new System.Drawing.Size(287, 142);
             this.btYksinpeli.TabIndex = 0;
             this.btYksinpeli.Text = "YKSINPELI";
             this.btYksinpeli.UseVisualStyleBackColor = false;
@@ -59,12 +60,14 @@
             this.btMoninpeli.FlatAppearance.BorderSize = 3;
             this.btMoninpeli.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btMoninpeli.Font = new System.Drawing.Font("Mistral", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Strikeout))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btMoninpeli.Location = new System.Drawing.Point(327, 139);
+            this.btMoninpeli.Location = new System.Drawing.Point(436, 171);
+            this.btMoninpeli.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btMoninpeli.Name = "btMoninpeli";
-            this.btMoninpeli.Size = new System.Drawing.Size(215, 115);
+            this.btMoninpeli.Size = new System.Drawing.Size(287, 142);
             this.btMoninpeli.TabIndex = 1;
-            this.btMoninpeli.Text = "MONINPELI";
+            this.btMoninpeli.Text = "CREDITS";
             this.btMoninpeli.UseVisualStyleBackColor = false;
+            this.btMoninpeli.Click += new System.EventHandler(this.btMoninpeli_Click);
             // 
             // btSaavutukset
             // 
@@ -73,9 +76,10 @@
             this.btSaavutukset.FlatAppearance.BorderSize = 3;
             this.btSaavutukset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btSaavutukset.Font = new System.Drawing.Font("Mistral", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Strikeout))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btSaavutukset.Location = new System.Drawing.Point(12, 273);
+            this.btSaavutukset.Location = new System.Drawing.Point(16, 336);
+            this.btSaavutukset.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btSaavutukset.Name = "btSaavutukset";
-            this.btSaavutukset.Size = new System.Drawing.Size(215, 115);
+            this.btSaavutukset.Size = new System.Drawing.Size(287, 142);
             this.btSaavutukset.TabIndex = 2;
             this.btSaavutukset.Text = "SAAVUTUKSET";
             this.btSaavutukset.UseVisualStyleBackColor = false;
@@ -88,9 +92,10 @@
             this.btTulokset.FlatAppearance.BorderSize = 3;
             this.btTulokset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btTulokset.Font = new System.Drawing.Font("Mistral", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Strikeout))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btTulokset.Location = new System.Drawing.Point(327, 273);
+            this.btTulokset.Location = new System.Drawing.Point(436, 336);
+            this.btTulokset.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btTulokset.Name = "btTulokset";
-            this.btTulokset.Size = new System.Drawing.Size(215, 115);
+            this.btTulokset.Size = new System.Drawing.Size(287, 142);
             this.btTulokset.TabIndex = 3;
             this.btTulokset.Text = "TILASTOT";
             this.btTulokset.UseVisualStyleBackColor = false;
@@ -102,9 +107,10 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Mistral", 50.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Strikeout))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DarkGray;
-            this.label1.Location = new System.Drawing.Point(113, 29);
+            this.label1.Location = new System.Drawing.Point(151, 36);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(336, 79);
+            this.label1.Size = new System.Drawing.Size(420, 101);
             this.label1.TabIndex = 4;
             this.label1.Text = "MASTERMIND";
             this.label1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -118,25 +124,27 @@
             this.btMute.FlatAppearance.BorderSize = 3;
             this.btMute.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btMute.Font = new System.Drawing.Font("Mistral", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Strikeout))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btMute.Location = new System.Drawing.Point(12, 12);
+            this.btMute.Location = new System.Drawing.Point(16, 15);
+            this.btMute.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btMute.Name = "btMute";
-            this.btMute.Size = new System.Drawing.Size(61, 44);
+            this.btMute.Size = new System.Drawing.Size(81, 54);
             this.btMute.TabIndex = 5;
             this.btMute.UseVisualStyleBackColor = false;
             this.btMute.Click += new System.EventHandler(this.btMute_Click);
             // 
             // Paavalikko
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(557, 414);
+            this.ClientSize = new System.Drawing.Size(743, 510);
             this.Controls.Add(this.btMute);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btTulokset);
             this.Controls.Add(this.btSaavutukset);
             this.Controls.Add(this.btMoninpeli);
             this.Controls.Add(this.btYksinpeli);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Paavalikko";
             this.Text = "MASTERMIND";
             this.Load += new System.EventHandler(this.Paavalikko_Load);

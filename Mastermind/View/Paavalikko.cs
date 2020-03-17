@@ -136,5 +136,15 @@ namespace Mastermind
             }                         
         }
 
+        private void btMoninpeli_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+
+            using (var credits = new Credits(this))
+            {
+                credits.ShowDialog();
+                this.Show();
+            }
+        }
     }
 }
