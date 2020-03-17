@@ -36,12 +36,19 @@ namespace Mastermind
 
         void timer_Tick(object sender, EventArgs e)
         {
-            label1.Location = new Point(label1.Location.X, label1.Location.Y - 2);
+            lbSuunnittelu.Location = new Point(lbSuunnittelu.Location.X, lbSuunnittelu.Location.Y - 2);
+            lbToteutus.Location = new Point(lbToteutus.Location.X, lbToteutus.Location.Y - 2);
 
-            if (label1.Location.Y > this.Height)
+            if (lbSuunnittelu.Location.Y > this.Height)
             {
-                label1.Location = new Point(label1.Location.X, 0 - label1.Height);
+                lbSuunnittelu.Location = new Point(lbSuunnittelu.Location.X, 0 - lbSuunnittelu.Height);
+            }
+
+            if (lbToteutus.Location.Y > this.Height)
+            {
+                lbToteutus.Location = new Point(lbToteutus.Location.X, 0 - lbToteutus.Height);
             }
         }
+
     }
 }
