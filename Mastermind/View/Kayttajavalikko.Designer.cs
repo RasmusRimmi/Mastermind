@@ -143,6 +143,7 @@
             this.Controls.Add(this.tbKayttaja);
             this.Controls.Add(this.btValitse);
             this.Controls.Add(this.btUusiKayttaja);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Kayttajavalikko";
             this.Text = "Kayttajavalikko";
             this.ResumeLayout(false);

@@ -19,7 +19,7 @@ namespace Mastermind
         private Paavalikko paavalikko;
         Ohjain registerHandler = new Ohjain();
         bool kato = true;
-        SoundPlayer musa = new SoundPlayer(Properties.Resources.TilastoMusic);
+        SoundPlayer musa = new SoundPlayer(Properties.Resources.SaavutusTilasto);
         SoundPlayer menu = new SoundPlayer(Properties.Resources.MastermindMenu8bit);
 
         Label lb1Pel = new Label();

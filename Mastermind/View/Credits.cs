@@ -17,15 +17,28 @@ namespace Mastermind
     {
         Timer timer = new Timer();
         Label label = new Label();
+        SoundPlayer credit = new SoundPlayer(Properties.Resources.Credits);
 
         public Credits(Paavalikko paavalikko)
         {
             InitializeComponent();
 
+            if (Paavalikko.mute == true)
+            {
+                btMute.BackgroundImage = Properties.Resources.on;
+                credit.Play();
+            }
+
+            else if (Paavalikko.mute == false)
+            {
+                btMute.BackgroundImage = Properties.Resources.off;
+                credit.Stop();
+            }
+
             lbTitle.Hide();
 
             timer.Tick += new EventHandler(timer_Tick);
-            timer.Interval = (70) * (1);         
+            timer.Interval = 141;         
             timer.Enabled = true;                      
             timer.Start();
 
@@ -77,19 +90,36 @@ namespace Mastermind
         {
             Paavalikko paavalikko = ((Paavalikko)Owner);
 
-            //musa.Stop();
+            credit.Stop();
 
-            //if (Paavalikko.mute == true)
-            //{
-            //    Paavalikko.menu.PlayLooping();
-            //}
+            if (Paavalikko.mute == true)
+            {
+                  Paavalikko.menu.PlayLooping();
+            }
 
-            //else if (Paavalikko.mute == false)
-            //{
-            //    Paavalikko.menu.Stop();
-            //}
+            else if (Paavalikko.mute == false)
+            {
+                Paavalikko.menu.Stop();
+            }
 
             Close();
+        }
+
+        private void btMute_Click(object sender, EventArgs e)
+        {
+            if (Paavalikko.mute == true)
+            {
+                btMute.BackgroundImage = Properties.Resources.off;
+                credit.Stop();
+                Paavalikko.mute = false;
+            }
+
+            else if (Paavalikko.mute == false)
+            {
+                btMute.BackgroundImage = Properties.Resources.on;
+                credit.PlayLooping();
+                Paavalikko.mute = true;
+            }
         }
     }
 }

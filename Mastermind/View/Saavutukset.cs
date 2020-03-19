@@ -17,7 +17,7 @@ namespace Mastermind
     {
         private Paavalikko paavalikko;
         Ohjain registerHandler = new Ohjain();
-        SoundPlayer musa = new SoundPlayer(Properties.Resources.TilastoMusic);
+        SoundPlayer musa = new SoundPlayer(Properties.Resources.SaavutusTilasto);
         SoundPlayer menu = new SoundPlayer(Properties.Resources.MastermindMenu8bit);
 
         public Saavutukset(Paavalikko paavalikko)

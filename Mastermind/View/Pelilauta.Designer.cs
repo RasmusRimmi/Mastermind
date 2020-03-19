@@ -231,7 +231,7 @@
             this.btLuovuta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btLuovuta.Font = new System.Drawing.Font("Mistral", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Strikeout))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btLuovuta.ForeColor = System.Drawing.Color.Black;
-            this.btLuovuta.Location = new System.Drawing.Point(492, 599);
+            this.btLuovuta.Location = new System.Drawing.Point(492, 608);
             this.btLuovuta.Name = "btLuovuta";
             this.btLuovuta.Size = new System.Drawing.Size(159, 54);
             this.btLuovuta.TabIndex = 7;
@@ -1402,7 +1402,7 @@
             this.btPaavalikko.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btPaavalikko.Font = new System.Drawing.Font("Mistral", 21F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Strikeout))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btPaavalikko.ForeColor = System.Drawing.Color.Black;
-            this.btPaavalikko.Location = new System.Drawing.Point(492, 539);
+            this.btPaavalikko.Location = new System.Drawing.Point(492, 548);
             this.btPaavalikko.Name = "btPaavalikko";
             this.btPaavalikko.Size = new System.Drawing.Size(159, 54);
             this.btPaavalikko.TabIndex = 107;
@@ -1432,7 +1432,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ClientSize = new System.Drawing.Size(684, 665);
+            this.ClientSize = new System.Drawing.Size(684, 674);
             this.Controls.Add(this.btMute);
             this.Controls.Add(this.btPaavalikko);
             this.Controls.Add(this.lbLoppu);
@@ -1534,6 +1534,7 @@
             this.Controls.Add(this.pictureBox9);
             this.Controls.Add(this.label1);
             this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Pelilauta";
             this.Text = "Pelilauta";
             this.Load += new System.EventHandler(this.Pelilauta_Load);

@@ -81,6 +81,27 @@ namespace Mastermind
             }
         }
 
+        private void btCredits_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+
+            using (var credits = new Credits(this))
+            {
+                credits.ShowDialog();
+                this.Show();
+
+                if (mute == true)
+                {
+                    btMute.BackgroundImage = Properties.Resources.on;
+                }
+
+                else if (mute == false)
+                {
+                    btMute.BackgroundImage = Properties.Resources.off;
+                }
+            }
+        }
+
         private void btSaavutukset_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -146,15 +167,6 @@ namespace Mastermind
             }                         
         }
 
-        private void btMoninpeli_Click(object sender, EventArgs e)
-        {
-            this.Hide();
 
-            using (var credits = new Credits(this))
-            {
-                credits.ShowDialog();
-                this.Show();
-            }
-        }
     }
 }
