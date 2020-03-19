@@ -28,46 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lbSuunnittelu = new System.Windows.Forms.Label();
-            this.lbToteutus = new System.Windows.Forms.Label();
+            this.lbTekijat = new System.Windows.Forms.Label();
             this.lbTitle = new System.Windows.Forms.Label();
             this.lbNimi2 = new System.Windows.Forms.Label();
-            this.lbNimi4 = new System.Windows.Forms.Label();
-            this.lbNimi3 = new System.Windows.Forms.Label();
             this.lbNimi1 = new System.Windows.Forms.Label();
             this.btPaavalikko = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // lbSuunnittelu
+            // lbTekijat
             // 
-            this.lbSuunnittelu.AutoSize = true;
-            this.lbSuunnittelu.Font = new System.Drawing.Font("Mistral", 22F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Strikeout))));
-            this.lbSuunnittelu.ForeColor = System.Drawing.Color.White;
-            this.lbSuunnittelu.Location = new System.Drawing.Point(207, 76);
-            this.lbSuunnittelu.Name = "lbSuunnittelu";
-            this.lbSuunnittelu.Size = new System.Drawing.Size(176, 44);
-            this.lbSuunnittelu.TabIndex = 0;
-            this.lbSuunnittelu.Text = "SUNNITTELU";
-            // 
-            // lbToteutus
-            // 
-            this.lbToteutus.AutoSize = true;
-            this.lbToteutus.Font = new System.Drawing.Font("Mistral", 22F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Strikeout))));
-            this.lbToteutus.ForeColor = System.Drawing.Color.White;
-            this.lbToteutus.Location = new System.Drawing.Point(207, 254);
-            this.lbToteutus.Name = "lbToteutus";
-            this.lbToteutus.Size = new System.Drawing.Size(145, 44);
-            this.lbToteutus.TabIndex = 1;
-            this.lbToteutus.Text = "TOTEUTUS";
+            this.lbTekijat.AutoSize = true;
+            this.lbTekijat.Font = new System.Drawing.Font("Mistral", 22F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Strikeout))));
+            this.lbTekijat.ForeColor = System.Drawing.Color.White;
+            this.lbTekijat.Location = new System.Drawing.Point(232, 260);
+            this.lbTekijat.Name = "lbTekijat";
+            this.lbTekijat.Size = new System.Drawing.Size(145, 55);
+            this.lbTekijat.TabIndex = 0;
+            this.lbTekijat.Text = "TEKIJÄT";
             // 
             // lbTitle
             // 
             this.lbTitle.AutoSize = true;
-            this.lbTitle.Font = new System.Drawing.Font("Mistral", 30F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Strikeout))));
+            this.lbTitle.BackColor = System.Drawing.Color.Black;
+            this.lbTitle.Font = new System.Drawing.Font("Mistral", 34F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Strikeout))));
             this.lbTitle.ForeColor = System.Drawing.Color.White;
-            this.lbTitle.Location = new System.Drawing.Point(296, 392);
+            this.lbTitle.Location = new System.Drawing.Point(267, 86);
             this.lbTitle.Name = "lbTitle";
-            this.lbTitle.Size = new System.Drawing.Size(253, 60);
+            this.lbTitle.Size = new System.Drawing.Size(289, 68);
             this.lbTitle.TabIndex = 2;
             this.lbTitle.Text = "MASTERMIND";
             // 
@@ -76,40 +63,18 @@
             this.lbNimi2.AutoSize = true;
             this.lbNimi2.Font = new System.Drawing.Font("Mistral", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Strikeout))));
             this.lbNimi2.ForeColor = System.Drawing.Color.White;
-            this.lbNimi2.Location = new System.Drawing.Point(472, 111);
+            this.lbNimi2.Location = new System.Drawing.Point(497, 295);
             this.lbNimi2.Name = "lbNimi2";
             this.lbNimi2.Size = new System.Drawing.Size(79, 35);
             this.lbNimi2.TabIndex = 3;
             this.lbNimi2.Text = "RIINA";
-            // 
-            // lbNimi4
-            // 
-            this.lbNimi4.AutoSize = true;
-            this.lbNimi4.Font = new System.Drawing.Font("Mistral", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Strikeout))));
-            this.lbNimi4.ForeColor = System.Drawing.Color.White;
-            this.lbNimi4.Location = new System.Drawing.Point(474, 289);
-            this.lbNimi4.Name = "lbNimi4";
-            this.lbNimi4.Size = new System.Drawing.Size(79, 35);
-            this.lbNimi4.TabIndex = 4;
-            this.lbNimi4.Text = "RIINA";
-            // 
-            // lbNimi3
-            // 
-            this.lbNimi3.AutoSize = true;
-            this.lbNimi3.Font = new System.Drawing.Font("Mistral", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Strikeout))));
-            this.lbNimi3.ForeColor = System.Drawing.Color.White;
-            this.lbNimi3.Location = new System.Drawing.Point(472, 254);
-            this.lbNimi3.Name = "lbNimi3";
-            this.lbNimi3.Size = new System.Drawing.Size(101, 35);
-            this.lbNimi3.TabIndex = 5;
-            this.lbNimi3.Text = "RASMUS";
             // 
             // lbNimi1
             // 
             this.lbNimi1.AutoSize = true;
             this.lbNimi1.Font = new System.Drawing.Font("Mistral", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Strikeout))));
             this.lbNimi1.ForeColor = System.Drawing.Color.White;
-            this.lbNimi1.Location = new System.Drawing.Point(472, 76);
+            this.lbNimi1.Location = new System.Drawing.Point(497, 260);
             this.lbNimi1.Name = "lbNimi1";
             this.lbNimi1.Size = new System.Drawing.Size(101, 35);
             this.lbNimi1.TabIndex = 6;
@@ -137,15 +102,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(838, 488);
+            this.ClientSize = new System.Drawing.Size(838, 486);
             this.Controls.Add(this.btPaavalikko);
             this.Controls.Add(this.lbNimi1);
-            this.Controls.Add(this.lbNimi3);
-            this.Controls.Add(this.lbNimi4);
             this.Controls.Add(this.lbNimi2);
             this.Controls.Add(this.lbTitle);
-            this.Controls.Add(this.lbToteutus);
-            this.Controls.Add(this.lbSuunnittelu);
+            this.Controls.Add(this.lbTekijat);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Credits";
             this.Text = "Credits";
             this.ResumeLayout(false);
@@ -155,12 +118,9 @@
 
         #endregion
 
-        private System.Windows.Forms.Label lbSuunnittelu;
-        private System.Windows.Forms.Label lbToteutus;
+        private System.Windows.Forms.Label lbTekijat;
         private System.Windows.Forms.Label lbTitle;
         private System.Windows.Forms.Label lbNimi2;
-        private System.Windows.Forms.Label lbNimi4;
-        private System.Windows.Forms.Label lbNimi3;
         private System.Windows.Forms.Label lbNimi1;
         private System.Windows.Forms.Button btPaavalikko;
     }
