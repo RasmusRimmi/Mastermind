@@ -28,6 +28,7 @@ namespace Mastermind
 
             ShowData();
 
+            //Testaa onko päävalikossa musiikki hiljennetty vai ei, jos hiljennetty niin myös tämä sivu on hiljennetty
             if (Paavalikko.mute == true)
             {
                 btMute.BackgroundImage = Properties.Resources.on;
@@ -40,13 +41,13 @@ namespace Mastermind
                 musa.Stop();
             }
         }
-
+        //Klikkaamalla Päävalikko nappia pääsee takaisin päävalikko sivulle.
         private void btPaavalikko_Click(object sender, EventArgs e)
         {
             Paavalikko paavalikko = ((Paavalikko)Owner);
 
             musa.Stop();
-
+            //Testi onko päävalikon musiikki käynnissä vai ei jos ei niin ei ole tässäkään
             if (Paavalikko.mute == true)
             {
                 Paavalikko.menu.PlayLooping();

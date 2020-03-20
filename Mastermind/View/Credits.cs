@@ -23,6 +23,7 @@ namespace Mastermind
         {
             InitializeComponent();
 
+            //Musiikki napin toiminnot
             if (Paavalikko.mute == true)
             {
                 btMute.BackgroundImage = Properties.Resources.on;
@@ -37,6 +38,7 @@ namespace Mastermind
 
             lbTitle.Hide();
 
+            //Timerin säädökset liikkuvaan label tekstiin 
             timer.Tick += new EventHandler(timer_Tick);
             timer.Interval = 141;         
             timer.Enabled = true;                      
@@ -48,12 +50,14 @@ namespace Mastermind
 
             this.Controls.Add(label);
 
+            //labeleiden lähtökoordinaatit pystysuunnassa.
             lbTekijat.Top = 400;
             lbNimi1.Top = 400;
             lbNimi2.Top = 430;
 
         }
 
+        //timer muuttaa koordinaatteja tikittäessään säädetyllä nopeudella
         void timer_Tick(object sender, EventArgs e)
         {
             lbTekijat.Location = new Point(lbTekijat.Location.X, lbTekijat.Location.Y - 1);
@@ -74,6 +78,7 @@ namespace Mastermind
                 lbNimi2.Location = new Point(lbNimi2.Location.X, 0 - lbNimi2.Height);
             }
 
+            //Tietty korkeus saavutettu pysäytetään timer ja tuodaan title näkyviin
             if (lbTekijat.Location.Y == 180)
             {
                 timer.Stop();
@@ -84,14 +89,13 @@ namespace Mastermind
 
         }
 
-
-
+        //Päävalikkoon vievän napin toiminnot.
         private void btPaavalikko_Click(object sender, EventArgs e)
         {
             Paavalikko paavalikko = ((Paavalikko)Owner);
 
             credit.Stop();
-
+            //Testi soiko musiikki päävalikossa ja laittaa saman asetuksen
             if (Paavalikko.mute == true)
             {
                   Paavalikko.menu.PlayLooping();
@@ -105,8 +109,10 @@ namespace Mastermind
             Close();
         }
 
+        //Musiikin hiljennys napin toiminnot
         private void btMute_Click(object sender, EventArgs e)
         {
+            //Nappia klikatessa musiikki pysähtyy tai jatkuu
             if (Paavalikko.mute == true)
             {
                 btMute.BackgroundImage = Properties.Resources.off;
