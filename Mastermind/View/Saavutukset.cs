@@ -61,6 +61,7 @@ namespace Mastermind
             Close();
         }
 
+        //Comboboxiin haetaan käyttäjä id:n perusteella kenen saavutukset halutaan nähdä.
         private void Saavutukset_Load(object sender, EventArgs e)
         {
             cbKayttaja.DataSource = registerHandler.KaikkiKayttajat();
@@ -76,11 +77,13 @@ namespace Mastermind
             dgvSaavutukset.DataSource = registerHandler.Saavutukset(user);
         }
 
+        //Kun Comboboxista on valittu arvo, näyttää haetun datan sen mukaan.
         private void cbKayttaja_SelectedValueChanged(object sender, EventArgs e)
         {
             ShowData();
         }
 
+        //Musiikin hiljennys napin toiminnot.
         private void btMute_Click(object sender, EventArgs e)
         {
             if (Paavalikko.mute == true)
