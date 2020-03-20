@@ -27,7 +27,7 @@ namespace Mastermind
         bool eka;
         bool toka;
         bool kolmas;
-        bool nelhas;
+        bool neljäs;
         SoundPlayer peli = new SoundPlayer(Properties.Resources.Mastermind_game);
         SoundPlayer menu = new SoundPlayer(Properties.Resources.MastermindMenu8bit);
 
@@ -51,11 +51,13 @@ namespace Mastermind
                 peli.Stop();
             }
 
+            //Lisätään oikean rivin pictureboxit taulukkoon
             oikeaRivi[0] = pbOikea1;
             oikeaRivi[1] = pbOikea2;
             oikeaRivi[2] = pbOikea3;
             oikeaRivi[3] = pbOikea4;
 
+            //Lisätään värien pictureboxit taulukkoon
             varit[0] = pbKeltainen;
             varit[1] = pbOranssi;
             varit[2] = pbValkoinen;
@@ -65,8 +67,10 @@ namespace Mastermind
             varit[6] = pbVihrea;
             varit[7] = pbVioletti;
 
+            //Lisätään värien taulukosta listaan
             variLista = varit.ToList();
 
+            //Lisätään rivit omaan taulukkoon
             Rivit[0, 0] = pb1R1;
             Rivit[0, 1] = pb2R1;
             Rivit[0, 2] = pb3R1;
@@ -108,7 +112,7 @@ namespace Mastermind
             Rivit[9, 2] = pb3R10;
             Rivit[9, 3] = pb4R10;
 
-
+            //Lisätään kaikki tarkistus-pictureboxit taulukkoon
             Tarkistus[0, 0] = pbTark1R1;
             Tarkistus[0, 1] = pbTark2R1;
             Tarkistus[0, 2] = pbTark3R1;
@@ -155,6 +159,7 @@ namespace Mastermind
         {
             lbKayttaja.Text = b;
 
+            //hyväksytään kuvan vaihto arvaus riveille
             for (int i = 0; i < 10; i++)
             {
                 for (int j = 0; j < 4; j++)
@@ -163,6 +168,7 @@ namespace Mastermind
                 }
             }
 
+            //piilotetaan kaikki muut arvaus rivit paitsi ensimmäinen
             for (int i = 1; i < 10; i++)
             {
                 for (int j = 0; j < 4; j++)
@@ -173,6 +179,7 @@ namespace Mastermind
 
             OikeaRivi();
 
+            //Oikea rivi piiloon
             for (int i = 0; i < 4; i++)
             {
                 oikeaRivi[i].Hide();
@@ -192,7 +199,7 @@ namespace Mastermind
         }
 
         /// <summary>
-        /// 
+        /// Arvotaan oikea rivi värilistasta ja poistetaan arvottu väri listasta, jotta kone ei pysty arpomaan kahta samaa väriä
         /// </summary>
         public void OikeaRivi()
         {
@@ -263,6 +270,358 @@ namespace Mastermind
             }
 
         }
+
+        /// <summary>
+        /// Täällä tapahtuu oikean rivin ja arvatun rivin vertaileminen ja merkkaaminen onko oikea väri oikein oikealla paikalla, oikea väri väärällä paikalla vai kokonaan väärä väri
+        /// </summary>
+        private void btTarkista_Click(object sender, EventArgs e)
+        {
+            eka = false;
+            toka = false;
+            kolmas = false;
+            neljäs = false;
+
+            /// <summary>
+            /// Arvattu rivi on sama kuin oikea rivi ja pelaajalle lisätään voitto
+            /// lisätään käyttäjälle saavutus, jos se oli hänen ensimmäinen, kolmas tai kymmenes voitto
+            /// Lisätään saavutus, jos oli pelaajan ensimmäinen, viides tai kymmennes pelikerta
+            /// </summary>
+            if (oikeaRivi[0].Image == Rivit[i, 0].Image && oikeaRivi[1].Image == Rivit[i, 1].Image && oikeaRivi[2].Image == Rivit[i, 2].Image && oikeaRivi[3].Image == Rivit[i, 3].Image)
+            {
+                if (i == 0)
+                {
+                    Kayttajat user2 = new Kayttajat();
+                    user2.KayttajaId = y;
+                    registerHandler.SuperVoitto(user2);
+                }
+
+                Kayttajat user = new Kayttajat();
+                user.Voitot = y;
+
+                registerHandler.Voitot(user);
+                registerHandler.VoittoSaavutus(user);
+
+                user.Total = y;
+                registerHandler.PelitSaavutus(user);
+                registerHandler.PeliSaavutusLisays(user);
+
+                lbLoppu.Text = "VOITIT";
+                lbLoppu.ForeColor = Color.Lime;
+
+                Tarkistus[i, 0].Image = pbPunainen.Image;
+                Tarkistus[i, 1].Image = pbPunainen.Image;
+                Tarkistus[i, 2].Image = pbPunainen.Image;
+                Tarkistus[i, 3].Image = pbPunainen.Image;
+
+                for (int i = 0; i < 4; i++)
+                {
+                    oikeaRivi[i].Show();
+                }
+
+                btPaavalikko.Show();
+                btLuovuta.Enabled = false;
+                btTarkista.Enabled = false;
+            }
+
+            else
+            {
+                for (int k = 0; k < 4; k++)
+                {                    
+                    //Vertaillaan onko samat värit samoilla paikoilla
+                    if (Rivit[i, k].Image == oikeaRivi[k].Image)
+                    {
+                        //Katsotaan, että punaiset tarkistus pallot eivät mene päällekkäin
+                        if (Tarkistus[i, 0].Image != pbPunainen.Image)
+                        {
+                            Tarkistus[i, 0].Image = pbPunainen.Image;
+                        }
+
+                        else if (Tarkistus[i, 1].Image != pbPunainen.Image)
+                        {
+                            Tarkistus[i, 1].Image = pbPunainen.Image;
+                        }
+
+                        else if (Tarkistus[i, 2].Image != pbPunainen.Image)
+                        {
+                            Tarkistus[i, 2].Image = pbPunainen.Image;
+                        }
+                    }
+
+                    //Näytetään seuraava rivi arvaukselle
+                    if (i < 9)
+                    {
+                        Rivit[i + 1, k].Show();
+                    }
+                }
+
+                
+                if (Rivit[i, 0].Image == oikeaRivi[1].Image || Rivit[i, 0].Image == oikeaRivi[2].Image || Rivit[i, 0].Image == oikeaRivi[3].Image)
+                {
+                    //Ei lisätä valkoista tarkistusta, jos pelaaja on veikannut useampaan kohtaan saman värin ja saanut värin oikealle paikalle
+                    if ((Rivit[i, 0].Image == oikeaRivi[1].Image && Rivit[i, 1].Image == oikeaRivi[1].Image) || (Rivit[i, 0].Image == oikeaRivi[2].Image && Rivit[i, 2].Image == oikeaRivi[2].Image) || (Rivit[i, 0].Image == oikeaRivi[3].Image && Rivit[i, 3].Image == oikeaRivi[3].Image))
+                    {
+
+                    }
+
+                    else if ((Tarkistus[i, 0].Image != pbValkoinen.Image && Tarkistus[i, 0].Image != pbPunainen.Image) && (eka == false))
+                    {
+                        Tarkistus[i, 0].Image = pbValkoinen.Image;
+                        eka = true;
+                    }
+
+                    else if ((Tarkistus[i, 1].Image != pbValkoinen.Image && Tarkistus[i, 1].Image != pbPunainen.Image) && (eka == false))
+                    {
+                        Tarkistus[i, 1].Image = pbValkoinen.Image;
+                        eka = true;
+                    }
+
+                    else if ((Tarkistus[i, 2].Image != pbValkoinen.Image && Tarkistus[i, 2].Image != pbPunainen.Image) && (eka == false))
+                    {
+                        Tarkistus[i, 2].Image = pbValkoinen.Image;
+                        eka = true;
+                    }
+
+                    else if ((Tarkistus[i, 3].Image != pbValkoinen.Image && Tarkistus[i, 3].Image != pbPunainen.Image) && (eka == false))
+                    {
+                        Tarkistus[i, 3].Image = pbValkoinen.Image;
+                        eka = true;
+                    }
+
+                }
+
+                else
+                {
+
+                }
+
+                if (Rivit[i, 1].Image == oikeaRivi[0].Image || Rivit[i, 1].Image == oikeaRivi[2].Image || Rivit[i, 1].Image == oikeaRivi[3].Image)
+                {
+                    //Ei lisätä valkoista tarkistusta, jos pelaaja on veikannut useampaan kohtaan saman värin ja saanut värin oikealle paikalle
+                    if ((Rivit[i, 1].Image == oikeaRivi[0].Image && Rivit[i, 0].Image == oikeaRivi[0].Image) || (Rivit[i, 1].Image == oikeaRivi[2].Image && Rivit[i, 2].Image == oikeaRivi[2].Image) || (Rivit[i, 1].Image == oikeaRivi[3].Image && Rivit[i, 3].Image == oikeaRivi[3].Image))
+                    {
+
+                    }
+
+                    else if ((Tarkistus[i, 0].Image != pbValkoinen.Image && Tarkistus[i, 0].Image != pbPunainen.Image) && (toka == false))
+                    {
+                        Tarkistus[i, 0].Image = pbValkoinen.Image;
+                        toka = false;
+                    }
+
+                    else if ((Tarkistus[i, 1].Image != pbValkoinen.Image && Tarkistus[i, 1].Image != pbPunainen.Image) && (toka == false))
+                    {
+                        Tarkistus[i, 1].Image = pbValkoinen.Image;
+                        toka = true;
+                    }
+
+                    else if ((Tarkistus[i, 1].Image == pbValkoinen.Image || Tarkistus[i, 1].Image == pbPunainen.Image) && (toka == false))
+                    {
+                        Tarkistus[i, 2].Image = pbValkoinen.Image;
+                        toka = true;
+                    }
+
+                    else if ((Tarkistus[i, 3].Image != pbValkoinen.Image && Tarkistus[i, 3].Image != pbPunainen.Image) && (toka == false))
+                    {
+                        Tarkistus[i, 3].Image = pbValkoinen.Image;
+                        toka = true;
+                    }
+                }
+
+                else
+                {
+
+                }
+
+                if (Rivit[i, 2].Image == oikeaRivi[0].Image || Rivit[i, 2].Image == oikeaRivi[1].Image || Rivit[i, 2].Image == oikeaRivi[3].Image)
+                {
+                    //Ei lisätä valkoista tarkistusta, jos pelaaja on veikannut useampaan kohtaan saman värin ja saanut värin oikealle paikalle
+                    if ((Rivit[i, 2].Image == oikeaRivi[0].Image && Rivit[i, 0].Image == oikeaRivi[0].Image) || (Rivit[i, 2].Image == oikeaRivi[1].Image && Rivit[i, 1].Image == oikeaRivi[1].Image) || (Rivit[i, 2].Image == oikeaRivi[3].Image && Rivit[i, 3].Image == oikeaRivi[3].Image))
+                    {
+
+                    }
+
+                    else if ((Tarkistus[i, 0].Image != pbValkoinen.Image && Tarkistus[i, 0].Image != pbPunainen.Image) && (kolmas == false))
+                    {
+                        Tarkistus[i, 0].Image = pbValkoinen.Image;
+                        kolmas = true;
+                    }
+
+                    else if ((Tarkistus[i, 1].Image != pbValkoinen.Image && Tarkistus[i, 1].Image != pbPunainen.Image) && (kolmas == false))
+                    {
+                        Tarkistus[i, 1].Image = pbValkoinen.Image;
+                        kolmas = true;
+                    }
+
+                    else if ((Tarkistus[i, 2].Image != pbValkoinen.Image && Tarkistus[i, 2].Image != pbPunainen.Image) && (kolmas == false))
+                    {
+                        Tarkistus[i, 2].Image = pbValkoinen.Image;
+                        kolmas = true;
+                    }
+
+                    else if ((Tarkistus[i, 3].Image != pbValkoinen.Image && Tarkistus[i, 3].Image != pbPunainen.Image) && (kolmas == false))
+                    {
+                        Tarkistus[i, 3].Image = pbValkoinen.Image;
+                        kolmas = true;
+                    }
+                }
+
+                else
+                {
+
+                }
+
+                if (Rivit[i, 3].Image == oikeaRivi[0].Image || Rivit[i, 3].Image == oikeaRivi[1].Image || Rivit[i, 3].Image == oikeaRivi[2].Image)
+                {
+                    //Ei lisätä valkoista tarkistusta, jos pelaaja on veikannut useampaan kohtaan saman värin ja saanut värin oikealle paikalle
+                    if ((Rivit[i, 3].Image == oikeaRivi[0].Image && Rivit[i, 0].Image == oikeaRivi[0].Image) || (Rivit[i, 3].Image == oikeaRivi[1].Image && Rivit[i, 1].Image == oikeaRivi[1].Image) || (Rivit[i, 3].Image == oikeaRivi[2].Image && Rivit[i, 2].Image == oikeaRivi[2].Image))
+                    {
+
+                    }
+
+                    else if ((Tarkistus[i, 0].Image != pbValkoinen.Image && Tarkistus[i, 0].Image != pbPunainen.Image) && (neljäs == false))
+                    {
+                        Tarkistus[i, 0].Image = pbValkoinen.Image;
+                        neljäs = true;
+                    }
+
+                    else if ((Tarkistus[i, 1].Image != pbValkoinen.Image && Tarkistus[i, 1].Image != pbPunainen.Image) && (neljäs == false))
+                    {
+                        Tarkistus[i, 1].Image = pbValkoinen.Image;
+                        neljäs = true;
+                    }
+
+                    else if ((Tarkistus[i, 2].Image != pbValkoinen.Image && Tarkistus[i, 2].Image != pbPunainen.Image) && (neljäs == false))
+                    {
+                        Tarkistus[i, 2].Image = pbValkoinen.Image;
+                        neljäs = true;
+                    }
+
+                    else if ((Tarkistus[i, 3].Image != pbValkoinen.Image && Tarkistus[i, 3].Image != pbPunainen.Image) && (neljäs == false))
+                    {
+                        Tarkistus[i, 3].Image = pbValkoinen.Image;
+                        neljäs = true;
+                    }
+
+                }
+
+                else
+                {
+
+                }
+
+                //Lukitaan arvatun rivin kuvan pudotus
+                for (int l = 0; l < 4; l++)
+                {
+                    Rivit[i, l].AllowDrop = false;
+                }
+            }
+
+            // lisätään käyttäjälle saavutus, jos se oli hänen ensimmäinen, kolmas tai kymmenes häviö
+            // Lisätään saavutus, jos oli pelaajan ensimmäinen, viides tai kymmennes pelikerta
+            if (i + 1 > 9 && (oikeaRivi[0].Image != Rivit[i, 0].Image || oikeaRivi[1].Image != Rivit[i, 1].Image || oikeaRivi[2].Image != Rivit[i, 2].Image || oikeaRivi[3].Image != Rivit[i, 3].Image))
+            {
+                lbLoppu.Text = "HÄVISIT";
+                lbLoppu.ForeColor = Color.Red;
+
+                Kayttajat user = new Kayttajat();
+                user.Haviot = y;
+
+                registerHandler.Haviot(user);
+                registerHandler.HavioSaavutus(user);
+
+                user.Total = y;
+                registerHandler.PelitSaavutus(user);
+                registerHandler.PeliSaavutusLisays(user);
+
+                for (int i = 0; i < 4; i++)
+                {
+                    oikeaRivi[i].Show();
+                }
+
+                btPaavalikko.Show();
+                btLuovuta.Enabled = false;
+                btTarkista.Enabled = false;
+            }
+               
+            i++;
+        }
+
+        /// <summary>
+        /// Päävalikko nappia painettaessa lopetetaan pelilaudassa oleva musiikki ja katsotaan onko mute näppäintä painettu. Jos ei ole niin main menun musiikki alkaa soida ja jos on niin se ei ala soida. Suljetaan pelilauta.
+        /// </summary>
+        private void btPaavalikko_Click(object sender, EventArgs e)
+        {
+            Paavalikko paavalikko = ((Paavalikko)Owner);
+
+            peli.Stop();
+
+            if (Paavalikko.mute == true)
+            {
+                Paavalikko.menu.PlayLooping();
+            }
+
+            else if (Paavalikko.mute == false)
+            {
+                Paavalikko.menu.Stop();
+            }
+
+            this.Close();
+        }
+
+        /// <summary>
+        /// Luovuta nappia painaessa käyttäjälle lisätään häviö
+        /// lisätään käyttäjälle saavutus, jos se oli hänen ensimmäinen, kolmas tai kymmenes häviö
+        /// Lisätään saavutus, jos oli pelaajan ensimmäinen, viides tai kymmennes pelikerta
+        /// Lopetetaan pelilaudassa oleva musiikki ja katsotaan onko mute näppäintä painettu. Jos ei ole niin main menun musiikki alkaa soida ja jos on niin se ei ala soida. Suljetaan pelilauta.
+        /// </summary>
+        private void btLuovuta_Click(object sender, EventArgs e)
+        { 
+            Kayttajat user = new Kayttajat();
+            user.Haviot = y;
+
+            registerHandler.Haviot(user);
+            registerHandler.HavioSaavutus(user);
+
+            user.Total = y;
+            registerHandler.PelitSaavutus(user);
+            registerHandler.PeliSaavutusLisays(user);
+
+            Paavalikko paavalikko = ((Paavalikko)Owner);
+
+            peli.Stop();
+
+            if (Paavalikko.mute == true)
+            {
+                Paavalikko.menu.PlayLooping();
+            }
+
+            else if (Paavalikko.mute == false)
+            {
+                Paavalikko.menu.Stop();
+            }
+
+            this.Close();
+        }
+
+        //Musiikin hiljennys napin toiminnot
+        private void btMute_Click(object sender, EventArgs e)
+        {
+            //Nappia klikatessa musiikki pysähtyy tai jatkuu
+            if (Paavalikko.mute == true)
+            {
+                btMute.BackgroundImage = Properties.Resources.off;
+                peli.Stop();
+                Paavalikko.mute = false;
+            }
+
+            else if (Paavalikko.mute == false)
+            {
+                btMute.BackgroundImage = Properties.Resources.on;
+                peli.PlayLooping();
+                Paavalikko.mute = true;
+            }
+        }
+
 
         private void DragDropR1P1(object sender, DragEventArgs e)
         {
@@ -362,7 +721,7 @@ namespace Mastermind
         }
         private void DragDropR6P1(object sender, DragEventArgs e)
         {
-            pb1R6.Image = (Bitmap)e.Data.GetData(DataFormats.Bitmap); 
+            pb1R6.Image = (Bitmap)e.Data.GetData(DataFormats.Bitmap);
         }
 
         private void DragDropR6P2(object sender, DragEventArgs e)
@@ -501,330 +860,6 @@ namespace Mastermind
         {
             pbVioletti.DoDragDrop(pbVioletti.Image, DragDropEffects.Copy);
             this.pbVihrea.Visible = true;
-        }
-
-        private void btTarkista_Click(object sender, EventArgs e)
-        {
-
-            eka = false;
-            toka = false;
-            kolmas = false;
-            nelhas = false;
-
-            if (oikeaRivi[0].Image == Rivit[i, 0].Image && oikeaRivi[1].Image == Rivit[i, 1].Image && oikeaRivi[2].Image == Rivit[i, 2].Image && oikeaRivi[3].Image == Rivit[i, 3].Image)
-            {
-                if (i == 0)
-                {
-                    Kayttajat user2 = new Kayttajat();
-                    user2.KayttajaId = y;
-                    registerHandler.SuperVoitto(user2);
-                }
-
-                Kayttajat user = new Kayttajat();
-                user.Voitot = y;
-
-                registerHandler.Voitot(user);
-                registerHandler.VoittoSaavutus(user);
-
-                user.Total = y;
-                registerHandler.PelitSaavutus(user);
-                registerHandler.PeliSaavutusLisays(user);
-
-                lbLoppu.Text = "VOITIT";
-                lbLoppu.ForeColor = Color.Lime;
-
-                Tarkistus[i, 0].Image = pbPunainen.Image;
-                Tarkistus[i, 1].Image = pbPunainen.Image;
-                Tarkistus[i, 2].Image = pbPunainen.Image;
-                Tarkistus[i, 3].Image = pbPunainen.Image;
-
-                for (int i = 0; i < 4; i++)
-                {
-                    oikeaRivi[i].Show();
-                }
-
-                btPaavalikko.Show();
-                btLuovuta.Enabled = false;
-                btTarkista.Enabled = false;
-            }
-
-            else
-            {
-                for (int k = 0; k < 4; k++)
-                {
-                    
-                    if (Rivit[i, k].Image == oikeaRivi[k].Image)
-                    {
-                        if (Tarkistus[i, 0].Image != pbPunainen.Image)
-                        {
-                            Tarkistus[i, 0].Image = pbPunainen.Image;
-                        }
-
-                        else if (Tarkistus[i, 1].Image != pbPunainen.Image)
-                        {
-                            Tarkistus[i, 1].Image = pbPunainen.Image;
-                        }
-
-                        else if (Tarkistus[i, 2].Image != pbPunainen.Image)
-                        {
-                            Tarkistus[i, 2].Image = pbPunainen.Image;
-                        }
-                    }
-
-                    if (i < 9)
-                    {
-                        Rivit[i + 1, k].Show();
-                    }
-                }
-
-                if (Rivit[i, 0].Image == oikeaRivi[1].Image || Rivit[i, 0].Image == oikeaRivi[2].Image || Rivit[i, 0].Image == oikeaRivi[3].Image)
-                {
-
-                    if ((Rivit[i, 0].Image == oikeaRivi[1].Image && Rivit[i, 1].Image == oikeaRivi[1].Image) || (Rivit[i, 0].Image == oikeaRivi[2].Image && Rivit[i, 2].Image == oikeaRivi[2].Image) || (Rivit[i, 0].Image == oikeaRivi[3].Image && Rivit[i, 3].Image == oikeaRivi[3].Image))
-                    {
-
-                    }
-
-                    else if ((Tarkistus[i, 0].Image != pbValkoinen.Image && Tarkistus[i, 0].Image != pbPunainen.Image) && (eka == false))
-                    {
-                        Tarkistus[i, 0].Image = pbValkoinen.Image;
-                        eka = true;
-                    }
-
-                    else if ((Tarkistus[i, 1].Image != pbValkoinen.Image && Tarkistus[i, 1].Image != pbPunainen.Image) && (eka == false))
-                    {
-                        Tarkistus[i, 1].Image = pbValkoinen.Image;
-                        eka = true;
-                    }
-
-                    else if ((Tarkistus[i, 2].Image != pbValkoinen.Image && Tarkistus[i, 2].Image != pbPunainen.Image) && (eka == false))
-                    {
-                        Tarkistus[i, 2].Image = pbValkoinen.Image;
-                        eka = true;
-                    }
-
-                    else if ((Tarkistus[i, 3].Image != pbValkoinen.Image && Tarkistus[i, 3].Image != pbPunainen.Image) && (eka == false))
-                    {
-                        Tarkistus[i, 3].Image = pbValkoinen.Image;
-                        eka = true;
-                    }
-
-                }
-
-                else
-                {
-
-                }
-
-                if (Rivit[i, 1].Image == oikeaRivi[0].Image || Rivit[i, 1].Image == oikeaRivi[2].Image || Rivit[i, 1].Image == oikeaRivi[3].Image)
-                {
-                    if ((Rivit[i, 1].Image == oikeaRivi[0].Image && Rivit[i, 0].Image == oikeaRivi[0].Image) || (Rivit[i, 1].Image == oikeaRivi[2].Image && Rivit[i, 2].Image == oikeaRivi[2].Image) || (Rivit[i, 1].Image == oikeaRivi[3].Image && Rivit[i, 3].Image == oikeaRivi[3].Image))
-                    {
-
-                    }
-
-                    else if ((Tarkistus[i, 0].Image != pbValkoinen.Image && Tarkistus[i, 0].Image != pbPunainen.Image) && (toka == false))
-                    {
-                        Tarkistus[i, 0].Image = pbValkoinen.Image;
-                        toka = false;
-                    }
-
-                    else if ((Tarkistus[i, 1].Image != pbValkoinen.Image && Tarkistus[i, 1].Image != pbPunainen.Image) && (toka == false))
-                    {
-                        Tarkistus[i, 1].Image = pbValkoinen.Image;
-                        toka = true;
-                    }
-
-                    else if ((Tarkistus[i, 1].Image == pbValkoinen.Image || Tarkistus[i, 1].Image == pbPunainen.Image) && (toka == false))
-                    {
-                        Tarkistus[i, 2].Image = pbValkoinen.Image;
-                        toka = true;
-                    }
-
-                    else if ((Tarkistus[i, 3].Image != pbValkoinen.Image && Tarkistus[i, 3].Image != pbPunainen.Image) && (toka == false))
-                    {
-                        Tarkistus[i, 3].Image = pbValkoinen.Image;
-                        toka = true;
-                    }
-                }
-
-                else
-                {
-
-                }
-
-                if (Rivit[i, 2].Image == oikeaRivi[0].Image || Rivit[i, 2].Image == oikeaRivi[1].Image || Rivit[i, 2].Image == oikeaRivi[3].Image)
-                {
-                    if ((Rivit[i, 2].Image == oikeaRivi[0].Image && Rivit[i, 0].Image == oikeaRivi[0].Image) || (Rivit[i, 2].Image == oikeaRivi[1].Image && Rivit[i, 1].Image == oikeaRivi[1].Image) || (Rivit[i, 2].Image == oikeaRivi[3].Image && Rivit[i, 3].Image == oikeaRivi[3].Image))
-                    {
-
-                    }
-
-                    else if ((Tarkistus[i, 0].Image != pbValkoinen.Image && Tarkistus[i, 0].Image != pbPunainen.Image) && (kolmas == false))
-                    {
-                        Tarkistus[i, 0].Image = pbValkoinen.Image;
-                        kolmas = true;
-                    }
-
-                    else if ((Tarkistus[i, 1].Image != pbValkoinen.Image && Tarkistus[i, 1].Image != pbPunainen.Image) && (kolmas == false))
-                    {
-                        Tarkistus[i, 1].Image = pbValkoinen.Image;
-                        kolmas = true;
-                    }
-
-                    else if ((Tarkistus[i, 2].Image != pbValkoinen.Image && Tarkistus[i, 2].Image != pbPunainen.Image) && (kolmas == false))
-                    {
-                        Tarkistus[i, 2].Image = pbValkoinen.Image;
-                        kolmas = true;
-                    }
-
-                    else if ((Tarkistus[i, 3].Image != pbValkoinen.Image && Tarkistus[i, 3].Image != pbPunainen.Image) && (kolmas == false))
-                    {
-                        Tarkistus[i, 3].Image = pbValkoinen.Image;
-                        kolmas = true;
-                    }
-                }
-
-                else
-                {
-
-                }
-
-                if (Rivit[i, 3].Image == oikeaRivi[0].Image || Rivit[i, 3].Image == oikeaRivi[1].Image || Rivit[i, 3].Image == oikeaRivi[2].Image)
-                {
-                    if ((Rivit[i, 3].Image == oikeaRivi[0].Image && Rivit[i, 0].Image == oikeaRivi[0].Image) || (Rivit[i, 3].Image == oikeaRivi[1].Image && Rivit[i, 1].Image == oikeaRivi[1].Image) || (Rivit[i, 3].Image == oikeaRivi[2].Image && Rivit[i, 2].Image == oikeaRivi[2].Image))
-                    {
-
-                    }
-
-                    else if ((Tarkistus[i, 0].Image != pbValkoinen.Image && Tarkistus[i, 0].Image != pbPunainen.Image) && (nelhas == false))
-                    {
-                        Tarkistus[i, 0].Image = pbValkoinen.Image;
-                        nelhas = true;
-                    }
-
-                    else if ((Tarkistus[i, 1].Image != pbValkoinen.Image && Tarkistus[i, 1].Image != pbPunainen.Image) && (nelhas == false))
-                    {
-                        Tarkistus[i, 1].Image = pbValkoinen.Image;
-                        nelhas = true;
-                    }
-
-                    else if ((Tarkistus[i, 2].Image != pbValkoinen.Image && Tarkistus[i, 2].Image != pbPunainen.Image) && (nelhas == false))
-                    {
-                        Tarkistus[i, 2].Image = pbValkoinen.Image;
-                        nelhas = true;
-                    }
-
-                    else if ((Tarkistus[i, 3].Image != pbValkoinen.Image && Tarkistus[i, 3].Image != pbPunainen.Image) && (nelhas == false))
-                    {
-                        Tarkistus[i, 3].Image = pbValkoinen.Image;
-                        nelhas = true;
-                    }
-
-                }
-
-                else
-                {
-
-                }
-
-                for (int l = 0; l < 4; l++)
-                {
-                    Rivit[i, l].AllowDrop = false;
-                }
-            }
-
-            if (i + 1 > 9 && (oikeaRivi[0].Image != Rivit[i, 0].Image || oikeaRivi[1].Image != Rivit[i, 1].Image || oikeaRivi[2].Image != Rivit[i, 2].Image || oikeaRivi[3].Image != Rivit[i, 3].Image))
-            {
-                lbLoppu.Text = "HÄVISIT";
-                lbLoppu.ForeColor = Color.Red;
-
-                Kayttajat user = new Kayttajat();
-                user.Haviot = y;
-
-                registerHandler.Haviot(user);
-                registerHandler.HavioSaavutus(user);
-
-                user.Total = y;
-                registerHandler.PelitSaavutus(user);
-                registerHandler.PeliSaavutusLisays(user);
-
-                for (int i = 0; i < 4; i++)
-                {
-                    oikeaRivi[i].Show();
-                }
-
-                btPaavalikko.Show();
-                btLuovuta.Enabled = false;
-                btTarkista.Enabled = false;
-            }
-               
-            i++;
-        }
-
-        private void btPaavalikko_Click(object sender, EventArgs e)
-        {
-            Paavalikko paavalikko = ((Paavalikko)Owner);
-
-            peli.Stop();
-
-            if (Paavalikko.mute == true)
-            {
-                Paavalikko.menu.PlayLooping();
-            }
-
-            else if (Paavalikko.mute == false)
-            {
-                Paavalikko.menu.Stop();
-            }
-
-            this.Close();
-        }
-
-        private void btLuovuta_Click(object sender, EventArgs e)
-        { 
-            Kayttajat user = new Kayttajat();
-            user.Haviot = y;
-
-            registerHandler.Haviot(user);
-            registerHandler.HavioSaavutus(user);
-
-            user.Total = y;
-            registerHandler.PelitSaavutus(user);
-            registerHandler.PeliSaavutusLisays(user);
-
-            Paavalikko paavalikko = ((Paavalikko)Owner);
-
-            peli.Stop();
-
-            if (Paavalikko.mute == true)
-            {
-                Paavalikko.menu.PlayLooping();
-            }
-
-            else if (Paavalikko.mute == false)
-            {
-                Paavalikko.menu.Stop();
-            }
-
-            this.Close();
-        }
-
-        private void btMute_Click(object sender, EventArgs e)
-        {
-            if (Paavalikko.mute == true)
-            {
-                btMute.BackgroundImage = Properties.Resources.off;
-                peli.Stop();
-                Paavalikko.mute = false;
-            }
-
-            else if (Paavalikko.mute == false)
-            {
-                btMute.BackgroundImage = Properties.Resources.on;
-                peli.PlayLooping();
-                Paavalikko.mute = true;
-            }
         }
     }
 }

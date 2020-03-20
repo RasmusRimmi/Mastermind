@@ -86,6 +86,7 @@ namespace Mastermind
         //Musiikin hiljennys napin toiminnot.
         private void btMute_Click(object sender, EventArgs e)
         {
+            //Nappia klikatessa musiikki pysähtyy tai jatkuu
             if (Paavalikko.mute == true)
             {
                 btMute.BackgroundImage = Properties.Resources.off;

@@ -16,6 +16,7 @@ namespace Mastermind
         private static SoundPlayer _menu = new SoundPlayer(Properties.Resources.MastermindMenu8bit);
         private static bool _mute = true;
 
+        //mute-nappi, jota voi käyttää kaikissa formeissa
         public static bool mute
         {
             get
@@ -28,6 +29,7 @@ namespace Mastermind
             }
         }
 
+        //menun musiikki, jota voi käyttää kaikissa formeissa
         public static SoundPlayer menu
         {
             get
@@ -60,6 +62,7 @@ namespace Mastermind
 
         }
 
+        //Avaa käyttäjävalikon
         private void btYksinpeli_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -81,6 +84,7 @@ namespace Mastermind
             }
         }
 
+        //Avaa creditsit
         private void btCredits_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -102,6 +106,7 @@ namespace Mastermind
             }
         }
 
+        //Avaa saavutukset
         private void btSaavutukset_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -123,6 +128,7 @@ namespace Mastermind
             }
         }
 
+        //Avaa tulokset
         private void btTulokset_Click(object sender, EventArgs e)
         {
 
@@ -150,8 +156,10 @@ namespace Mastermind
             
         }
 
+        //Musiikin hiljennys napin toiminnot.
         private void btMute_Click(object sender, EventArgs e)
         {
+
             if (mute == true)
             {
                 btMute.BackgroundImage = Properties.Resources.off;
