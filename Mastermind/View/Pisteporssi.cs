@@ -22,6 +22,7 @@ namespace Mastermind
         SoundPlayer musa = new SoundPlayer(Properties.Resources.SaavutusTilasto);
         SoundPlayer menu = new SoundPlayer(Properties.Resources.MastermindMenu8bit);
 
+        //Luodaan labelit pisteiden näyttöä varten varten
         Label lb1Pel = new Label();
         Label lb2Pel = new Label();
         Label lb3Pel = new Label();
@@ -54,6 +55,7 @@ namespace Mastermind
 
             VoittoTilasto();
 
+            //Musiikintoisto napin testi, päävalikon asetuksen perusteella.
             if (Paavalikko.mute == true)
             {
                 btMute.BackgroundImage = Properties.Resources.on;
@@ -67,12 +69,14 @@ namespace Mastermind
             }
         }
 
+        //Päävalikkoon paluu nappula
         private void btPaavalikko_Click(object sender, EventArgs e)
         {
             Paavalikko paavalikko = ((Paavalikko)Owner);
 
             musa.Stop();
 
+            //Testaa soiko musiikki ennestään.
             if (Paavalikko.mute == true)
             {
                 Paavalikko.menu.PlayLooping();
@@ -86,6 +90,9 @@ namespace Mastermind
             this.Close();
         }
 
+        //Käyttäjien voittojen näyttö suuruusjärjestyksessä.
+        //Labelien tyylittely
+        //Testi montako käyttäjää tietokannassa on ja sen mukaan näyttää käyttäjien voitot. Max 5.
         public void VoittoTilasto()
         {
             if (registerHandler.VoittoTilastot().Tables[0].Rows.Count == 1)
@@ -320,6 +327,9 @@ namespace Mastermind
 
         }
 
+        //Käyttäjien häviöiden näyttö suuruusjärjestyksessä.
+        //Labelien tyylittely
+        //Testi montako käyttäjää tietokannassa on ja sen mukaan näyttää käyttäjien häviöt. Max 5.
         private void HavioTilasto()
         {
             if (registerHandler.HavioTilastot().Tables[0].Rows.Count == 1)
@@ -530,6 +540,8 @@ namespace Mastermind
 
         }
 
+        //Kun klikataan VoitotHaviot nappia teksti muuttuu sen mukaan mitä seuraavaksi haluutan näkyvän.
+        //Piilottaa klikkaamisen mukaan labelit ja tuo esiin toiset. Esim piilottaa häviöt ja tuo esiin voitot.
         private void btVoitotHaviot_Click(object sender, EventArgs e)
         {
             if (kato == true)
@@ -593,6 +605,7 @@ namespace Mastermind
             }
         }
 
+        //Musiikin hiljennysnapin klikkaus
         private void btMute_Click(object sender, EventArgs e)
         {
             if (Paavalikko.mute == true)
