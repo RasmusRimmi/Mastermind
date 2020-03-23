@@ -18,6 +18,7 @@ namespace Mastermind.Model
 
         }
 
+        //Lisää uuden käyttäjän tietokantaan
         public bool UusiKayttaja(Kayttajat kayttaja)
         {
             dbYhteys.Open();
@@ -32,6 +33,7 @@ namespace Mastermind.Model
             return true;
         }
 
+        //Näyttää kaikki käyttäjät tietokannasta
         public List<Kayttajat> KaikkiKayttajatTietokannasta()
         {
             dbYhteys.Open();
@@ -50,6 +52,7 @@ namespace Mastermind.Model
             return kayttajaLista;
         }
 
+        //Lisää häviön käyttäjälle
         public bool Havio(Kayttajat kayttaja)
         {
             dbYhteys.Open();
@@ -63,6 +66,7 @@ namespace Mastermind.Model
             return true;
         }
 
+        //Antaa saavutuksen käyttäjälle 1, 3 ja 10 häviön jälkeen
         public bool HavioSaavutus(Kayttajat kayttaja)
         {
             dbYhteys.Open();
@@ -110,6 +114,7 @@ namespace Mastermind.Model
             return true;
         }
 
+        //Lisää voiton käyttäjälle
         public bool Voitto(Kayttajat kayttaja)
         {
             dbYhteys.Open();
@@ -123,6 +128,7 @@ namespace Mastermind.Model
             return true;
         }
 
+        //Antaa saavutuksen käyttäjälle 1, 3 ja 10 voiton jälkeen
         public bool VoittoSaavutus(Kayttajat kayttaja)
         {
             dbYhteys.Open();
@@ -185,6 +191,7 @@ namespace Mastermind.Model
             return true;
         }
 
+        //Saavutus, jos käyttäjä arvaa rivin oikein ensimmäisellä kieroksella
         public bool SuperVoitto(Kayttajat kayttaja)
         {
             dbYhteys.Open();
@@ -211,6 +218,7 @@ namespace Mastermind.Model
             return true;
         }
 
+        //Päivittää käyttäjän pelikertojen määrän
         public bool PeliSaavutus(Kayttajat kayttaja)
         {
             dbYhteys.Open();
@@ -224,6 +232,7 @@ namespace Mastermind.Model
             return true;
         }
 
+        //Saavutus, jos käyttäjä on pelannus 1, 5 tai 10 kertaa
         public bool PeliSaavutusLisays(Kayttajat kayttaja)
         {
             dbYhteys.Open();
@@ -284,6 +293,7 @@ namespace Mastermind.Model
             return true;
         }
 
+        //Näyttää käyttäjien voitot
         public DataSet VoitotTietokannasta()
         {
             Kayttajat user = new Kayttajat();
@@ -298,6 +308,7 @@ namespace Mastermind.Model
             return ds;
         }
 
+        //Näyttää käyttäjien häviöt
         public DataSet HaviotTietokannasta()
         {
             Kayttajat user = new Kayttajat();
@@ -312,6 +323,7 @@ namespace Mastermind.Model
             return ds;
         }
 
+        //Näyttää käyttäjien saavutukset
         public DataTable SaavutuksetTietokannasta(Kayttajat kayttaja)
         {
             dbYhteys.Open();
