@@ -66,7 +66,7 @@ namespace Mastermind.Model
             return true;
         }
 
-        //Antaa saavutuksen käyttäjälle 1, 3 ja 10 häviön jälkeen
+        //Antaa saavutuksen käyttäjälle 3:nnen ja 10:nnen häviön jälkeen
         public bool HavioSaavutus(Kayttajat kayttaja)
         {
             dbYhteys.Open();
@@ -77,10 +77,10 @@ namespace Mastermind.Model
 
             if (havio.Read())
             {
-                Kayttajat paska = new Kayttajat();
-                paska.Haviot = (int)havio["Haviot"];
+                Kayttajat User = new Kayttajat();
+                User.Haviot = (int)havio["Haviot"];
 
-                if (paska.Haviot == 10)
+                if (User.Haviot == 10)
                 {
                     dbYhteys.Close();
                     dbYhteys.Open();
@@ -94,7 +94,7 @@ namespace Mastermind.Model
                     query2.ExecuteNonQuery();
                 }
 
-                else if (paska.Haviot == 3)
+                else if (User.Haviot == 3)
                 {
                     dbYhteys.Close();
                     dbYhteys.Open();
@@ -128,7 +128,7 @@ namespace Mastermind.Model
             return true;
         }
 
-        //Antaa saavutuksen käyttäjälle 1, 3 ja 10 voiton jälkeen
+        //Antaa saavutuksen käyttäjälle 1:sen, 3:nnen ja 10:nnen voiton jälkeen
         public bool VoittoSaavutus(Kayttajat kayttaja)
         {
             dbYhteys.Open();
@@ -139,10 +139,10 @@ namespace Mastermind.Model
 
             if (voitto.Read())
             {
-                Kayttajat paska = new Kayttajat();
-                paska.Voitot = (int)voitto["Voitot"];
+                Kayttajat user = new Kayttajat();
+                user.Voitot = (int)voitto["Voitot"];
 
-                if (paska.Voitot == 1)
+                if (user.Voitot == 1)
                 {
                     dbYhteys.Close();
                     dbYhteys.Open();
@@ -156,7 +156,7 @@ namespace Mastermind.Model
                     query2.ExecuteNonQuery();
                 }
 
-                else if (paska.Voitot == 3)
+                else if (user.Voitot == 3)
                 {
                     dbYhteys.Close();
                     dbYhteys.Open();
@@ -171,7 +171,7 @@ namespace Mastermind.Model
 
                 }
 
-                else if (paska.Voitot == 10)
+                else if (user.Voitot == 10)
                 {
                     dbYhteys.Close();
                     dbYhteys.Open();
@@ -232,7 +232,7 @@ namespace Mastermind.Model
             return true;
         }
 
-        //Saavutus, jos käyttäjä on pelannus 1, 5 tai 10 kertaa
+        //Saavutus, jos käyttäjä on pelannut 1:sen, 5:nnen tai 10:nnen kerran
         public bool PeliSaavutusLisays(Kayttajat kayttaja)
         {
             dbYhteys.Open();
