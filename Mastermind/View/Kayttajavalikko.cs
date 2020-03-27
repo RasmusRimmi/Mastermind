@@ -47,6 +47,8 @@ namespace Mastermind
                 btMute.BackgroundImage = Properties.Resources.off;
             }
 
+            tbKayttaja.MaxLength = 6;
+            lbLisays.Hide();
         }
 
         //Avataan päävalikko
@@ -64,7 +66,8 @@ namespace Mastermind
 
             registerHandler.TallennaKayttaja(kayttaja);
 
-            MessageBox.Show("Käyttäjä lisätty");
+            lbLisays.Show();
+            //MessageBox.Show("Käyttäjä lisätty");
         }
 
         //Hakee käyttäjät tietokannasta
@@ -121,6 +124,12 @@ namespace Mastermind
                 Paavalikko.menu.PlayLooping();
                 Paavalikko.mute = true;
             }
+        }
+
+        private void tbKayttaja_Click(object sender, EventArgs e)
+        {
+            lbLisays.Hide();
+            tbKayttaja.Clear();
         }
     }
 }

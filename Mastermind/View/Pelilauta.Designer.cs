@@ -128,6 +128,7 @@
             this.lbLoppu = new System.Windows.Forms.Label();
             this.btPaavalikko = new System.Windows.Forms.Button();
             this.btMute = new System.Windows.Forms.Button();
+            this.lbVirhe = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pb4R1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb3R1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb2R1)).BeginInit();
@@ -325,6 +326,7 @@
             this.pbKeltainen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbKeltainen.TabIndex = 15;
             this.pbKeltainen.TabStop = false;
+            this.pbKeltainen.Click += new System.EventHandler(this.PiilotaLabel);
             this.pbKeltainen.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Siirra1);
             // 
             // pbVioletti
@@ -336,6 +338,7 @@
             this.pbVioletti.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbVioletti.TabIndex = 16;
             this.pbVioletti.TabStop = false;
+            this.pbVioletti.MouseClick += new System.Windows.Forms.MouseEventHandler(this.PiilotaLabel);
             this.pbVioletti.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Siirra8);
             // 
             // pbVihrea
@@ -347,6 +350,7 @@
             this.pbVihrea.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbVihrea.TabIndex = 17;
             this.pbVihrea.TabStop = false;
+            this.pbVihrea.MouseClick += new System.Windows.Forms.MouseEventHandler(this.PiilotaLabel);
             this.pbVihrea.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Siirra7);
             // 
             // pbTurkoosi
@@ -358,6 +362,7 @@
             this.pbTurkoosi.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbTurkoosi.TabIndex = 18;
             this.pbTurkoosi.TabStop = false;
+            this.pbTurkoosi.MouseClick += new System.Windows.Forms.MouseEventHandler(this.PiilotaLabel);
             this.pbTurkoosi.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Siirra6);
             // 
             // pbSininen
@@ -369,6 +374,7 @@
             this.pbSininen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbSininen.TabIndex = 19;
             this.pbSininen.TabStop = false;
+            this.pbSininen.MouseClick += new System.Windows.Forms.MouseEventHandler(this.PiilotaLabel);
             this.pbSininen.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Siirra5);
             // 
             // pbPunainen
@@ -380,6 +386,7 @@
             this.pbPunainen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbPunainen.TabIndex = 20;
             this.pbPunainen.TabStop = false;
+            this.pbPunainen.MouseClick += new System.Windows.Forms.MouseEventHandler(this.PiilotaLabel);
             this.pbPunainen.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Siirra4);
             // 
             // pbValkoinen
@@ -391,6 +398,7 @@
             this.pbValkoinen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbValkoinen.TabIndex = 21;
             this.pbValkoinen.TabStop = false;
+            this.pbValkoinen.MouseClick += new System.Windows.Forms.MouseEventHandler(this.PiilotaLabel);
             this.pbValkoinen.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Siirra3);
             // 
             // pbOranssi
@@ -402,6 +410,7 @@
             this.pbOranssi.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbOranssi.TabIndex = 22;
             this.pbOranssi.TabStop = false;
+            this.pbOranssi.MouseClick += new System.Windows.Forms.MouseEventHandler(this.PiilotaLabel);
             this.pbOranssi.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Siirra2);
             // 
             // pictureBox9
@@ -1426,6 +1435,18 @@
             this.btMute.UseVisualStyleBackColor = false;
             this.btMute.Click += new System.EventHandler(this.btMute_Click);
             // 
+            // lbVirhe
+            // 
+            this.lbVirhe.AutoSize = true;
+            this.lbVirhe.BackColor = System.Drawing.Color.Transparent;
+            this.lbVirhe.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbVirhe.ForeColor = System.Drawing.Color.Red;
+            this.lbVirhe.Location = new System.Drawing.Point(471, 388);
+            this.lbVirhe.Name = "lbVirhe";
+            this.lbVirhe.Size = new System.Drawing.Size(203, 18);
+            this.lbVirhe.TabIndex = 109;
+            this.lbVirhe.Text = "RIVIÄ EI OLE TÄYTETTY!";
+            // 
             // Pelilauta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1433,6 +1454,7 @@
             this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(684, 674);
+            this.Controls.Add(this.lbVirhe);
             this.Controls.Add(this.btMute);
             this.Controls.Add(this.btPaavalikko);
             this.Controls.Add(this.lbLoppu);
@@ -1738,5 +1760,6 @@
         private System.Windows.Forms.Label lbLoppu;
         private System.Windows.Forms.Button btPaavalikko;
         private System.Windows.Forms.Button btMute;
+        private System.Windows.Forms.Label lbVirhe;
     }
 }

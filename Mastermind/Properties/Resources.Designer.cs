@@ -92,15 +92,6 @@ namespace Mastermind.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static System.IO.UnmanagedMemoryStream Mastermind_game {
-            get {
-                return ResourceManager.GetStream("Mastermind_game", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
         internal static System.IO.UnmanagedMemoryStream MastermindMenu {
             get {
                 return ResourceManager.GetStream("MastermindMenu", resourceCulture);
@@ -153,6 +144,15 @@ namespace Mastermind.Properties {
             get {
                 object obj = ResourceManager.GetObject("oranssipampula", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream Pelilauta {
+            get {
+                return ResourceManager.GetStream("Pelilauta", resourceCulture);
             }
         }
         

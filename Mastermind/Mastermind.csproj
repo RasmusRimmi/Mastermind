@@ -191,5 +191,8 @@
   <ItemGroup>
     <None Include="Resources\SaavutusTilasto.wav" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pelilauta.wav" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

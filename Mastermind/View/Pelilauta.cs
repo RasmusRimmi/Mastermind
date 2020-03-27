@@ -28,12 +28,12 @@ namespace Mastermind
         bool toka;
         bool kolmas;
         bool neljäs;
-        SoundPlayer peli = new SoundPlayer(Properties.Resources.Mastermind_game);
+        SoundPlayer peli = new SoundPlayer(Properties.Resources.Pelilauta);
         SoundPlayer menu = new SoundPlayer(Properties.Resources.MastermindMenu8bit);
         Bitmap harmaa = Mastermind.Properties.Resources.harmaapampula;
 
         int i = 0;
-        int testi = 0;
+        int rivi = 0;
 
         public Pelilauta(Kayttajavalikko kayttajavalikko)
         { 
@@ -197,6 +197,7 @@ namespace Mastermind
             }
 
             btPaavalikko.Hide();
+            lbVirhe.Hide();
         }
 
         public void ab(string a)
@@ -293,9 +294,10 @@ namespace Mastermind
             neljäs = false;
 
             //Annetaan virheilmoitus, jos arvattavaa riviä ei ole kokonaan täytetty
-            if (Rivit[testi, 0].Image == harmaa || Rivit[testi, 1].Image == harmaa || Rivit[testi, 2].Image == harmaa || Rivit[testi, 3].Image == harmaa)
+            if (Rivit[rivi, 0].Image == harmaa || Rivit[rivi, 1].Image == harmaa || Rivit[rivi, 2].Image == harmaa || Rivit[rivi, 3].Image == harmaa)
             {
-                MessageBox.Show("Riviä ei ole täytetty");
+                //MessageBox.Show("Riviä ei ole täytetty");
+                lbVirhe.Show();
             }
 
             else
@@ -564,273 +566,9 @@ namespace Mastermind
                 }
 
                 i++;
-                testi++;
+                rivi++;
             }
 
-            ///// <summary>
-            ///// Arvattu rivi on sama kuin oikea rivi ja pelaajalle lisätään voitto
-            ///// lisätään käyttäjälle saavutus, jos se oli hänen ensimmäinen, kolmas tai kymmenes voitto
-            ///// Lisätään saavutus, jos oli pelaajan ensimmäinen, viides tai kymmennes pelikerta
-            ///// </summary>
-            //if (oikeaRivi[0].Image == Rivit[i, 0].Image && oikeaRivi[1].Image == Rivit[i, 1].Image && oikeaRivi[2].Image == Rivit[i, 2].Image && oikeaRivi[3].Image == Rivit[i, 3].Image)
-            //{
-
-            //    if (i == 0)
-            //    {
-            //        Kayttajat user2 = new Kayttajat();
-            //        user2.KayttajaId = y;
-            //        registerHandler.SuperVoitto(user2);
-            //    }
-
-            //    Kayttajat user = new Kayttajat();
-            //    user.Voitot = y;
-
-            //    registerHandler.Voitot(user);
-            //    registerHandler.VoittoSaavutus(user);
-
-            //    user.Total = y;
-            //    registerHandler.PelitSaavutus(user);
-            //    registerHandler.PeliSaavutusLisays(user);
-
-            //    lbLoppu.Text = "VOITIT";
-            //    lbLoppu.ForeColor = Color.Lime;
-
-            //    Tarkistus[i, 0].Image = pbPunainen.Image;
-            //    Tarkistus[i, 1].Image = pbPunainen.Image;
-            //    Tarkistus[i, 2].Image = pbPunainen.Image;
-            //    Tarkistus[i, 3].Image = pbPunainen.Image;
-
-            //    for (int i = 0; i < 4; i++)
-            //    {
-            //        oikeaRivi[i].Show();
-            //    }
-
-            //    btPaavalikko.Show();
-            //    btLuovuta.Enabled = false;
-            //    btTarkista.Enabled = false;
-            //}
-
-            //else
-            //{
-            //    for (int k = 0; k < 4; k++)
-            //    {
-            //        //Vertaillaan onko samat värit samoilla paikoilla
-            //        if (Rivit[i, k].Image == oikeaRivi[k].Image)
-            //        {
-            //            //Katsotaan, että punaiset tarkistus pallot eivät mene päällekkäin
-            //            if (Tarkistus[i, 0].Image != pbPunainen.Image)
-            //            {
-            //                Tarkistus[i, 0].Image = pbPunainen.Image;
-            //            }
-
-            //            else if (Tarkistus[i, 1].Image != pbPunainen.Image)
-            //            {
-            //                Tarkistus[i, 1].Image = pbPunainen.Image;
-            //            }
-
-            //            else if (Tarkistus[i, 2].Image != pbPunainen.Image)
-            //            {
-            //                Tarkistus[i, 2].Image = pbPunainen.Image;
-            //            }
-            //        }
-
-            //        //Näytetään seuraava rivi arvaukselle
-            //        if (i < 9)
-            //        {
-            //            Rivit[i + 1, k].Show();
-            //        }
-            //    }
-
-
-            //    if (Rivit[i, 0].Image == oikeaRivi[1].Image || Rivit[i, 0].Image == oikeaRivi[2].Image || Rivit[i, 0].Image == oikeaRivi[3].Image)
-            //    {
-            //        //Ei lisätä valkoista tarkistusta, jos pelaaja on veikannut useampaan kohtaan saman värin ja saanut värin oikealle paikalle
-            //        if ((Rivit[i, 0].Image == oikeaRivi[1].Image && Rivit[i, 1].Image == oikeaRivi[1].Image) || (Rivit[i, 0].Image == oikeaRivi[2].Image && Rivit[i, 2].Image == oikeaRivi[2].Image) || (Rivit[i, 0].Image == oikeaRivi[3].Image && Rivit[i, 3].Image == oikeaRivi[3].Image))
-            //        {
-
-            //        }
-
-            //        else if ((Tarkistus[i, 0].Image != pbValkoinen.Image && Tarkistus[i, 0].Image != pbPunainen.Image) && (eka == false))
-            //        {
-            //            Tarkistus[i, 0].Image = pbValkoinen.Image;
-            //            eka = true;
-            //        }
-
-            //        else if ((Tarkistus[i, 1].Image != pbValkoinen.Image && Tarkistus[i, 1].Image != pbPunainen.Image) && (eka == false))
-            //        {
-            //            Tarkistus[i, 1].Image = pbValkoinen.Image;
-            //            eka = true;
-            //        }
-
-            //        else if ((Tarkistus[i, 2].Image != pbValkoinen.Image && Tarkistus[i, 2].Image != pbPunainen.Image) && (eka == false))
-            //        {
-            //            Tarkistus[i, 2].Image = pbValkoinen.Image;
-            //            eka = true;
-            //        }
-
-            //        else if ((Tarkistus[i, 3].Image != pbValkoinen.Image && Tarkistus[i, 3].Image != pbPunainen.Image) && (eka == false))
-            //        {
-            //            Tarkistus[i, 3].Image = pbValkoinen.Image;
-            //            eka = true;
-            //        }
-
-            //    }
-
-            //    else
-            //    {
-
-            //    }
-
-            //    if (Rivit[i, 1].Image == oikeaRivi[0].Image || Rivit[i, 1].Image == oikeaRivi[2].Image || Rivit[i, 1].Image == oikeaRivi[3].Image)
-            //    {
-            //        //Ei lisätä valkoista tarkistusta, jos pelaaja on veikannut useampaan kohtaan saman värin ja saanut värin oikealle paikalle
-            //        if ((Rivit[i, 1].Image == oikeaRivi[0].Image && Rivit[i, 0].Image == oikeaRivi[0].Image) || (Rivit[i, 1].Image == oikeaRivi[2].Image && Rivit[i, 2].Image == oikeaRivi[2].Image) || (Rivit[i, 1].Image == oikeaRivi[3].Image && Rivit[i, 3].Image == oikeaRivi[3].Image))
-            //        {
-
-            //        }
-
-            //        else if ((Tarkistus[i, 0].Image != pbValkoinen.Image && Tarkistus[i, 0].Image != pbPunainen.Image) && (toka == false))
-            //        {
-            //            Tarkistus[i, 0].Image = pbValkoinen.Image;
-            //            toka = false;
-            //        }
-
-            //        else if ((Tarkistus[i, 1].Image != pbValkoinen.Image && Tarkistus[i, 1].Image != pbPunainen.Image) && (toka == false))
-            //        {
-            //            Tarkistus[i, 1].Image = pbValkoinen.Image;
-            //            toka = true;
-            //        }
-
-            //        else if ((Tarkistus[i, 1].Image == pbValkoinen.Image || Tarkistus[i, 1].Image == pbPunainen.Image) && (toka == false))
-            //        {
-            //            Tarkistus[i, 2].Image = pbValkoinen.Image;
-            //            toka = true;
-            //        }
-
-            //        else if ((Tarkistus[i, 3].Image != pbValkoinen.Image && Tarkistus[i, 3].Image != pbPunainen.Image) && (toka == false))
-            //        {
-            //            Tarkistus[i, 3].Image = pbValkoinen.Image;
-            //            toka = true;
-            //        }
-            //    }
-
-            //    else
-            //    {
-
-            //    }
-
-            //    if (Rivit[i, 2].Image == oikeaRivi[0].Image || Rivit[i, 2].Image == oikeaRivi[1].Image || Rivit[i, 2].Image == oikeaRivi[3].Image)
-            //    {
-            //        //Ei lisätä valkoista tarkistusta, jos pelaaja on veikannut useampaan kohtaan saman värin ja saanut värin oikealle paikalle
-            //        if ((Rivit[i, 2].Image == oikeaRivi[0].Image && Rivit[i, 0].Image == oikeaRivi[0].Image) || (Rivit[i, 2].Image == oikeaRivi[1].Image && Rivit[i, 1].Image == oikeaRivi[1].Image) || (Rivit[i, 2].Image == oikeaRivi[3].Image && Rivit[i, 3].Image == oikeaRivi[3].Image))
-            //        {
-
-            //        }
-
-            //        else if ((Tarkistus[i, 0].Image != pbValkoinen.Image && Tarkistus[i, 0].Image != pbPunainen.Image) && (kolmas == false))
-            //        {
-            //            Tarkistus[i, 0].Image = pbValkoinen.Image;
-            //            kolmas = true;
-            //        }
-
-            //        else if ((Tarkistus[i, 1].Image != pbValkoinen.Image && Tarkistus[i, 1].Image != pbPunainen.Image) && (kolmas == false))
-            //        {
-            //            Tarkistus[i, 1].Image = pbValkoinen.Image;
-            //            kolmas = true;
-            //        }
-
-            //        else if ((Tarkistus[i, 2].Image != pbValkoinen.Image && Tarkistus[i, 2].Image != pbPunainen.Image) && (kolmas == false))
-            //        {
-            //            Tarkistus[i, 2].Image = pbValkoinen.Image;
-            //            kolmas = true;
-            //        }
-
-            //        else if ((Tarkistus[i, 3].Image != pbValkoinen.Image && Tarkistus[i, 3].Image != pbPunainen.Image) && (kolmas == false))
-            //        {
-            //            Tarkistus[i, 3].Image = pbValkoinen.Image;
-            //            kolmas = true;
-            //        }
-            //    }
-
-            //    else
-            //    {
-
-            //    }
-
-            //    if (Rivit[i, 3].Image == oikeaRivi[0].Image || Rivit[i, 3].Image == oikeaRivi[1].Image || Rivit[i, 3].Image == oikeaRivi[2].Image)
-            //    {
-            //        //Ei lisätä valkoista tarkistusta, jos pelaaja on veikannut useampaan kohtaan saman värin ja saanut värin oikealle paikalle
-            //        if ((Rivit[i, 3].Image == oikeaRivi[0].Image && Rivit[i, 0].Image == oikeaRivi[0].Image) || (Rivit[i, 3].Image == oikeaRivi[1].Image && Rivit[i, 1].Image == oikeaRivi[1].Image) || (Rivit[i, 3].Image == oikeaRivi[2].Image && Rivit[i, 2].Image == oikeaRivi[2].Image))
-            //        {
-
-            //        }
-
-            //        else if ((Tarkistus[i, 0].Image != pbValkoinen.Image && Tarkistus[i, 0].Image != pbPunainen.Image) && (neljäs == false))
-            //        {
-            //            Tarkistus[i, 0].Image = pbValkoinen.Image;
-            //            neljäs = true;
-            //        }
-
-            //        else if ((Tarkistus[i, 1].Image != pbValkoinen.Image && Tarkistus[i, 1].Image != pbPunainen.Image) && (neljäs == false))
-            //        {
-            //            Tarkistus[i, 1].Image = pbValkoinen.Image;
-            //            neljäs = true;
-            //        }
-
-            //        else if ((Tarkistus[i, 2].Image != pbValkoinen.Image && Tarkistus[i, 2].Image != pbPunainen.Image) && (neljäs == false))
-            //        {
-            //            Tarkistus[i, 2].Image = pbValkoinen.Image;
-            //            neljäs = true;
-            //        }
-
-            //        else if ((Tarkistus[i, 3].Image != pbValkoinen.Image && Tarkistus[i, 3].Image != pbPunainen.Image) && (neljäs == false))
-            //        {
-            //            Tarkistus[i, 3].Image = pbValkoinen.Image;
-            //            neljäs = true;
-            //        }
-
-            //    }
-
-            //    else
-            //    {
-
-            //    }
-
-            //    //Lukitaan arvatun rivin kuvan pudotus
-            //    for (int l = 0; l < 4; l++)
-            //    {
-            //        Rivit[i, l].AllowDrop = false;
-            //    }
-            //}
-
-            //// lisätään käyttäjälle saavutus, jos se oli hänen ensimmäinen, kolmas tai kymmenes häviö
-            //// Lisätään saavutus, jos oli pelaajan ensimmäinen, viides tai kymmennes pelikerta
-            //if (i + 1 > 9 && (oikeaRivi[0].Image != Rivit[i, 0].Image || oikeaRivi[1].Image != Rivit[i, 1].Image || oikeaRivi[2].Image != Rivit[i, 2].Image || oikeaRivi[3].Image != Rivit[i, 3].Image))
-            //{
-            //    lbLoppu.Text = "HÄVISIT";
-            //    lbLoppu.ForeColor = Color.Red;
-
-            //    Kayttajat user = new Kayttajat();
-            //    user.Haviot = y;
-
-            //    registerHandler.Haviot(user);
-            //    registerHandler.HavioSaavutus(user);
-
-            //    user.Total = y;
-            //    registerHandler.PelitSaavutus(user);
-            //    registerHandler.PeliSaavutusLisays(user);
-
-            //    for (int i = 0; i < 4; i++)
-            //    {
-            //        oikeaRivi[i].Show();
-            //    }
-
-            //    btPaavalikko.Show();
-            //    btLuovuta.Enabled = false;
-            //    btTarkista.Enabled = false;
-            //}
-               
-            //i++;
         }
 
         /// <summary>
@@ -909,197 +647,242 @@ namespace Mastermind
             }
         }
 
+        public void PiilotaLabel(object sender, EventArgs e)
+        {
+            lbVirhe.Hide();
+        }
+
 
         private void DragDropR1P1(object sender, DragEventArgs e)
         {
             Rivit[0, 0].Image = (Bitmap)e.Data.GetData(DataFormats.Bitmap);
+            lbVirhe.Hide();
         }
 
         private void DragDropR1P2(object sender, DragEventArgs e)
         {
             Rivit[0, 1].Image = (Bitmap)e.Data.GetData(DataFormats.Bitmap);
+            lbVirhe.Hide();
         }
 
         private void DragDropR1P3(object sender, DragEventArgs e)
         {
             Rivit[0, 2].Image = (Bitmap)e.Data.GetData(DataFormats.Bitmap);
+            lbVirhe.Hide();
         }
 
         private void DragDropR1P4(object sender, DragEventArgs e)
         {
             Rivit[0, 3].Image = (Bitmap)e.Data.GetData(DataFormats.Bitmap);
+            lbVirhe.Hide();
         }
 
         private void DragDropR2P1(object sender, DragEventArgs e)
         {
             pb1R2.Image = (Bitmap)e.Data.GetData(DataFormats.Bitmap);
+            lbVirhe.Hide();
         }
 
         private void DragDropR2P2(object sender, DragEventArgs e)
         {
             pb2R2.Image = (Bitmap)e.Data.GetData(DataFormats.Bitmap);
+            lbVirhe.Hide();
         }
 
         private void DragDropR2P3(object sender, DragEventArgs e)
         {
             pb3R2.Image = (Bitmap)e.Data.GetData(DataFormats.Bitmap);
+            lbVirhe.Hide();
         }
 
         private void DragDropR2P4(object sender, DragEventArgs e)
         {
             pb4R2.Image = (Bitmap)e.Data.GetData(DataFormats.Bitmap);
+            lbVirhe.Hide();
         }
         private void DragDropR3P1(object sender, DragEventArgs e)
         {
             pb1R3.Image = (Bitmap)e.Data.GetData(DataFormats.Bitmap);
+            lbVirhe.Hide();
         }
 
         private void DragDropR3P2(object sender, DragEventArgs e)
         {
             pb2R3.Image = (Bitmap)e.Data.GetData(DataFormats.Bitmap);
+            lbVirhe.Hide();
         }
 
         private void DragDropR3P3(object sender, DragEventArgs e)
         {
             pb3R3.Image = (Bitmap)e.Data.GetData(DataFormats.Bitmap);
+            lbVirhe.Hide();
         }
 
         private void DragDropR3P4(object sender, DragEventArgs e)
         {
             pb4R3.Image = (Bitmap)e.Data.GetData(DataFormats.Bitmap);
+            lbVirhe.Hide();
         }
         private void DragDropR4P1(object sender, DragEventArgs e)
         {
             pb1R4.Image = (Bitmap)e.Data.GetData(DataFormats.Bitmap);
+            lbVirhe.Hide();
         }
 
         private void DragDropR4P2(object sender, DragEventArgs e)
         {
             pb2R4.Image = (Bitmap)e.Data.GetData(DataFormats.Bitmap);
+            lbVirhe.Hide();
         }
 
         private void DragDropR4P3(object sender, DragEventArgs e)
         {
             pb3R4.Image = (Bitmap)e.Data.GetData(DataFormats.Bitmap);
+            lbVirhe.Hide();
         }
 
         private void DragDropR4P4(object sender, DragEventArgs e)
         {
             pb4R4.Image = (Bitmap)e.Data.GetData(DataFormats.Bitmap);
+            lbVirhe.Hide();
         }
         private void DragDropR5P1(object sender, DragEventArgs e)
         {
             pb1R5.Image = (Bitmap)e.Data.GetData(DataFormats.Bitmap);
+            lbVirhe.Hide();
         }
 
         private void DragDropR5P2(object sender, DragEventArgs e)
         {
             pb2R5.Image = (Bitmap)e.Data.GetData(DataFormats.Bitmap);
+            lbVirhe.Hide();
         }
 
         private void DragDropR5P3(object sender, DragEventArgs e)
         {
             pb3R5.Image = (Bitmap)e.Data.GetData(DataFormats.Bitmap);
+            lbVirhe.Hide();
         }
 
         private void DragDropR5P4(object sender, DragEventArgs e)
         {
             pb4R5.Image = (Bitmap)e.Data.GetData(DataFormats.Bitmap);
+            lbVirhe.Hide();
         }
         private void DragDropR6P1(object sender, DragEventArgs e)
         {
             pb1R6.Image = (Bitmap)e.Data.GetData(DataFormats.Bitmap);
+            lbVirhe.Hide();
         }
 
         private void DragDropR6P2(object sender, DragEventArgs e)
         {
             pb2R6.Image = (Bitmap)e.Data.GetData(DataFormats.Bitmap);
+            lbVirhe.Hide();
         }
 
         private void DragDropR6P3(object sender, DragEventArgs e)
         {
             pb3R6.Image = (Bitmap)e.Data.GetData(DataFormats.Bitmap);
+            lbVirhe.Hide();
         }
 
         private void DragDropR6P4(object sender, DragEventArgs e)
         {
             pb4R6.Image = (Bitmap)e.Data.GetData(DataFormats.Bitmap);
+            lbVirhe.Hide();
         }
         private void DragDropR7P1(object sender, DragEventArgs e)
         {
             pb1R7.Image = (Bitmap)e.Data.GetData(DataFormats.Bitmap);
+            lbVirhe.Hide();
         }
 
         private void DragDropR7P2(object sender, DragEventArgs e)
         {
             pb2R7.Image = (Bitmap)e.Data.GetData(DataFormats.Bitmap);
+            lbVirhe.Hide();
         }
 
         private void DragDropR7P3(object sender, DragEventArgs e)
         {
             pb3R7.Image = (Bitmap)e.Data.GetData(DataFormats.Bitmap);
+            lbVirhe.Hide();
         }
 
         private void DragDropR7P4(object sender, DragEventArgs e)
         {
             pb4R7.Image = (Bitmap)e.Data.GetData(DataFormats.Bitmap);
+            lbVirhe.Hide();
         }
         private void DragDropR8P1(object sender, DragEventArgs e)
         {
             pb1R8.Image = (Bitmap)e.Data.GetData(DataFormats.Bitmap);
+            lbVirhe.Hide();
         }
 
         private void DragDropR8P2(object sender, DragEventArgs e)
         {
             pb2R8.Image = (Bitmap)e.Data.GetData(DataFormats.Bitmap);
+            lbVirhe.Hide();
         }
 
         private void DragDropR8P3(object sender, DragEventArgs e)
         {
             pb3R8.Image = (Bitmap)e.Data.GetData(DataFormats.Bitmap);
+            lbVirhe.Hide();
         }
 
         private void DragDropR8P4(object sender, DragEventArgs e)
         {
             pb4R8.Image = (Bitmap)e.Data.GetData(DataFormats.Bitmap);
+            lbVirhe.Hide();
         }
         private void DragDropR9P1(object sender, DragEventArgs e)
         {
             pb1R9.Image = (Bitmap)e.Data.GetData(DataFormats.Bitmap);
+            lbVirhe.Hide();
         }
 
         private void DragDropR9P2(object sender, DragEventArgs e)
         {
             pb2R9.Image = (Bitmap)e.Data.GetData(DataFormats.Bitmap);
+            lbVirhe.Hide();
         }
 
         private void DragDropR9P3(object sender, DragEventArgs e)
         {
             pb3R9.Image = (Bitmap)e.Data.GetData(DataFormats.Bitmap);
+            lbVirhe.Hide();
         }
 
         private void DragDropR9P4(object sender, DragEventArgs e)
         {
             pb4R9.Image = (Bitmap)e.Data.GetData(DataFormats.Bitmap);
+            lbVirhe.Hide();
         }
         private void DragDropR10P1(object sender, DragEventArgs e)
         {
             pb1R10.Image = (Bitmap)e.Data.GetData(DataFormats.Bitmap);
+            lbVirhe.Hide();
         }
 
         private void DragDropR10P2(object sender, DragEventArgs e)
         {
             pb2R10.Image = (Bitmap)e.Data.GetData(DataFormats.Bitmap);
+            lbVirhe.Hide();
         }
 
         private void DragDropR10P3(object sender, DragEventArgs e)
         {
             pb3R10.Image = (Bitmap)e.Data.GetData(DataFormats.Bitmap);
+            lbVirhe.Hide();
         }
 
         private void DragDropR10P4(object sender, DragEventArgs e)
         {
             pb4R10.Image = (Bitmap)e.Data.GetData(DataFormats.Bitmap);
+            lbVirhe.Hide();
         }
 
         private void DragEnter(object sender, DragEventArgs e)
@@ -1148,5 +931,6 @@ namespace Mastermind
             pbVioletti.DoDragDrop(pbVioletti.Image, DragDropEffects.Copy);
             this.pbVihrea.Visible = true;
         }
+
     }
 }

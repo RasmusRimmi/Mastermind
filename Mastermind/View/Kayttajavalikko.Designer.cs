@@ -35,6 +35,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btPaavalikko = new System.Windows.Forms.Button();
             this.btMute = new System.Windows.Forms.Button();
+            this.lbLisays = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btUusiKayttaja
@@ -45,7 +46,7 @@
             this.btUusiKayttaja.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btUusiKayttaja.Font = new System.Drawing.Font("Mistral", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Strikeout))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btUusiKayttaja.ForeColor = System.Drawing.Color.Black;
-            this.btUusiKayttaja.Location = new System.Drawing.Point(225, 101);
+            this.btUusiKayttaja.Location = new System.Drawing.Point(225, 113);
             this.btUusiKayttaja.Name = "btUusiKayttaja";
             this.btUusiKayttaja.Size = new System.Drawing.Size(146, 43);
             this.btUusiKayttaja.TabIndex = 1;
@@ -62,7 +63,7 @@
             this.btValitse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btValitse.Font = new System.Drawing.Font("Mistral", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Strikeout))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btValitse.ForeColor = System.Drawing.Color.Black;
-            this.btValitse.Location = new System.Drawing.Point(225, 187);
+            this.btValitse.Location = new System.Drawing.Point(225, 199);
             this.btValitse.Name = "btValitse";
             this.btValitse.Size = new System.Drawing.Size(146, 43);
             this.btValitse.TabIndex = 2;
@@ -72,16 +73,17 @@
             // 
             // tbKayttaja
             // 
-            this.tbKayttaja.Location = new System.Drawing.Point(48, 101);
+            this.tbKayttaja.Location = new System.Drawing.Point(48, 113);
             this.tbKayttaja.Name = "tbKayttaja";
             this.tbKayttaja.Size = new System.Drawing.Size(146, 20);
             this.tbKayttaja.TabIndex = 3;
+            this.tbKayttaja.Click += new System.EventHandler(this.tbKayttaja_Click);
             this.tbKayttaja.TextChanged += new System.EventHandler(this.tbKayttaja_TextChanged);
             // 
             // cbKayttaja
             // 
             this.cbKayttaja.FormattingEnabled = true;
-            this.cbKayttaja.Location = new System.Drawing.Point(48, 187);
+            this.cbKayttaja.Location = new System.Drawing.Point(48, 199);
             this.cbKayttaja.Name = "cbKayttaja";
             this.cbKayttaja.Size = new System.Drawing.Size(146, 21);
             this.cbKayttaja.TabIndex = 4;
@@ -106,7 +108,7 @@
             this.btPaavalikko.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btPaavalikko.Font = new System.Drawing.Font("Mistral", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Strikeout))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btPaavalikko.ForeColor = System.Drawing.Color.Black;
-            this.btPaavalikko.Location = new System.Drawing.Point(267, 267);
+            this.btPaavalikko.Location = new System.Drawing.Point(285, 287);
             this.btPaavalikko.Name = "btPaavalikko";
             this.btPaavalikko.Size = new System.Drawing.Size(104, 30);
             this.btPaavalikko.TabIndex = 6;
@@ -130,12 +132,24 @@
             this.btMute.UseVisualStyleBackColor = false;
             this.btMute.Click += new System.EventHandler(this.btMute_Click);
             // 
+            // lbLisays
+            // 
+            this.lbLisays.AutoSize = true;
+            this.lbLisays.Font = new System.Drawing.Font("Mistral", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbLisays.ForeColor = System.Drawing.Color.Lime;
+            this.lbLisays.Location = new System.Drawing.Point(43, 81);
+            this.lbLisays.Name = "lbLisays";
+            this.lbLisays.Size = new System.Drawing.Size(173, 29);
+            this.lbLisays.TabIndex = 8;
+            this.lbLisays.Text = "KÄYTTÄJÄ LISÄTTY!";
+            // 
             // Kayttajavalikko
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(401, 329);
+            this.Controls.Add(this.lbLisays);
             this.Controls.Add(this.btMute);
             this.Controls.Add(this.btPaavalikko);
             this.Controls.Add(this.label1);
@@ -160,5 +174,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btPaavalikko;
         private System.Windows.Forms.Button btMute;
+        private System.Windows.Forms.Label lbLisays;
     }
 }
