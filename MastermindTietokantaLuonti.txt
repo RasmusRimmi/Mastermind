@@ -19,7 +19,7 @@ CREATE TABLE [dbo].[Saavutukset] (
     PRIMARY KEY CLUSTERED ([SaavutusId] ASC)
 );
 
-/*/Lisää tiedot saavutustauluun*/
+/*Lisää tiedot saavutustauluun*/
 SET IDENTITY_INSERT [dbo].[Saavutukset] ON
 INSERT INTO [dbo].[Saavutukset] ([SaavutusId], [Saavutus], [Kriteeri], [Vaikeustaso]) VALUES (1, N'Mahtava valinta', N'Olet pelannut ensimmäisen pelin', N'Helppo')
 INSERT INTO [dbo].[Saavutukset] ([SaavutusId], [Saavutus], [Kriteeri], [Vaikeustaso]) VALUES (2, N'Yksinäinen susi', N'Olet pelannut 5 kierrosta yksinpeliä.', N'Helppo')
