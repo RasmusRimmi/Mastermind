@@ -1,6 +1,6 @@
-Luo uusi tietokanta nimellä Mastermind ja kopioi siihen alla olevat taulut
+/*Luo uusi tietokanta nimellä Mastermind ja kopioi siihen alla olevat taulut*/
 
-//Luo Kayttajat taulun
+/*Luo Kayttajat taulun*/
 CREATE TABLE [dbo].[Kayttajat] (
     [KayttajaId] INT          IDENTITY (1, 1) NOT NULL,
     [Kayttaja]   NVARCHAR (6) NULL,
@@ -10,7 +10,7 @@ CREATE TABLE [dbo].[Kayttajat] (
     CONSTRAINT [PK_Kayttajat] PRIMARY KEY CLUSTERED ([KayttajaId] ASC)
 );
 
-//Luo Saavutukset taulun
+/*Luo Saavutukset taulun*/
 CREATE TABLE [dbo].[Saavutukset] (
     [SaavutusId]  INT            IDENTITY (1, 1) NOT NULL,
     [Saavutus]    NVARCHAR (50)  NULL,
@@ -19,7 +19,7 @@ CREATE TABLE [dbo].[Saavutukset] (
     PRIMARY KEY CLUSTERED ([SaavutusId] ASC)
 );
 
-//Lisää tiedot saavutustauluun
+/*/Lisää tiedot saavutustauluun*/
 SET IDENTITY_INSERT [dbo].[Saavutukset] ON
 INSERT INTO [dbo].[Saavutukset] ([SaavutusId], [Saavutus], [Kriteeri], [Vaikeustaso]) VALUES (1, N'Mahtava valinta', N'Olet pelannut ensimmäisen pelin', N'Helppo')
 INSERT INTO [dbo].[Saavutukset] ([SaavutusId], [Saavutus], [Kriteeri], [Vaikeustaso]) VALUES (2, N'Yksinäinen susi', N'Olet pelannut 5 kierrosta yksinpeliä.', N'Helppo')
@@ -32,7 +32,7 @@ INSERT INTO [dbo].[Saavutukset] ([SaavutusId], [Saavutus], [Kriteeri], [Vaikeust
 INSERT INTO [dbo].[Saavutukset] ([SaavutusId], [Saavutus], [Kriteeri], [Vaikeustaso]) VALUES (9, N'Hävisit 2', N'Olet hävinnyt 10 kertaa', N'Kummallinen')
 SET IDENTITY_INSERT [dbo].[Saavutukset] OFF
 
-//Luo Kayttajiensaavutukset taulun
+/*Luo Kayttajiensaavutukset taulun*/
 CREATE TABLE [dbo].[Kayttajiensaavutukset] (
     [KayttajaId] INT NOT NULL,
     [SaavutusId] INT NOT NULL,
