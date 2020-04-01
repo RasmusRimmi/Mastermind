@@ -94,6 +94,11 @@ namespace Mastermind
         private void btValitse_Click(object sender, EventArgs e)
         {
             this.Hide();
+            using (var ohjeet = new Ohjeet(this))
+            {
+                ohjeet.ShowDialog();
+            }
+
             using (var pelilauta = new Pelilauta(this))
             {
                 a = cbKayttaja.Text;

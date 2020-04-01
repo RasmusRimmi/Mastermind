@@ -144,6 +144,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "Pisteporssi";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Pistepörssi";
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -1558,6 +1558,7 @@
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Pelilauta";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Pelilauta";
             this.Load += new System.EventHandler(this.Pelilauta_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pb4R1)).EndInit();

@@ -130,8 +130,9 @@
             this.Controls.Add(this.lbTitle);
             this.Controls.Add(this.lbTekijat);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Credits";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Credits";
             this.ResumeLayout(false);
             this.PerformLayout();

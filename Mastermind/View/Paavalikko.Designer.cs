@@ -140,6 +140,7 @@
             this.Controls.Add(this.btYksinpeli);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Paavalikko";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MASTERMIND";
             this.Load += new System.EventHandler(this.Paavalikko_Load);
             this.ResumeLayout(false);
