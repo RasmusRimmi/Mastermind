@@ -146,6 +146,7 @@
             this.Name = "Pisteporssi";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Pistepörssi";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Pisteporssi_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 

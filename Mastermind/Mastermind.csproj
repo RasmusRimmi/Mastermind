@@ -203,5 +203,11 @@
   <ItemGroup>
     <None Include="Resources\Pelilauta.wav" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pelimusa2.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ohjeet.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

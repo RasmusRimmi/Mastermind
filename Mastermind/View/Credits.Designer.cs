@@ -134,6 +134,7 @@
             this.Name = "Credits";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Credits";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Credits_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 

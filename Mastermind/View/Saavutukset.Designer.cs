@@ -160,6 +160,7 @@
             this.Name = "Saavutukset";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Saavutukset";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Saavutukset_FormClosing);
             this.Load += new System.EventHandler(this.Saavutukset_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvSaavutukset)).EndInit();
             this.ResumeLayout(false);

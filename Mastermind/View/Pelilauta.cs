@@ -28,7 +28,7 @@ namespace Mastermind
         bool toka;
         bool kolmas;
         bool neljäs;
-        SoundPlayer peli = new SoundPlayer(Properties.Resources.Pelilauta);
+        SoundPlayer peli = new SoundPlayer(Properties.Resources.Pelimusa2);
         SoundPlayer menu = new SoundPlayer(Properties.Resources.MastermindMenu8bit);
         Bitmap harmaa = Mastermind.Properties.Resources.harmaapampula;
 
@@ -647,12 +647,6 @@ namespace Mastermind
             }
         }
 
-        public void PiilotaLabel(object sender, EventArgs e)
-        {
-            lbVirhe.Hide();
-        }
-
-
         private void DragDropR1P1(object sender, DragEventArgs e)
         {
             Rivit[0, 0].Image = (Bitmap)e.Data.GetData(DataFormats.Bitmap);
@@ -926,11 +920,30 @@ namespace Mastermind
             pbVihrea.DoDragDrop(pbVihrea.Image, DragDropEffects.Copy);
             this.pbVihrea.Visible = true;
         }
+
         private void Siirra8(object sender, MouseEventArgs e)
         {
             pbVioletti.DoDragDrop(pbVioletti.Image, DragDropEffects.Copy);
             this.pbVihrea.Visible = true;
         }
 
+        private void btOhjeet_Click(object sender, EventArgs e)
+        {
+            Ohjeet ohjeet = new Ohjeet(kayttajavalikko);
+            ohjeet.ShowDialog();
+        }
+
+        private void Pelilauta_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (Paavalikko.mute == true)
+            {
+                Paavalikko.menu.PlayLooping();
+            }
+
+            else if (Paavalikko.mute == false)
+            {
+                Paavalikko.menu.Stop();
+            }
+        }
     }
 }

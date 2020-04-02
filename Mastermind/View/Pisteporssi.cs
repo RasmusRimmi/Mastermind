@@ -624,5 +624,18 @@ namespace Mastermind
                 Paavalikko.mute = true;
             }
         }
+
+        private void Pisteporssi_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (Paavalikko.mute == true)
+            {
+                Paavalikko.menu.PlayLooping();
+            }
+
+            else if (Paavalikko.mute == false)
+            {
+                Paavalikko.menu.Stop();
+            }
+        }
     }
 }

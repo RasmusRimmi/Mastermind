@@ -7,11 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Media;
 
 namespace Mastermind
 {
     public partial class Ohjeet : Form
     {
+        SoundPlayer peli = new SoundPlayer(Properties.Resources.Pelimusa2);
+
         public Ohjeet(Kayttajavalikko kayttajavalikko)
         { 
             InitializeComponent();
@@ -40,14 +43,14 @@ namespace Mastermind
             if (Paavalikko.mute == true)
             {
                 btMute.BackgroundImage = Properties.Resources.off;
-                Paavalikko.menu.Stop();
+                peli.Stop();
                 Paavalikko.mute = false;
             }
 
             else if (Paavalikko.mute == false)
             {
                 btMute.BackgroundImage = Properties.Resources.on;
-                Paavalikko.menu.PlayLooping();
+                peli.PlayLooping();
                 Paavalikko.mute = true;
             }
         }

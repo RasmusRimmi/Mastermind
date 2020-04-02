@@ -150,9 +150,18 @@ namespace Mastermind.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static System.IO.UnmanagedMemoryStream Pelilauta {
+        internal static System.IO.UnmanagedMemoryStream Pelimusa1 {
             get {
-                return ResourceManager.GetStream("Pelilauta", resourceCulture);
+                return ResourceManager.GetStream("Pelimusa1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream Pelimusa2 {
+            get {
+                return ResourceManager.GetStream("Pelimusa2", resourceCulture);
             }
         }
         
