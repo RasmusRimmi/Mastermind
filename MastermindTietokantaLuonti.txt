@@ -20,17 +20,18 @@ CREATE TABLE [dbo].[Saavutukset] (
 );
 
 /*Lisää tiedot saavutustauluun*/
-SET IDENTITY_INSERT [dbo].[Saavutukset] ON
-INSERT INTO [dbo].[Saavutukset] ([SaavutusId], [Saavutus], [Kriteeri], [Vaikeustaso]) VALUES (1, N'Mahtava valinta', N'Olet pelannut ensimmäisen pelin', N'Helppo')
-INSERT INTO [dbo].[Saavutukset] ([SaavutusId], [Saavutus], [Kriteeri], [Vaikeustaso]) VALUES (2, N'Yksinäinen susi', N'Olet pelannut 5 kierrosta yksinpeliä.', N'Helppo')
-INSERT INTO [dbo].[Saavutukset] ([SaavutusId], [Saavutus], [Kriteeri], [Vaikeustaso]) VALUES (3, N'Voittaja 1', N'Olet voittanut 3 peliä', N'Helppo')
-INSERT INTO [dbo].[Saavutukset] ([SaavutusId], [Saavutus], [Kriteeri], [Vaikeustaso]) VALUES (4, N'Yksinäinen susi 2', N'Olet pelannut 10 kierrosta yksinpeliä', N'Vaikea')
-INSERT INTO [dbo].[Saavutukset] ([SaavutusId], [Saavutus], [Kriteeri], [Vaikeustaso]) VALUES (5, N'Voittaja 2', N'Olet voittanut 10 peliä', N'Vaikea')
-INSERT INTO [dbo].[Saavutukset] ([SaavutusId], [Saavutus], [Kriteeri], [Vaikeustaso]) VALUES (6, N'PARAS', N'Arvasit pampulat ensimäisellä kierroksella', N'Vaikea')
-INSERT INTO [dbo].[Saavutukset] ([SaavutusId], [Saavutus], [Kriteeri], [Vaikeustaso]) VALUES (7, N'Mastermind', N'Voitit ensimmäisen kerran', N'Kummallinen')
-INSERT INTO [dbo].[Saavutukset] ([SaavutusId], [Saavutus], [Kriteeri], [Vaikeustaso]) VALUES (8, N'Hävisit 1', N'Olet hävinnyt 3 kertaa', N'Kummallinen')
-INSERT INTO [dbo].[Saavutukset] ([SaavutusId], [Saavutus], [Kriteeri], [Vaikeustaso]) VALUES (9, N'Hävisit 2', N'Olet hävinnyt 10 kertaa', N'Kummallinen')
-SET IDENTITY_INSERT [dbo].[Saavutukset] OFF
+SET IDENTITY_INSERT Saavutukset ON
+INSERT INTO Saavutukset (SaavutusId, Saavutus, Kriteeri, Vaikeustaso) VALUES 
+(1, 'Mahtava valinta', 'Olet pelannut ensimmäisen pelin', 'Helppo'),
+(2, 'Yksinäinen susi', 'Olet pelannut 5 kierrosta yksinpeliä.', 'Helppo'),
+(3, 'Voittaja 1', 'Olet voittanut 3 peliä', 'Helppo'),
+(4, 'Yksinäinen susi 2', 'Olet pelannut 10 kierrosta yksinpeliä', 'Vaikea'),
+(5, 'Voittaja 2', 'Olet voittanut 10 peliä', 'Vaikea'),
+(6, 'PARAS', 'Arvasit pampulat ensimmäisellä kierroksella', 'Vaikea'),
+(7, 'Mastermind', 'Voitit ensimmäisen kerran', 'Kummallinen'),
+(8, 'Hävisit 1', 'Olet hävinnyt 3 kertaa', 'Kummallinen'),
+(9, 'Hävisit 2', 'Olet hävinnyt 10 kertaa', 'Kummallinen')
+SET IDENTITY_INSERT Saavutukset OFF
 
 /*Luo Kayttajiensaavutukset taulun*/
 CREATE TABLE [dbo].[Kayttajiensaavutukset] (
