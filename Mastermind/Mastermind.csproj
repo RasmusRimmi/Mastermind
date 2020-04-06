@@ -50,7 +50,6 @@
     <Compile Include="Model\DatabaseHallinta.cs" />
     <Compile Include="Model\Kayttajat.cs" />
     <Compile Include="Model\KayttajienSaavutukset.cs" />
-    <Compile Include="Model\Pampulat.cs" />
     <Compile Include="Model\Saavutukset.cs" />
     <Compile Include="View\Credits.cs">
       <SubType>Form</SubType>
