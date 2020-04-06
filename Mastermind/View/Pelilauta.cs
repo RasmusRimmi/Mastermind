@@ -200,11 +200,13 @@ namespace Mastermind
             lbVirhe.Hide();
         }
 
+        //Saadaan valitun käyttäjän nimi pelilautaan käyttäjävalikosta
         public void ab(string a)
         {
             b = a.ToString();
         }
 
+        //Saadaan valitun käyttäjän Id pelilautaan käyttäjävalikosta
         public void yx(int x)
         {
             y = x;

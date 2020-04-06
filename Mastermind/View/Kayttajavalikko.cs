@@ -103,7 +103,11 @@ namespace Mastermind
             {
                 a = cbKayttaja.Text;
                 x = (int)cbKayttaja.SelectedValue;
+                
+                //kutsutaan pelilaudan ab-metodia, jotta saadaan pelilaudassa b:n arvoksi valitun käyttäjän nimi
                 pelilauta.ab(a.ToString());
+                
+                //kutsutaan pelilaudan yx-metodia, jotta saadaan pelilaudassa y:n arvoksi valitun käyttäjän id
                 pelilauta.yx(x);
                 pelilauta.ShowDialog();
                 this.Show();
